@@ -8,20 +8,20 @@ namespace WinFormApp.Model
 {
     public class SanPham
     {
-        public string MaSP { get; set; }
-        public string TenSP { get; set; }
+        public string maSanPham { get; set; }
+        public string tenSanPham { get; set; }
         public float donGia { get; set; }
-        public string DVT { get; set; }
+        public string donViTinh { get; set; }
         public SanPham()
         {
 
         }
-        public SanPham(string MaSP, string TenSP, float donGia, string DVT)
+        public SanPham(string masp, string tensp, float dongia, string dvt)
         {
-            this.MaSP = MaSP;
-            this.TenSP = TenSP;
-            this.donGia = donGia;
-            this.DVT = DVT;
+            this.maSanPham = masp;
+            this.tenSanPham = tensp;
+            this.donGia = dongia;
+            this.donViTinh = dvt;
         }
     }
 }

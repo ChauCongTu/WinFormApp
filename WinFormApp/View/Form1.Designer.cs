@@ -83,12 +83,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.label1.Location = new System.Drawing.Point(64, 20);
+            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.Location = new System.Drawing.Point(22, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 37);
+            this.label1.Size = new System.Drawing.Size(470, 37);
             this.label1.TabIndex = 14;
-            this.label1.Text = "ĐĂNG NHẬP HỆ THỐNG";
+            this.label1.Text = "QUẢN LÝ CỬA HÀNG HONDA";
             // 
             // txtUsername
             // 
@@ -96,14 +96,14 @@
             this.txtUsername.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtUsername.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtUsername.BorderSize = 3;
-            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(196, 98);
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Padding = new System.Windows.Forms.Padding(7);
             this.txtUsername.PasswordChar = false;
-            this.txtUsername.Size = new System.Drawing.Size(273, 34);
+            this.txtUsername.Size = new System.Drawing.Size(273, 37);
             this.txtUsername.TabIndex = 20;
             this.txtUsername.Texts = "";
             this.txtUsername.UnderlinedStyle = true;
@@ -114,14 +114,14 @@
             this.txtPassword.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtPassword.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtPassword.BorderSize = 3;
-            this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(196, 165);
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Padding = new System.Windows.Forms.Padding(7);
             this.txtPassword.PasswordChar = false;
-            this.txtPassword.Size = new System.Drawing.Size(272, 34);
+            this.txtPassword.Size = new System.Drawing.Size(272, 37);
             this.txtPassword.TabIndex = 21;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = true;
@@ -150,9 +150,9 @@
             // 
             this.pbShowPwd.BackColor = System.Drawing.Color.Transparent;
             this.pbShowPwd.Image = global::WinFormApp.Properties.Resources.eye_512;
-            this.pbShowPwd.Location = new System.Drawing.Point(431, 165);
+            this.pbShowPwd.Location = new System.Drawing.Point(436, 165);
             this.pbShowPwd.Name = "pbShowPwd";
-            this.pbShowPwd.Size = new System.Drawing.Size(38, 33);
+            this.pbShowPwd.Size = new System.Drawing.Size(33, 28);
             this.pbShowPwd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbShowPwd.TabIndex = 23;
             this.pbShowPwd.TabStop = false;

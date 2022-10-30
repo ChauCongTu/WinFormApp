@@ -8,9 +8,9 @@ namespace WinFormApp.Model
 {
     public class CTHDXUAT
     {
-        public int sl = 0;
-        public float thanhtien;
-        public SanPham SP;
+        public int sl{ get; set; }
+        public float thanhtien { get; set; }
+        public SanPham SP { get; set; }
         public CTHDXUAT()
         {
 
@@ -18,8 +18,8 @@ namespace WinFormApp.Model
         public CTHDXUAT(int SL, SanPham SP)
         {
             this.sl = SL;
-            this.thanhtien = SL * SP.donGia;
             this.SP = SP;
+            this.thanhtien = SL * SP.donGia;
         }
     }
 }

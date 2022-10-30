@@ -56,6 +56,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControl\FormMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FormMessageBox.Designer.cs">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -65,11 +71,45 @@
     <Compile Include="CustomControl\RJCircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControl\RJMessageBox.cs" />
     <Compile Include="CustomControl\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAO_ChiNhanh.cs" />
+    <Compile Include="DAO\DAO_NhanVien.cs" />
+    <Compile Include="DAO\DAO_SanPham.cs" />
+    <Compile Include="DAO\DAO_SanPhamPhuTung.cs" />
+    <Compile Include="DAO\DAO_SanPhamXe.cs" />
+    <Compile Include="View\ChiTietHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChiTietHoaDonNhap.Designer.cs">
+      <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyNhapHang.Designer.cs">
+      <DependentUpon>ucQuanLyNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DatabaseConnection.cs" />
+    <Compile Include="Model\ChiNhanh.cs" />
+    <Compile Include="Model\CTHDNHAP.cs" />
+    <Compile Include="Model\HoaDonNhap.cs" />
+    <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\LoaiXe.cs" />
+    <Compile Include="Model\NhaCungCap.cs" />
+    <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\SanPhamPhuTung.cs" />
+    <Compile Include="Model\SanPhamXe.cs" />
+    <Compile Include="View\ChiTietHoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChiTietHoaDonXuat.Designer.cs">
+      <DependentUpon>ChiTietHoaDonXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CTHDXUAT.cs" />
     <Compile Include="Model\HoaDonXuat.cs" />
@@ -94,8 +134,20 @@
     <Compile Include="View\QuanLyCuaHang.Designer.cs">
       <DependentUpon>QuanLyCuaHang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomControl\FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChiTietHoaDonNhap.resx">
+      <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucQuanLyNhapHang.resx">
+      <DependentUpon>ucQuanLyNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChiTietHoaDonXuat.resx">
+      <DependentUpon>ChiTietHoaDonXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucQuanLyXuatHang.resx">
       <DependentUpon>ucQuanLyXuatHang.cs</DependentUpon>
@@ -149,7 +201,6 @@
     <None Include="Resources\avatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="View\Report\" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +220,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\taoanhdep-icon-trash-alt-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\NhapHang1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Sua1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-3-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled-filter-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

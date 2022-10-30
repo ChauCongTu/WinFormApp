@@ -55,6 +55,10 @@ namespace WinFormApp
             btnThongKe.BackColor = Color.Transparent;
             btnThongKe.ForeColor = Color.White;
             btnThongKe.BorderRadius = 0;
+
+            rjButton1.BackColor = Color.Transparent;
+            rjButton1.ForeColor = Color.White;
+            rjButton1.BorderRadius = 0;
             //Selected Button
             btn.BackColor = Color.White;
             btn.ForeColor = Color.Black;
@@ -108,11 +112,18 @@ namespace WinFormApp
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
             switchSelect(btnNhapHang);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucQuanLyNhapHang());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             switchSelect(btnThongKe);
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            switchSelect(rjButton1);
         }
     }
 }
