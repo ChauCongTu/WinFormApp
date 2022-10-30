@@ -10,6 +10,7 @@ Chủ đề: Quản lý cửa hàng xe Honda Phát Tiến
 - Bui Nhat Huy
 - Nguyen Cao An
 - Luu Nhat Thanh
+- Le Thanh Nhan
 
 # Hướng dẫn code
 
