@@ -120,7 +120,7 @@ namespace WinFormApp
         {
             switchSelect(btnThongKe);
             gpMain.Controls.Clear();
-            gpMain.Controls.Add(new ucQuanLyThongKe());
+            
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
