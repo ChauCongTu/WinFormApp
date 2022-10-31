@@ -63,7 +63,29 @@ namespace WinFormApp.DAO
             }
             _conn.Close();
             return list;
-            
+        }
+        public List<NhanVien> GetListByName(string _tenNhanVien)
+        {
+            List<NhanVien> list = new List<NhanVien>();
+            _conn.Open();
+            command = new SqlCommand($"SELECT * FROM NHANVIEN WHERE TENNV LIKE '%{_tenNhanVien}%'", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maNhanVien = reader.GetString(0);
+                string tenNhanVien = reader.GetString(1);
+                string tenDangNhap = reader.GetString(2);
+                string matKhau = reader.GetString(3);
+                DateTime ngaySinh = reader.GetDateTime(4);
+                int chungMinhNhanDan = reader.GetInt32(5);
+                string diaChi = reader.GetString(6);
+                int capbac = reader.GetInt32(7);
+                string soDienThoai = reader.GetString(8);
+                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                list.Add(nhan);
+            }
+            _conn.Close();
+            return list;
         }
         public NhanVien GetByID(string _maNhanVien)
         {
@@ -131,9 +153,7 @@ namespace WinFormApp.DAO
         public static string GetMD5(string plainText)
         {
             MD5 md5 = new MD5CryptoServiceProvider();
-            // Compute hash from the bytes of text
             md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(plainText));
-            // Get hash result after compute it
             byte[] result = md5.Hash;
             StringBuilder strBuilder = new StringBuilder();
             for (int i = 0; i < result.Length; i++)

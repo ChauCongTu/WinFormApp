@@ -39,6 +39,27 @@ namespace WinFormApp.DAO
             }
             return list;
         }
+        public List<ChiNhanh> GetByName(string _tenChiNhanh)
+        {
+            List<ChiNhanh> list = new List<ChiNhanh>();
+            _conn.Open();
+            command = new SqlCommand($"SELECT * FROM CHINHANH WHERE TENCN LIKE '%{_tenChiNhanh}%'");
+            reader = command.ExecuteReader();
+            DAO_NhanVien _NhanVien = new DAO_NhanVien();
+            DAO_SanPham _SanPham = new DAO_SanPham();
+            while (reader.Read())
+            {
+                string maChiNhanh = reader.GetString(0);
+                string tenChiNhanh = reader.GetString(1);
+                string diaChi = reader.GetString(2);
+                string soDienThoai = reader.GetString(3);
+                List<SanPham> sanPham = _SanPham.GetList(maChiNhanh);
+                List<NhanVien> nhanVien = _NhanVien.GetList(maChiNhanh);
+                ChiNhanh chiNhanh = new ChiNhanh(maChiNhanh, tenChiNhanh, diaChi, soDienThoai, nhanVien, sanPham);
+                list.Add(chiNhanh);
+            }
+            return list;
+        }
         public ChiNhanh GetByID(string _maChiNhanh)
         {
             ChiNhanh chiNhanh = new ChiNhanh();
