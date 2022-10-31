@@ -78,6 +78,36 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
+        public List<SanPhamXe> GetListByName(string _tenXe)
+        {
+            List<SanPhamXe> list = new List<SanPhamXe>();
+            _conn.Open();
+            command = new SqlCommand($"SELECT SANPHAM.MASP, TENSP, DONGIA, DVT, MAXE, SOKHUNG, KHOILUONG, DUNGTICHBX, DUNGTICHXL, LOAIDC, PITTONG, TYSONEN, CONGSUATMAX, DUNGTICHNHOT, TRUYENDONG, HTKHOIDONG  FROM XE, SANPHAM WHERE XE.MASP = SANPHAM.MASP AND MACN = @macn AND DABAN != 1 AND TENSP LIKE '%{_tenXe}%'", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string masp = reader.GetString(0);
+                string tensp = reader.GetString(1);
+                float dongia = reader.GetFloat(2);
+                string dvt = reader.GetString(3);
+                string maXe = reader.GetString(4);
+                string soKhungXe = reader.GetString(5);
+                float khoiLuong = reader.GetFloat(6);
+                float dungTichBinhXang = reader.GetFloat(7);
+                float dungTichXiLanh = reader.GetFloat(8);
+                string loaiDongCo = reader.GetString(9);
+                string hanhTrinhPittong = reader.GetString(10);
+                string tySoNen = reader.GetString(11);
+                string congSuatToiDa = reader.GetString(12);
+                string dungTichNhot = reader.GetString(13);
+                string loaiTruyenDong = reader.GetString(14);
+                string heThongKhoiDong = reader.GetString(15);
+                SanPhamXe sanPham = new SanPhamXe(masp, tensp, dongia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
+                list.Add(sanPham);
+            }
+            _conn.Close();
+            return list;
+        }
         public SanPhamXe GetByID(string _maSanPham)
         {
             SanPhamXe sanPham = new SanPhamXe();

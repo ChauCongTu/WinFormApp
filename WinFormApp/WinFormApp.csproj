@@ -79,6 +79,10 @@
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_ChiNhanh.cs" />
+    <Compile Include="DAO\DAO_ChiTietHoaDonNhap.cs" />
+    <Compile Include="DAO\DAO_ChiTietHoaDonXuat.cs" />
+    <Compile Include="DAO\DAO_HoaDonNhap.cs" />
+    <Compile Include="DAO\DAO_HoaDonXuat.cs" />
     <Compile Include="DAO\DAO_KhachHang.cs" />
     <Compile Include="DAO\DAO_NhaCungCap.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
