@@ -120,7 +120,6 @@ namespace WinFormApp
         {
             switchSelect(btnThongKe);
             gpMain.Controls.Clear();
-            
         }
 
         private void rjButton1_Click(object sender, EventArgs e)

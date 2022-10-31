@@ -12,7 +12,7 @@ namespace WinFormApp.Model
         public string tenKhachHang { get; set; }
         public string diaChi { get; set; }
         public string soDienThoai { get; set; }
-        int chungMinhNhanDan { get; set; }
+        public int chungMinhNhanDan { get; set; }
 
         public KhachHang()
         {
