@@ -10,13 +10,13 @@ namespace WinFormApp.Model
     {
         public string maSanPham { get; set; }
         public string tenSanPham { get; set; }
-        public float donGia { get; set; }
+        public decimal donGia { get; set; }
         public string donViTinh { get; set; }
         public SanPham()
         {
 
         }
-        public SanPham(string masp, string tensp, float dongia, string dvt)
+        public SanPham(string masp, string tensp, decimal dongia, string dvt)
         {
             this.maSanPham = masp;
             this.tenSanPham = tensp;

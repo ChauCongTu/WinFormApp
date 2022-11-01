@@ -28,7 +28,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                float dongia = reader.GetFloat(2);
+                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -42,7 +42,7 @@ namespace WinFormApp.DAO
                 string dungTichNhot = reader.GetString(13);
                 string loaiTruyenDong = reader.GetString(14);
                 string heThongKhoiDong = reader.GetString(15);
-                SanPhamXe sanPham = new SanPhamXe(masp, tensp, dongia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
+                SanPhamXe sanPham = new SanPhamXe(masp, tensp, donGia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
                 list.Add(sanPham);
             }
             _conn.Close();
@@ -58,7 +58,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                float dongia = reader.GetFloat(2);
+                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -72,7 +72,7 @@ namespace WinFormApp.DAO
                 string dungTichNhot = reader.GetString(13);
                 string loaiTruyenDong = reader.GetString(14);
                 string heThongKhoiDong = reader.GetString(15);
-                SanPhamXe sanPham = new SanPhamXe(masp, tensp, dongia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
+                SanPhamXe sanPham = new SanPhamXe(masp, tensp, donGia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
                 list.Add(sanPham);
             }
             _conn.Close();
@@ -88,7 +88,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                float dongia = reader.GetFloat(2);
+                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -102,7 +102,7 @@ namespace WinFormApp.DAO
                 string dungTichNhot = reader.GetString(13);
                 string loaiTruyenDong = reader.GetString(14);
                 string heThongKhoiDong = reader.GetString(15);
-                SanPhamXe sanPham = new SanPhamXe(masp, tensp, dongia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
+                SanPhamXe sanPham = new SanPhamXe(masp, tensp, donGia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
                 list.Add(sanPham);
             }
             _conn.Close();
@@ -118,7 +118,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                float dongia = reader.GetFloat(2);
+                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -132,7 +132,7 @@ namespace WinFormApp.DAO
                 string dungTichNhot = reader.GetString(13);
                 string loaiTruyenDong = reader.GetString(14);
                 string heThongKhoiDong = reader.GetString(15);
-                sanPham = new SanPhamXe(masp, tensp, dongia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
+                sanPham = new SanPhamXe(masp, tensp, donGia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
             }
             _conn.Close();
             return sanPham;

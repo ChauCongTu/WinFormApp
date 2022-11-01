@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormApp.DAO;
 using WinFormApp.Model;
 using WinFormApp.View;
 
@@ -24,6 +25,12 @@ namespace WinFormApp.CustomControl
         {
             InitializeComponent();
             this.hd = hd;
+        }
+        void table_load()
+        {
+            DAO_HoaDonNhap dAO_HoaDonNhap = new DAO_HoaDonNhap();
+            List<HoaDonNhap> hoaDonNhap = dAO_HoaDonNhap.GetAll();
+            dgvHoaDonXuat.DataSource = hoaDonNhap;
         }
         void turnOffButton(Button btn, PictureBox picture)
         {

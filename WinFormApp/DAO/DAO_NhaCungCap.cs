@@ -40,7 +40,7 @@ namespace WinFormApp.DAO
         {
             NhaCungCap nhaCungCap = new NhaCungCap();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM NHACUNGCAP WHERE MAKH = '{_maNhaCungCap}'", _conn);
+            command = new SqlCommand($"SELECT * FROM NHACUNGCAP WHERE MANCC = '{_maNhaCungCap}'", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {

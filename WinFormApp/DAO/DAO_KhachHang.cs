@@ -58,7 +58,7 @@ namespace WinFormApp.DAO
         {
             List<KhachHang> list = new List<KhachHang>();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM KHACHHANG WHERE TENKH = '{_tenKhachHang}'", _conn);
+            command = new SqlCommand($"SELECT * FROM KHACHHANG WHERE TENKH LIKE '%{_tenKhachHang}%'", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {

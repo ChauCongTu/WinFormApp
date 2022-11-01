@@ -13,7 +13,7 @@ namespace WinFormApp.Model
         public NhanVien nhanVien = new NhanVien();
         public NhaCungCap nhaCungCap = new NhaCungCap();
         public List<CTHDNHAP> chiTietHoaDon = new List<CTHDNHAP>();
-        public float tongHoaDon { get; set; }
+        public decimal tongHoaDon { get; set; }
         public HoaDonNhap()
         {
 
@@ -27,7 +27,7 @@ namespace WinFormApp.Model
         }
         public HoaDonNhap(string sOHD, DateTime ngayLapHoaDon, NhanVien nhanVien, NhaCungCap nhaCungCap, List<CTHDNHAP> chiTietHoaDon)
         {
-            List<float> thanhtien = new List<float>();
+            List<decimal> thanhtien = new List<decimal>();
             foreach(CTHDNHAP ct in chiTietHoaDon)
             {
                 thanhtien.Add(ct.thanhTien);
@@ -40,10 +40,10 @@ namespace WinFormApp.Model
             this.tongHoaDon = sum(thanhtien);
         }
 
-        public static float sum(List<float> thanhTien)
+        public static decimal sum(List<decimal> thanhTien)
         {
-            float tongtien = 0;
-            foreach (float i in thanhTien)
+            decimal tongtien = 0;
+            foreach (decimal i in thanhTien)
             {
                 tongtien = tongtien + i;
             }

@@ -91,7 +91,7 @@ namespace WinFormApp.DAO
         {
             NhanVien nhanVien = new NhanVien();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM NHANVIEN WHERE MANV = {_maNhanVien}", _conn);
+            command = new SqlCommand($"SELECT * FROM NHANVIEN WHERE MANV = '{_maNhanVien}'", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -106,6 +106,7 @@ namespace WinFormApp.DAO
                 string soDienThoai = reader.GetString(8);
                 nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
             }
+            _conn.Close();
             return nhanVien;
         }
         public void Add(NhanVien _nhanVien, string _maChiNhanh)

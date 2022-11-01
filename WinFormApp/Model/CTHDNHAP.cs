@@ -10,7 +10,7 @@ namespace WinFormApp.Model
     {
         public int soLuong { get; set; }
         public SanPham sanPham { get; set; }
-        public float thanhTien { get; set; }
+        public decimal thanhTien { get; set; }
 
         public CTHDNHAP()
         {
@@ -20,7 +20,7 @@ namespace WinFormApp.Model
         {
             this.soLuong = soLuong;
             this.sanPham = sanPham;
-            this.thanhTien = soLuong * sanPham.donGia;
+            this.thanhTien = Convert.ToDecimal(soLuong) * sanPham.donGia;
         }
     }
 }

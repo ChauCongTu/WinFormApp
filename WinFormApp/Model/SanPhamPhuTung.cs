@@ -15,7 +15,7 @@ namespace WinFormApp.Model
         {
 
         }
-        public SanPhamPhuTung(string masp, string tensp, float dongia, string dvt, string maPhuTung, string moTa, int soLuong) : base( masp,  tensp,  dongia,  dvt)
+        public SanPhamPhuTung(string masp, string tensp, decimal dongia, string dvt, string maPhuTung, string moTa, int soLuong) : base( masp,  tensp,  dongia,  dvt)
         {
             this.maPhuTung = maPhuTung;
             this.moTa = moTa;
