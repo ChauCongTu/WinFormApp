@@ -28,7 +28,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
+                decimal donGia = reader.GetDecimal(2);
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -58,7 +58,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
+                decimal donGia = reader.GetDecimal(2);
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -88,7 +88,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
+                decimal donGia = reader.GetDecimal(2);
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);
@@ -118,7 +118,7 @@ namespace WinFormApp.DAO
             {
                 string masp = reader.GetString(0);
                 string tensp = reader.GetString(1);
-                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
+                decimal donGia = reader.GetDecimal(2);
                 string dvt = reader.GetString(3);
                 string maXe = reader.GetString(4);
                 string soKhungXe = reader.GetString(5);

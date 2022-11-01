@@ -63,7 +63,7 @@ namespace WinFormApp.DAO
             {
                 string maSanPham = reader.GetString(0);
                 string tenSanPham = reader.GetString(1);
-                decimal donGia = 100000;
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(3);
                 sanPham = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
 
