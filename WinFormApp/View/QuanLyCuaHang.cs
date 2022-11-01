@@ -92,6 +92,8 @@ namespace WinFormApp
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             switchSelect(btnNhanVien);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucNhanVien());
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
@@ -109,6 +111,8 @@ namespace WinFormApp
         private void btnKhoPhuTung_Click(object sender, EventArgs e)
         {
             switchSelect(btnKhoPhuTung);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucKhoPhuTung());
         }
 
         private void btnNhapHang_Click(object sender, EventArgs e)
