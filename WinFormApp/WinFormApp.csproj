@@ -95,6 +95,7 @@
     <Compile Include="View\ChiTietHoaDonNhap.Designer.cs">
       <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Functions.cs" />
     <Compile Include="View\UserControl\ucQuanLyNhapHang.cs">
       <SubType>UserControl</SubType>
     </Compile>

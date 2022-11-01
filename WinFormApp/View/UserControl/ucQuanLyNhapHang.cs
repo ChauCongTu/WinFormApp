@@ -15,6 +15,7 @@ namespace WinFormApp.CustomControl
 {
     public partial class ucQuanLyNhapHang : UserControl
     {
+        Functions function = new Functions();
         ChiNhanh ChiNhanh = new ChiNhanh();
         HoaDonNhap hd = new HoaDonNhap();
         public ucQuanLyNhapHang()
@@ -28,44 +29,34 @@ namespace WinFormApp.CustomControl
         }
         void table_load()
         {
+            int i = 1;
             DAO_HoaDonNhap dAO_HoaDonNhap = new DAO_HoaDonNhap();
+
             List<HoaDonNhap> hoaDonNhap = dAO_HoaDonNhap.GetAll();
-            dgvHoaDonXuat.DataSource = hoaDonNhap;
+            foreach(HoaDonNhap hoaDon in hoaDonNhap)
+            {
+                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+                i++;
+            }
         }
-        void turnOffButton(Button btn, PictureBox picture)
-        {
-            btn.Enabled = false;
-            btn.BackColor = Color.FromArgb(238, 238, 238);
-            picture.BackColor = Color.FromArgb(238, 238, 238);
-        }
-        void turnOffButton(Button btn)
-        {
-            btn.Enabled = false;
-            btn.BackColor = Color.FromArgb(238, 238, 238);
-        }
-        void turnOnButton(Button btn, PictureBox picture)
-        {
-            btn.Enabled = true;
-            btn.BackColor = Color.FromArgb(23, 162, 139);
-            picture.BackColor = Color.FromArgb(23, 162, 139);
-        }
-        void turnOnButton(Button btn)
-        {
-            btn.Enabled = true;
-            btn.BackColor = Color.FromArgb(23, 162, 139);
-        }
+        
 
         private void ucQuanLyNhapHang_Load(object sender, EventArgs e)
         {
+            table_load();
             txtSoHD.Enabled = false;
             dtpNgayHD.Enabled = false;
             cbChiNhanh.Enabled = false;
             cbNhaCungCap.Enabled = false;
             cbNhanVien.Enabled = false;
-            turnOffButton(btnSave, pbSave);
-            turnOffButton(btnChiTietHD);
-            turnOffButton(btnUpdate, pbUpdate);
-            turnOffButton(btnDelete, pbDelete);
+            function.turnOffButton(btnSave, pbSave);
+            function.turnOffButton(btnChiTietHD);
+            function.turnOffButton(btnUpdate, pbUpdate);
+            function.turnOffButton(btnDelete, pbDelete);
+            DAO_ChiNhanh dAO_ChiNhanh = new DAO_ChiNhanh();
+            cbChiNhanh.DataSource = dAO_ChiNhanh.getAll();
+            cbChiNhanh.ValueMember = "maChiNhanh";
+            cbChiNhanh.DisplayMember = "tenChiNhanh";
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -73,11 +64,10 @@ namespace WinFormApp.CustomControl
             txtSoHD.Enabled = true;
             dtpNgayHD.Enabled = true;
             cbNhaCungCap.Enabled = true;
-            cbNhanVien.Enabled = true;
             cbChiNhanh.Enabled = true;
-            turnOnButton(btnChiTietHD);
-            turnOffButton(btnNew, pbAdd);
-            turnOnButton(btnSave, pbSave);
+            function.turnOnButton(btnChiTietHD);
+            function.turnOffButton(btnNew, pbAdd);
+            function.turnOnButton(btnSave, pbSave);
         }
 
         private void btnChiTietHD_Click(object sender, EventArgs e)
@@ -98,6 +88,23 @@ namespace WinFormApp.CustomControl
                 ChiTietHoaDonNhap chiTietHoaDon = new ChiTietHoaDonNhap(hoaDonNhap);
                 chiTietHoaDon.ShowDialog();
             }
+        }
+
+        private void dgvHoaDonXuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dgvHoaDonXuat_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            function.turnOnButton(btnUpdate, pbUpdate);
+            function.turnOnButton(btnDelete, pbDelete);
+        }
+
+        private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
+
         }
     }
 }

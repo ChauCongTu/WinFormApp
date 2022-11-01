@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormApp.CustomControl;
+using WinFormApp.Model;
 
 namespace WinFormApp
 {
     public partial class QuanLyCuaHang : Form
     {
+        NhanVien nhanVien = new NhanVien();
         public QuanLyCuaHang()
         {
             InitializeComponent();
+        }
+        public QuanLyCuaHang(NhanVien nhanVien)
+        {
+            InitializeComponent();
+            this.nhanVien = nhanVien;
         }
         void switchSelect(RJButton btn)
         {
@@ -125,6 +132,23 @@ namespace WinFormApp
         private void rjButton1_Click(object sender, EventArgs e)
         {
             switchSelect(rjButton1);
+        }
+
+        private void QuanLyCuaHang_Load(object sender, EventArgs e)
+        {
+            lbUserName.Text = nhanVien.tenNhanVien;
+            if(nhanVien.capbac == 1)
+            {
+                lbCapBac.Text = "(Nhân Viên)";
+            }
+            if(nhanVien.capbac == 2)
+            {
+                lbCapBac.Text = "(Quản Lý)";
+            }
+            if(nhanVien.capbac == 3)
+            {
+                lbCapBac.Text = "(Admin)";
+            }
         }
     }
 }

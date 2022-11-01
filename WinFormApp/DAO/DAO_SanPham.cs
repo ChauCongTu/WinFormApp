@@ -27,7 +27,7 @@ namespace WinFormApp.DAO
             {
                 string maSanPham = reader.GetString(0);
                 string tenSanPham = reader.GetString(1);
-                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(3);
                 SanPham sp = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
                 list.Add(sp);
@@ -45,7 +45,7 @@ namespace WinFormApp.DAO
             {
                 string maSanPham = reader.GetString(0);
                 string tenSanPham = reader.GetString(1);
-                decimal donGia = Convert.ToDecimal(reader.GetSqlMoney(2));
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(3);
                 SanPham sp = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
                 list.Add(sp);

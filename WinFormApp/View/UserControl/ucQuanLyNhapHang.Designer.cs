@@ -29,23 +29,20 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.rjButton1 = new WinFormApp.RJButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
             this.dgvHoaDonXuat = new System.Windows.Forms.DataGridView();
-            this.txtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNgayHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSoHD = new System.Windows.Forms.TextBox();
+            this.pbDelete = new System.Windows.Forms.PictureBox();
+            this.pbUpdate = new System.Windows.Forms.PictureBox();
             this.btnDelete = new WinFormApp.RJButton();
+            this.pbSave = new System.Windows.Forms.PictureBox();
+            this.pbAdd = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cbNhanVien = new System.Windows.Forms.ComboBox();
             this.btnExit = new WinFormApp.RJButton();
             this.cbNhaCungCap = new System.Windows.Forms.ComboBox();
@@ -60,19 +57,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
-            this.pbUpdate = new System.Windows.Forms.PictureBox();
-            this.pbSave = new System.Windows.Forms.PictureBox();
-            this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.rjButton1 = new WinFormApp.RJButton();
+            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
+            this.txtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNgayHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -84,25 +84,6 @@
             this.label7.Size = new System.Drawing.Size(24, 26);
             this.label7.TabIndex = 50;
             this.label7.Text = "~";
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.DimGray;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 1;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(398, 369);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(82, 34);
-            this.rjButton1.TabIndex = 51;
-            this.rjButton1.Text = "Lọc";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker2
             // 
@@ -132,24 +113,6 @@
             this.label6.TabIndex = 53;
             this.label6.Text = "Tra cứu số hóa đơn:";
             // 
-            // txtTraCuuHoaDon
-            // 
-            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
-            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTraCuuHoaDon.BorderSize = 2;
-            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(860, 367);
-            this.txtTraCuuHoaDon.Multiline = false;
-            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
-            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTraCuuHoaDon.PasswordChar = false;
-            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
-            this.txtTraCuuHoaDon.TabIndex = 49;
-            this.txtTraCuuHoaDon.Texts = "";
-            this.txtTraCuuHoaDon.UnderlinedStyle = true;
-            // 
             // dgvHoaDonXuat
             // 
             this.dgvHoaDonXuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -158,7 +121,7 @@
             this.dgvHoaDonXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtNo,
             this.txtID,
-            this.txtKhachHang,
+            this.txtNhaCungCap,
             this.txtNgayHD,
             this.txtNhanVien,
             this.txtTongTien});
@@ -168,47 +131,8 @@
             this.dgvHoaDonXuat.RowTemplate.Height = 24;
             this.dgvHoaDonXuat.Size = new System.Drawing.Size(1121, 371);
             this.dgvHoaDonXuat.TabIndex = 48;
-            // 
-            // txtNo
-            // 
-            this.txtNo.HeaderText = "Số TT";
-            this.txtNo.MinimumWidth = 6;
-            this.txtNo.Name = "txtNo";
-            this.txtNo.ReadOnly = true;
-            // 
-            // txtID
-            // 
-            this.txtID.HeaderText = "Số hóa đơn";
-            this.txtID.MinimumWidth = 6;
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            // 
-            // txtKhachHang
-            // 
-            this.txtKhachHang.HeaderText = "Khách hàng";
-            this.txtKhachHang.MinimumWidth = 6;
-            this.txtKhachHang.Name = "txtKhachHang";
-            this.txtKhachHang.ReadOnly = true;
-            // 
-            // txtNgayHD
-            // 
-            this.txtNgayHD.HeaderText = "Ngày lập HĐ";
-            this.txtNgayHD.MinimumWidth = 6;
-            this.txtNgayHD.Name = "txtNgayHD";
-            this.txtNgayHD.ReadOnly = true;
-            // 
-            // txtNhanVien
-            // 
-            this.txtNhanVien.HeaderText = "Nhân viên lập HĐ";
-            this.txtNhanVien.MinimumWidth = 6;
-            this.txtNhanVien.Name = "txtNhanVien";
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.HeaderText = "Tổng tiền";
-            this.txtTongTien.MinimumWidth = 6;
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
+            this.dgvHoaDonXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellClick);
+            this.dgvHoaDonXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellContentClick);
             // 
             // panel1
             // 
@@ -248,6 +172,7 @@
             this.cbChiNhanh.Name = "cbChiNhanh";
             this.cbChiNhanh.Size = new System.Drawing.Size(250, 34);
             this.cbChiNhanh.TabIndex = 46;
+            this.cbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cbChiNhanh_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -266,6 +191,28 @@
             this.txtSoHD.Name = "txtSoHD";
             this.txtSoHD.Size = new System.Drawing.Size(250, 30);
             this.txtSoHD.TabIndex = 44;
+            // 
+            // pbDelete
+            // 
+            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
+            this.pbDelete.Location = new System.Drawing.Point(720, 268);
+            this.pbDelete.Name = "pbDelete";
+            this.pbDelete.Size = new System.Drawing.Size(31, 31);
+            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDelete.TabIndex = 43;
+            this.pbDelete.TabStop = false;
+            // 
+            // pbUpdate
+            // 
+            this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
+            this.pbUpdate.Location = new System.Drawing.Point(511, 271);
+            this.pbUpdate.Name = "pbUpdate";
+            this.pbUpdate.Size = new System.Drawing.Size(28, 28);
+            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUpdate.TabIndex = 20;
+            this.pbUpdate.TabStop = false;
             // 
             // btnDelete
             // 
@@ -287,6 +234,39 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.TextColor = System.Drawing.Color.White;
             this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // pbSave
+            // 
+            this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
+            this.pbSave.Location = new System.Drawing.Point(292, 271);
+            this.pbSave.Name = "pbSave";
+            this.pbSave.Size = new System.Drawing.Size(28, 28);
+            this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSave.TabIndex = 19;
+            this.pbSave.TabStop = false;
+            // 
+            // pbAdd
+            // 
+            this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
+            this.pbAdd.Location = new System.Drawing.Point(80, 271);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(28, 28);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdd.TabIndex = 18;
+            this.pbAdd.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
+            this.pictureBox5.Location = new System.Drawing.Point(945, 271);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 41;
+            this.pictureBox5.TabStop = false;
             // 
             // cbNhanVien
             // 
@@ -481,60 +461,88 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Hóa Đơn Nhập";
             // 
-            // pbDelete
+            // rjButton1
             // 
-            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
-            this.pbDelete.Location = new System.Drawing.Point(720, 268);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(31, 31);
-            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete.TabIndex = 43;
-            this.pbDelete.TabStop = false;
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.DimGray;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 1;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(398, 369);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(82, 34);
+            this.rjButton1.TabIndex = 51;
+            this.rjButton1.Text = "Lọc";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // pbUpdate
+            // txtTraCuuHoaDon
             // 
-            this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
-            this.pbUpdate.Location = new System.Drawing.Point(511, 271);
-            this.pbUpdate.Name = "pbUpdate";
-            this.pbUpdate.Size = new System.Drawing.Size(28, 28);
-            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUpdate.TabIndex = 20;
-            this.pbUpdate.TabStop = false;
+            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
+            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTraCuuHoaDon.BorderSize = 2;
+            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(860, 367);
+            this.txtTraCuuHoaDon.Multiline = false;
+            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
+            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTraCuuHoaDon.PasswordChar = false;
+            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
+            this.txtTraCuuHoaDon.TabIndex = 49;
+            this.txtTraCuuHoaDon.Texts = "";
+            this.txtTraCuuHoaDon.UnderlinedStyle = true;
             // 
-            // pbSave
+            // txtNo
             // 
-            this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
-            this.pbSave.Location = new System.Drawing.Point(292, 271);
-            this.pbSave.Name = "pbSave";
-            this.pbSave.Size = new System.Drawing.Size(28, 28);
-            this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSave.TabIndex = 19;
-            this.pbSave.TabStop = false;
+            this.txtNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.txtNo.HeaderText = "Số TT";
+            this.txtNo.MinimumWidth = 6;
+            this.txtNo.Name = "txtNo";
+            this.txtNo.ReadOnly = true;
             // 
-            // pbAdd
+            // txtID
             // 
-            this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
-            this.pbAdd.Location = new System.Drawing.Point(80, 271);
-            this.pbAdd.Name = "pbAdd";
-            this.pbAdd.Size = new System.Drawing.Size(28, 28);
-            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAdd.TabIndex = 18;
-            this.pbAdd.TabStop = false;
+            this.txtID.HeaderText = "Số hóa đơn";
+            this.txtID.MinimumWidth = 6;
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             // 
-            // pictureBox5
+            // txtNhaCungCap
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
-            this.pictureBox5.Location = new System.Drawing.Point(945, 271);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 41;
-            this.pictureBox5.TabStop = false;
+            this.txtNhaCungCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.txtNhaCungCap.HeaderText = "Nhà cung cấp";
+            this.txtNhaCungCap.MinimumWidth = 6;
+            this.txtNhaCungCap.Name = "txtNhaCungCap";
+            this.txtNhaCungCap.ReadOnly = true;
+            this.txtNhaCungCap.Width = 245;
+            // 
+            // txtNgayHD
+            // 
+            this.txtNgayHD.HeaderText = "Ngày lập HĐ";
+            this.txtNgayHD.MinimumWidth = 6;
+            this.txtNgayHD.Name = "txtNgayHD";
+            this.txtNgayHD.ReadOnly = true;
+            // 
+            // txtNhanVien
+            // 
+            this.txtNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.txtNhanVien.HeaderText = "Nhân viên lập HĐ";
+            this.txtNhanVien.MinimumWidth = 6;
+            this.txtNhanVien.Name = "txtNhanVien";
+            this.txtNhanVien.Width = 242;
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.HeaderText = "Tổng tiền";
+            this.txtTongTien.MinimumWidth = 6;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
             // 
             // ucQuanLyNhapHang
             // 
@@ -554,13 +562,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,12 +583,6 @@
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.RJTextBox txtTraCuuHoaDon;
         private System.Windows.Forms.DataGridView dgvHoaDonXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtNgayHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtTongTien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbChiNhanh;
         private System.Windows.Forms.Label label8;
@@ -605,5 +607,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtNhaCungCap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtNgayHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtTongTien;
     }
 }

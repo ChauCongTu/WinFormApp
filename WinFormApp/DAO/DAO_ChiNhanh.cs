@@ -22,7 +22,7 @@ namespace WinFormApp.DAO
         {
             List<ChiNhanh> list = new List<ChiNhanh>();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM CHINHANH");
+            command = new SqlCommand($"SELECT * FROM CHINHANH", _conn);
             reader = command.ExecuteReader();
             DAO_NhanVien _NhanVien = new DAO_NhanVien();
             DAO_SanPham _SanPham = new DAO_SanPham();

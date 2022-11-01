@@ -62,6 +62,26 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
+        public HoaDonNhap GetLast()
+        {
+            HoaDonNhap hoaDonNhap = new HoaDonNhap();
+            command = new SqlCommand($"SELECT TOP(1).* FROM HOADONNHAP ORDER BY DESC", _conn);
+            reader = command.ExecuteReader();
+            DAO_NhaCungCap dAO_NhaCungCap = new DAO_NhaCungCap();
+            DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
+            DAO_ChiTietHoaDonNhap dAO_ChiTietHoaDonNhap = new DAO_ChiTietHoaDonNhap();
+            while (reader.Read())
+            {
+                string soHoaDon = reader.GetString(0);
+                DateTime ngayLapHoaDon = reader.GetDateTime(3);
+                NhanVien nhanVien = dAO_NhanVien.GetByID(reader.GetString(1));
+                NhaCungCap nhaCungCap = dAO_NhaCungCap.GetByID(reader.GetString(2));
+                List<CTHDNHAP> chiTiet = dAO_ChiTietHoaDonNhap.GetList(reader.GetString(0));
+                hoaDonNhap = new HoaDonNhap(soHoaDon, ngayLapHoaDon, nhanVien, nhaCungCap, chiTiet);
+            }
+            _conn.Close();
+            return hoaDonNhap;
+        }
         public HoaDonNhap GetByID(string _soHoaDon)
         {
             HoaDonNhap hoaDonNhap = new HoaDonNhap();
