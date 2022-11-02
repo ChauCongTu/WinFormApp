@@ -52,6 +52,10 @@ namespace WinFormApp
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            QuanLyCuaHang qlch = new QuanLyCuaHang();
+            qlch.ShowDialog();
+            this.Close();
             txtErr1.Text = "";
             txtErr2.Text = "";
             string usn = txtUsername.Texts;
@@ -79,10 +83,7 @@ namespace WinFormApp
                 }
                 else
                 {
-                    this.Hide();
-                    QuanLyCuaHang qlch = new QuanLyCuaHang(nhanVien);
-                    qlch.ShowDialog();
-                    this.Close();
+                    //Thêm đăng nhập vào đây
                 }
             }
         }
