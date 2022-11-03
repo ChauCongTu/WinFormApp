@@ -139,12 +139,6 @@
     <Compile Include="Model\CTHDXUAT.cs" />
     <Compile Include="Model\HoaDonXuat.cs" />
     <Compile Include="Model\SanPham.cs" />
-    <Compile Include="View\UserControl\ucQuanLyThongKe.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\UserControl\ucQuanLyThongKe.Designer.cs">
-      <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\UserControl\ucQuanLyXuatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChiTietHoaDonXuat.resx">
       <DependentUpon>ChiTietHoaDonXuat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControl\ucQuanLyThongKe.resx">
-      <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucQuanLyXuatHang.resx">
       <DependentUpon>ucQuanLyXuatHang.cs</DependentUpon>
