@@ -34,17 +34,11 @@
             this.txtSoHD = new System.Windows.Forms.TextBox();
             this.pbDelete = new System.Windows.Forms.PictureBox();
             this.pbUpdate = new System.Windows.Forms.PictureBox();
-            this.btnDelete = new WinFormApp.RJButton();
             this.pbSave = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cbNhanVien = new System.Windows.Forms.ComboBox();
-            this.btnExit = new WinFormApp.RJButton();
             this.cbKhachHang = new System.Windows.Forms.ComboBox();
-            this.btnUpdate = new WinFormApp.RJButton();
-            this.btnChiTietHD = new WinFormApp.RJButton();
-            this.btnSave = new WinFormApp.RJButton();
-            this.btnNew = new WinFormApp.RJButton();
             this.dtpNgayHD = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,8 +57,14 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
             this.rjButton1 = new WinFormApp.RJButton();
+            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
+            this.btnDelete = new WinFormApp.RJButton();
+            this.btnExit = new WinFormApp.RJButton();
+            this.btnUpdate = new WinFormApp.RJButton();
+            this.btnChiTietHD = new WinFormApp.RJButton();
+            this.btnSave = new WinFormApp.RJButton();
+            this.btnNew = new WinFormApp.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
@@ -155,27 +155,6 @@
             this.pbUpdate.TabIndex = 20;
             this.pbUpdate.TabStop = false;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.DimGray;
-            this.btnDelete.BorderRadius = 0;
-            this.btnDelete.BorderSize = 1;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(701, 270);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(157, 40);
-            this.btnDelete.TabIndex = 42;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
             // pbSave
             // 
             this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -218,27 +197,6 @@
             this.cbNhanVien.Size = new System.Drawing.Size(250, 34);
             this.cbNhanVien.TabIndex = 17;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnExit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnExit.BorderColor = System.Drawing.Color.DimGray;
-            this.btnExit.BorderRadius = 0;
-            this.btnExit.BorderSize = 1;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(919, 270);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(157, 40);
-            this.btnExit.TabIndex = 40;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.TextColor = System.Drawing.Color.White;
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
             // cbKhachHang
             // 
             this.cbKhachHang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,90 +205,6 @@
             this.cbKhachHang.Name = "cbKhachHang";
             this.cbKhachHang.Size = new System.Drawing.Size(250, 34);
             this.cbKhachHang.TabIndex = 16;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnUpdate.BorderColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.BorderRadius = 0;
-            this.btnUpdate.BorderSize = 1;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(488, 270);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnUpdate.Size = new System.Drawing.Size(157, 40);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Chỉnh Sửa";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.TextColor = System.Drawing.Color.White;
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnChiTietHD
-            // 
-            this.btnChiTietHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnChiTietHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnChiTietHD.BorderColor = System.Drawing.Color.DimGray;
-            this.btnChiTietHD.BorderRadius = 0;
-            this.btnChiTietHD.BorderSize = 1;
-            this.btnChiTietHD.FlatAppearance.BorderSize = 0;
-            this.btnChiTietHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChiTietHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiTietHD.ForeColor = System.Drawing.Color.White;
-            this.btnChiTietHD.Location = new System.Drawing.Point(701, 181);
-            this.btnChiTietHD.Name = "btnChiTietHD";
-            this.btnChiTietHD.Size = new System.Drawing.Size(375, 34);
-            this.btnChiTietHD.TabIndex = 11;
-            this.btnChiTietHD.Text = "Chi tiết hóa đơn";
-            this.btnChiTietHD.TextColor = System.Drawing.Color.White;
-            this.btnChiTietHD.UseVisualStyleBackColor = false;
-            this.btnChiTietHD.Click += new System.EventHandler(this.btnChiTietHD_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnSave.BorderColor = System.Drawing.Color.DimGray;
-            this.btnSave.BorderRadius = 0;
-            this.btnSave.BorderSize = 1;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(269, 270);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(157, 40);
-            this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "Lưu Lại";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnNew.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnNew.BorderColor = System.Drawing.Color.DimGray;
-            this.btnNew.BorderRadius = 0;
-            this.btnNew.BorderSize = 1;
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(56, 270);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnNew.Size = new System.Drawing.Size(157, 40);
-            this.btnNew.TabIndex = 9;
-            this.btnNew.Text = "Thêm Mới";
-            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.TextColor = System.Drawing.Color.White;
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // dtpNgayHD
             // 
@@ -500,24 +374,6 @@
             this.label7.TabIndex = 45;
             this.label7.Text = "~";
             // 
-            // txtTraCuuHoaDon
-            // 
-            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
-            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTraCuuHoaDon.BorderSize = 2;
-            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(863, 359);
-            this.txtTraCuuHoaDon.Multiline = false;
-            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
-            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTraCuuHoaDon.PasswordChar = false;
-            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
-            this.txtTraCuuHoaDon.TabIndex = 2;
-            this.txtTraCuuHoaDon.Texts = "";
-            this.txtTraCuuHoaDon.UnderlinedStyle = true;
-            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -536,6 +392,151 @@
             this.rjButton1.Text = "Lọc";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // txtTraCuuHoaDon
+            // 
+            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
+            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTraCuuHoaDon.BorderSize = 2;
+            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(863, 359);
+            this.txtTraCuuHoaDon.Multiline = false;
+            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
+            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTraCuuHoaDon.PasswordChar = false;
+            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
+            this.txtTraCuuHoaDon.TabIndex = 2;
+            this.txtTraCuuHoaDon.Texts = "";
+            this.txtTraCuuHoaDon.UnderlinedStyle = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderSize = 1;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(701, 270);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(157, 40);
+            this.btnDelete.TabIndex = 42;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnExit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnExit.BorderColor = System.Drawing.Color.DimGray;
+            this.btnExit.BorderRadius = 0;
+            this.btnExit.BorderSize = 1;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(919, 270);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(157, 40);
+            this.btnExit.TabIndex = 40;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.TextColor = System.Drawing.Color.White;
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnUpdate.BorderColor = System.Drawing.Color.DimGray;
+            this.btnUpdate.BorderRadius = 0;
+            this.btnUpdate.BorderSize = 1;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(488, 270);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnUpdate.Size = new System.Drawing.Size(157, 40);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Chỉnh Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnChiTietHD
+            // 
+            this.btnChiTietHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnChiTietHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnChiTietHD.BorderColor = System.Drawing.Color.DimGray;
+            this.btnChiTietHD.BorderRadius = 0;
+            this.btnChiTietHD.BorderSize = 1;
+            this.btnChiTietHD.FlatAppearance.BorderSize = 0;
+            this.btnChiTietHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChiTietHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTietHD.ForeColor = System.Drawing.Color.White;
+            this.btnChiTietHD.Location = new System.Drawing.Point(701, 181);
+            this.btnChiTietHD.Name = "btnChiTietHD";
+            this.btnChiTietHD.Size = new System.Drawing.Size(375, 34);
+            this.btnChiTietHD.TabIndex = 11;
+            this.btnChiTietHD.Text = "Chi tiết hóa đơn";
+            this.btnChiTietHD.TextColor = System.Drawing.Color.White;
+            this.btnChiTietHD.UseVisualStyleBackColor = false;
+            this.btnChiTietHD.Click += new System.EventHandler(this.btnChiTietHD_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnSave.BorderColor = System.Drawing.Color.DimGray;
+            this.btnSave.BorderRadius = 0;
+            this.btnSave.BorderSize = 1;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(269, 270);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(157, 40);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Lưu Lại";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnNew.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnNew.BorderColor = System.Drawing.Color.DimGray;
+            this.btnNew.BorderRadius = 0;
+            this.btnNew.BorderSize = 1;
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(56, 270);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnNew.Size = new System.Drawing.Size(157, 40);
+            this.btnNew.TabIndex = 9;
+            this.btnNew.Text = "Thêm Mới";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.TextColor = System.Drawing.Color.White;
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // ucQuanLyXuatHang
             // 

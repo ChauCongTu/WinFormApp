@@ -95,6 +95,18 @@ namespace WinFormApp.CustomControl
             turnOnButton(btnChiTietHD);
             turnOffButton(btnNew, pbAdd);
             turnOnButton(btnSave, pbSave);
+            if (txtSoHD.Text.Length == 0 || cbKhachHang.Text.Length == 0 || cbNhanVien.Text.Length == 0)
+            {
+                RJMessageBox.Show("Vui lòng điền các thông tin cho hóa đơn!",
+                    "Có lỗi xảy ra",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

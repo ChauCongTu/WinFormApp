@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormApp.Model;
 
 namespace WinFormApp.CustomControl
 {
@@ -62,6 +63,13 @@ namespace WinFormApp.CustomControl
             turnOnButton(btnSave, pbsave);
             turnOffButton(btn_sua, pbedit);
             turnOffButton(btn_xoa, pbdelete);
+            if (txtMaphutung.Text.Length == 0 || txtTenphutung.Text.Length == 0 || txtMota.Text.Length == 0 || txtSoluong.Text.Length == 0)
+            {
+                RJMessageBox.Show("Vui lòng điền đầy đủ các thông tin phụ tùng!",
+                    "Có lỗi xảy ra",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -73,6 +81,18 @@ namespace WinFormApp.CustomControl
             turnOnButton(btnSave, pbsave);
             turnOffButton(btn_them, pbadd);
             turnOffButton(btn_xoa, pbdelete);
+            if (txtMaphutung.Text.Length == 0 || txtTenphutung.Text.Length == 0 || txtMota.Text.Length == 0 || txtSoluong.Text.Length == 0)
+            {
+                RJMessageBox.Show("Vui lòng điền đầy đủ các thông tin phụ tùng!",
+                    "Có lỗi xảy ra",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void ucKhoPhuTung_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

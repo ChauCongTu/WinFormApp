@@ -73,6 +73,13 @@ namespace WinFormApp.CustomControl
             turnOnButton(btnSave, pbsave);
             turnOffButton(btn_sua, pbedit);
             turnOffButton(btn_xoa, pbdelete);
+            if (txtManhanvien.Text.Length == 0 || txtTen.Text.Length == 0|| txtDiachi.Text.Length == 0 || txtSodienthoai.Text.Length == 0|| rdNam.Text.Length == 0 || rdNu.Text.Length == 0 || cbChucvu.Text.Length == 0)
+            {
+                RJMessageBox.Show("Vui lòng điền đầy đủ các thông tin nhân viên!",
+                    "Có lỗi xảy ra",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

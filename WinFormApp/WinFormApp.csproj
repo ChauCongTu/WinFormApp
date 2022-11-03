@@ -290,5 +290,11 @@
   <ItemGroup>
     <None Include="Resources\filled-filter-128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhanVien1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\PhuTung1-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
