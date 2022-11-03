@@ -16,20 +16,5 @@ namespace WinFormApp.CustomControl
         {
             InitializeComponent();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvThongKe_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

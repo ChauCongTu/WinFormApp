@@ -383,6 +383,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "QuanLyCuaHang";
             this.Text = "Quản lý cửa hàng Honda Phát Tiến";
+            this.Load += new System.EventHandler(this.QuanLyCuaHang_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel3.ResumeLayout(false);
             this.gradientPanel3.PerformLayout();

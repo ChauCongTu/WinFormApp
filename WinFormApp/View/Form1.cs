@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormApp.CustomControl;
+using WinFormApp.DAO;
+using WinFormApp.Model;
 using WinFormApp.View;
 //Demo Pull
 namespace WinFormApp
@@ -14,6 +17,7 @@ namespace WinFormApp
     public partial class Form1 : Form
     {
         int _showPass = 0;
+        Functions _function = new Functions();
         public Form1()
         {
             InitializeComponent();
@@ -41,15 +45,46 @@ namespace WinFormApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtErr1.Text = "";
+            txtErr2.Text = "";
             txtPassword.PasswordChar = true;
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            QuanLyCuaHang qlch = new QuanLyCuaHang();
-            qlch.ShowDialog();
-            this.Close();
+            txtErr1.Text = "";
+            txtErr2.Text = "";
+            string usn = txtUsername.Texts;
+            string pwd = txtPassword.Texts;
+
+            if (usn.Length == 0)
+            {
+                txtErr1.Text = "*Tên đăng nhập không được để trống";
+            }
+            if (pwd.Length < 6)
+            {
+                txtErr2.Text = "*Mật khẩu phải ít nhất 6 kí tự";
+            }
+            DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
+            NhanVien nhanVien = dAO_NhanVien.GetByUsrName(usn);
+            if (nhanVien.tenDangNhap != usn)
+            {
+                txtErr1.Text = "*Tên đăng nhập không tồn tại";
+            }
+            else
+            {
+                if(_function.GetMD5(pwd) != nhanVien.matKhau)
+                {
+                    txtErr2.Text = "*Mật khẩu không chính xác";
+                }
+                else
+                {
+                    this.Hide();
+                    QuanLyCuaHang qlch = new QuanLyCuaHang(nhanVien);
+                    qlch.ShowDialog();
+                    this.Close();
+                }
+            }
         }
     }
 }

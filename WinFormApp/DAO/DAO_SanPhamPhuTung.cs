@@ -29,7 +29,7 @@ namespace WinFormApp.DAO
                 string maPhuTung = reader.GetString(1);
                 string tenSanPham = reader.GetString(2);
                 int soLuong = reader.GetInt32(3);
-                float donGia = reader.GetFloat(4);
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(5);
                 string mota = reader.GetString(6);
                 SanPhamPhuTung sanPhamPhuTung = new SanPhamPhuTung(maSanPham, tenSanPham, donGia, donViTinh, maPhuTung, mota, soLuong);
@@ -50,7 +50,7 @@ namespace WinFormApp.DAO
                 string maPhuTung = reader.GetString(1);
                 string tenSanPham = reader.GetString(2);
                 int soLuong = reader.GetInt32(3);
-                float donGia = reader.GetFloat(4);
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(5);
                 string mota = reader.GetString(6);
                 SanPhamPhuTung sanPhamPhuTung = new SanPhamPhuTung(maSanPham, tenSanPham, donGia, donViTinh, maPhuTung, mota, soLuong);
@@ -71,7 +71,7 @@ namespace WinFormApp.DAO
                 string maPhuTung = reader.GetString(1);
                 string tenSanPham = reader.GetString(2);
                 int soLuong = reader.GetInt32(3);
-                float donGia = reader.GetFloat(4);
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(5);
                 string mota = reader.GetString(6);
                 sanPhamPhuTung = new SanPhamPhuTung(maSanPham, tenSanPham, donGia, donViTinh, maPhuTung, mota, soLuong);

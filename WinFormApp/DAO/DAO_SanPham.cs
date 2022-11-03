@@ -27,26 +27,49 @@ namespace WinFormApp.DAO
             {
                 string maSanPham = reader.GetString(0);
                 string tenSanPham = reader.GetString(1);
-                float donGia = reader.GetFloat(2);
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(3);
+                SanPham sp = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
+                list.Add(sp);
             }
+            _conn.Close();
             return list;    
         }
         public List<SanPham> GetList(string _maChiNhanh)
         {
             List<SanPham> list = new List<SanPham>();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM SANPHAM WHERE MACN = {_maChiNhanh}", _conn);
+            command = new SqlCommand($"SELECT * FROM SANPHAM WHERE MACN = '{_maChiNhanh}'", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {
                 string maSanPham = reader.GetString(0);
                 string tenSanPham = reader.GetString(1);
-                float donGia = reader.GetFloat(2);
+                decimal donGia = reader.GetDecimal(2);
                 string donViTinh = reader.GetString(3);
+                SanPham sp = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
+                list.Add(sp);
             }
+            _conn.Close();
             return list;
+        }
+        public SanPham GetByID (string _maSanPham)
+        {
+            SanPham sanPham = new SanPham();
+            _conn.Open();
+            command = new SqlCommand($"SELECT * FROM SANPHAM WHERE MASP = '{_maSanPham}'", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maSanPham = reader.GetString(0);
+                string tenSanPham = reader.GetString(1);
+                decimal donGia = reader.GetDecimal(2);
+                string donViTinh = reader.GetString(3);
+                sanPham = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
 
+            }
+            _conn.Close();
+            return sanPham;
         }
     }
 }

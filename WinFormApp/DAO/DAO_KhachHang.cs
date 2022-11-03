@@ -54,6 +54,25 @@ namespace WinFormApp.DAO
             _conn.Close();
             return khachHang;
         }
+        public List<KhachHang> GetByName(string _tenKhachHang)
+        {
+            List<KhachHang> list = new List<KhachHang>();
+            _conn.Open();
+            command = new SqlCommand($"SELECT * FROM KHACHHANG WHERE TENKH LIKE '%{_tenKhachHang}%'", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maKhachHang = reader.GetString(0);
+                string tenKhachHang = reader.GetString(1);
+                string diaChi = reader.GetString(2);
+                string soDienThoai = reader.GetString(3);
+                int chungMinhNhanDan = reader.GetInt32(4);
+                KhachHang khachHang = new KhachHang(maKhachHang, tenKhachHang, diaChi, soDienThoai, chungMinhNhanDan);
+                list.Add(khachHang);
+            }
+            _conn.Close();
+            return list;
+        }
         public void Add(KhachHang khachHang)
         {
             _conn.Open();

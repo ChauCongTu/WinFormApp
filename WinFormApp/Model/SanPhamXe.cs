@@ -24,7 +24,7 @@ namespace WinFormApp.Model
         {
 
         }
-        public SanPhamXe(string masp, string tensp, float dongia, string dvt, string maXe, string soKhungXe, float khoiLuong, float dungTichBinhXang, float dungTichXiLanh, string loaiDongCo, string hanhTrinhPittong, string tySoNen, string congSuatToiDa, string dungTichNhot, string loaiTruyenDong, string heThongKhoiDong) : base( masp,  tensp,  dongia,  dvt)
+        public SanPhamXe(string masp, string tensp, decimal dongia, string dvt, string maXe, string soKhungXe, float khoiLuong, float dungTichBinhXang, float dungTichXiLanh, string loaiDongCo, string hanhTrinhPittong, string tySoNen, string congSuatToiDa, string dungTichNhot, string loaiTruyenDong, string heThongKhoiDong) : base( masp,  tensp,  dongia,  dvt)
         {
             this.maXe = maXe;
             this.soKhungXe = soKhungXe;
