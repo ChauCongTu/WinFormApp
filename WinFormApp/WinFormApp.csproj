@@ -96,6 +96,24 @@
       <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Functions.cs" />
+    <Compile Include="View\UserControl\ucKhoPhuTung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucKhoPhuTung.designer.cs">
+      <DependentUpon>ucKhoPhuTung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucNhanVien.designer.cs">
+      <DependentUpon>ucNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyKhachHang.designer.cs">
+      <DependentUpon>ucQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControl\ucQuanLyNhapHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +139,12 @@
     <Compile Include="Model\CTHDXUAT.cs" />
     <Compile Include="Model\HoaDonXuat.cs" />
     <Compile Include="Model\SanPham.cs" />
+    <Compile Include="View\UserControl\ucQuanLyThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyThongKe.Designer.cs">
+      <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControl\ucQuanLyXuatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,11 +174,23 @@
     <EmbeddedResource Include="View\ChiTietHoaDonNhap.resx">
       <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucKhoPhuTung.resx">
+      <DependentUpon>ucKhoPhuTung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucNhanVien.resx">
+      <DependentUpon>ucNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucQuanLyKhachHang.resx">
+      <DependentUpon>ucQuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucQuanLyNhapHang.resx">
       <DependentUpon>ucQuanLyNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChiTietHoaDonXuat.resx">
       <DependentUpon>ChiTietHoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucQuanLyThongKe.resx">
+      <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucQuanLyXuatHang.resx">
       <DependentUpon>ucQuanLyXuatHang.cs</DependentUpon>
