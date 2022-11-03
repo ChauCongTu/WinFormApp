@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using WinFormApp.Model;
 
 namespace WinFormApp.CustomControl
 {
@@ -36,10 +38,41 @@ namespace WinFormApp.CustomControl
         {
 
         }
-
+        void turnOffButton(Button btn, PictureBox picture)
+        {
+            btn.Enabled = false;
+            btn.BackColor = Color.FromArgb(238, 238, 238);
+            picture.BackColor = Color.FromArgb(238, 238, 238);
+        }
+        void turnOffButton(Button btn)
+        {
+            btn.Enabled = false;
+            btn.BackColor = Color.FromArgb(238, 238, 238);
+        }
+        void turnOnButton(Button btn, PictureBox picture)
+        {
+            btn.Enabled = true;
+            btn.BackColor = Color.FromArgb(23, 162, 139);
+            picture.BackColor = Color.FromArgb(23, 162, 139);
+        }
+        void turnOnButton(Button btn)
+        {
+            btn.Enabled = true;
+            btn.BackColor = Color.FromArgb(23, 162, 139);
+        }
         private void button1_Click(object sender, EventArgs e)  // Chức năng thêm nhân viên
         {
-
+            txtManhanvien.Enabled = true;
+            txtTen.Enabled = true;
+            dtbNgaysinh.Enabled = true;
+            rdNam.Enabled = true;
+            rdNu.Enabled = true;
+            txtDiachi.Enabled = true;
+            txtSodienthoai.Enabled = true;
+            cbChucvu.Enabled = true;
+            turnOnButton(btnSave, pbsave);
+            turnOffButton(btn_sua, pbedit);
+            turnOffButton(btn_xoa, pbdelete);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -56,6 +89,31 @@ namespace WinFormApp.CustomControl
         {
             panel1.Controls.Clear();
             //panel1.Controls.Add(new QuanLyCuaHang());        Thêm chức năng thoát về trang chủ
+        }
+
+        private void text_ten_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            txtManhanvien.Enabled = true;
+            txtTen.Enabled = true;
+            dtbNgaysinh.Enabled = true;
+            rdNam.Enabled = true;
+            rdNu.Enabled = true;
+            txtDiachi.Enabled = true;
+            txtSodienthoai.Enabled = true;
+            cbChucvu.Enabled = true;
+            turnOnButton(btnSave, pbsave);
+            turnOffButton(btn_them, pbadd);
+            turnOffButton(btn_xoa, pbdelete);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
