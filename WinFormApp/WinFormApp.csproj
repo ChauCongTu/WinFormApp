@@ -78,6 +78,30 @@
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControl\ucTrangCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucTrangCaNhan.Designer.cs">
+      <DependentUpon>ucTrangCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyChiNhanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyChiNhanh.Designer.cs">
+      <DependentUpon>ucQuanLyChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChiTietXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChiTietXe.Designer.cs">
+      <DependentUpon>ChiTietXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyThongKe.Designer.cs">
+      <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DAO_ChiNhanh.cs" />
     <Compile Include="DAO\DAO_ChiTietHoaDonNhap.cs" />
     <Compile Include="DAO\DAO_ChiTietHoaDonXuat.cs" />
@@ -164,6 +188,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucTrangCaNhan.resx">
+      <DependentUpon>ucTrangCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucQuanLyChiNhanh.resx">
+      <DependentUpon>ucQuanLyChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChiTietXe.resx">
+      <DependentUpon>ChiTietXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucQuanLyThongKe.resx">
+      <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChiTietHoaDonNhap.resx">
       <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
@@ -285,6 +321,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\filled-filter-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

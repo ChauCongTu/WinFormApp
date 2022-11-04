@@ -33,6 +33,12 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvHoaDonXuat = new System.Windows.Forms.DataGridView();
+            this.txtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNgayHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,12 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton1 = new WinFormApp.RJButton();
             this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
-            this.txtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNgayHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -133,6 +135,53 @@
             this.dgvHoaDonXuat.TabIndex = 48;
             this.dgvHoaDonXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellClick);
             this.dgvHoaDonXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellContentClick);
+            // 
+            // txtNo
+            // 
+            this.txtNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.txtNo.HeaderText = "Số TT";
+            this.txtNo.MinimumWidth = 6;
+            this.txtNo.Name = "txtNo";
+            this.txtNo.ReadOnly = true;
+            this.txtNo.Width = 125;
+            // 
+            // txtID
+            // 
+            this.txtID.HeaderText = "Số hóa đơn";
+            this.txtID.MinimumWidth = 6;
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            // 
+            // txtNhaCungCap
+            // 
+            this.txtNhaCungCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.txtNhaCungCap.HeaderText = "Nhà cung cấp";
+            this.txtNhaCungCap.MinimumWidth = 6;
+            this.txtNhaCungCap.Name = "txtNhaCungCap";
+            this.txtNhaCungCap.ReadOnly = true;
+            this.txtNhaCungCap.Width = 245;
+            // 
+            // txtNgayHD
+            // 
+            this.txtNgayHD.HeaderText = "Ngày lập HĐ";
+            this.txtNgayHD.MinimumWidth = 6;
+            this.txtNgayHD.Name = "txtNgayHD";
+            this.txtNgayHD.ReadOnly = true;
+            // 
+            // txtNhanVien
+            // 
+            this.txtNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.txtNhanVien.HeaderText = "Nhân viên lập HĐ";
+            this.txtNhanVien.MinimumWidth = 6;
+            this.txtNhanVien.Name = "txtNhanVien";
+            this.txtNhanVien.Width = 242;
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.HeaderText = "Tổng tiền";
+            this.txtTongTien.MinimumWidth = 6;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
             // 
             // panel1
             // 
@@ -498,56 +547,22 @@
             this.txtTraCuuHoaDon.Texts = "";
             this.txtTraCuuHoaDon.UnderlinedStyle = true;
             // 
-            // txtNo
+            // pictureBox1
             // 
-            this.txtNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.txtNo.HeaderText = "Số TT";
-            this.txtNo.MinimumWidth = 6;
-            this.txtNo.Name = "txtNo";
-            this.txtNo.ReadOnly = true;
-            // 
-            // txtID
-            // 
-            this.txtID.HeaderText = "Số hóa đơn";
-            this.txtID.MinimumWidth = 6;
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            // 
-            // txtNhaCungCap
-            // 
-            this.txtNhaCungCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.txtNhaCungCap.HeaderText = "Nhà cung cấp";
-            this.txtNhaCungCap.MinimumWidth = 6;
-            this.txtNhaCungCap.Name = "txtNhaCungCap";
-            this.txtNhaCungCap.ReadOnly = true;
-            this.txtNhaCungCap.Width = 245;
-            // 
-            // txtNgayHD
-            // 
-            this.txtNgayHD.HeaderText = "Ngày lập HĐ";
-            this.txtNgayHD.MinimumWidth = 6;
-            this.txtNgayHD.Name = "txtNgayHD";
-            this.txtNgayHD.ReadOnly = true;
-            // 
-            // txtNhanVien
-            // 
-            this.txtNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.txtNhanVien.HeaderText = "Nhân viên lập HĐ";
-            this.txtNhanVien.MinimumWidth = 6;
-            this.txtNhanVien.Name = "txtNhanVien";
-            this.txtNhanVien.Width = 242;
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.HeaderText = "Tổng tiền";
-            this.txtTongTien.MinimumWidth = 6;
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_search;
+            this.pictureBox1.Location = new System.Drawing.Point(1108, 367);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
             // 
             // ucQuanLyNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.dateTimePicker2);
@@ -569,6 +584,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +629,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNgayHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtTongTien;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

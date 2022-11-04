@@ -133,7 +133,7 @@ namespace WinFormApp
         {
             switchSelect(btnThongKe);
             gpMain.Controls.Clear();
-//            gpMain.Controls.Add(new ucQuanLyThongKe());
+            gpMain.Controls.Add(new ucQuanLyThongKe());
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
@@ -156,6 +156,13 @@ namespace WinFormApp
             {
                 lbCapBac.Text = "(Admin)";
             }
+        }
+
+        private void rjCircularPictureBox1_Click(object sender, EventArgs e)
+        {
+            ucTrangCaNhan profile = new ucTrangCaNhan(nhanVien);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(profile);
         }
     }
 }
