@@ -82,6 +82,8 @@ namespace WinFormApp
         private void btnChiNhanh_Click(object sender, EventArgs e)
         {
             switchSelect(btnChiNhanh);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucQuanLyChiNhanh());
         }
 
         private void btnXuatHang_Click(object sender, EventArgs e)
