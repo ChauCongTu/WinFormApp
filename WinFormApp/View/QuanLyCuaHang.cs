@@ -96,6 +96,7 @@ namespace WinFormApp
         private void btnHome_Click(object sender, EventArgs e)
         {
             switchSelect(btnHome);
+            gpMain.Controls.Clear();
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -115,6 +116,8 @@ namespace WinFormApp
         private void btnKhoXe_Click(object sender, EventArgs e)
         {
             switchSelect(btnKhoXe);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucKhoXe());
         }
 
         private void btnKhoPhuTung_Click(object sender, EventArgs e)
@@ -141,6 +144,8 @@ namespace WinFormApp
         private void rjButton1_Click(object sender, EventArgs e)
         {
             switchSelect(rjButton1);
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucQuanLyNCC());
         }
 
         private void QuanLyCuaHang_Load(object sender, EventArgs e)

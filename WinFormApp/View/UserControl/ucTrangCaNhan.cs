@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormApp.Model;
+using WinFormApp.View;
 
 namespace WinFormApp.CustomControl
 {
@@ -58,6 +59,17 @@ namespace WinFormApp.CustomControl
             txtChungMinhNhanDan.Text = nhanVien.chungMinhNhanDan.ToString();
             txtDiaChi.Text = nhanVien.diaChi;
             dtpNgaySinh.Value = nhanVien.ngaySinh;
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMatKhau = new DoiMatKhau(nhanVien);
+            doiMatKhau.Show();
+        }
+
+        private void pbDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

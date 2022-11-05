@@ -366,9 +366,9 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(36, 65);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 26);
+            this.label5.Size = new System.Drawing.Size(142, 26);
             this.label5.TabIndex = 58;
-            this.label5.Text = "Số HĐ:";
+            this.label5.Text = "Mã sản phẩm:";
             // 
             // panel3
             // 

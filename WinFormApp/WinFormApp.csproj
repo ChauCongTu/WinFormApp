@@ -78,6 +78,24 @@
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\ucKhoXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ucKhoXe.Designer.cs">
+      <DependentUpon>ucKhoXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyNCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucQuanLyNCC.Designer.cs">
+      <DependentUpon>ucQuanLyNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControl\ucTrangCaNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +206,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\ucKhoXe.resx">
+      <DependentUpon>ucKhoXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucQuanLyNCC.resx">
+      <DependentUpon>ucQuanLyNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucTrangCaNhan.resx">
       <DependentUpon>ucTrangCaNhan.cs</DependentUpon>
@@ -324,6 +351,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\NhanVien1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\PhuTung1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\ChiNhanh1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\KhachHang1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_ncc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\XuatHang1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\KhoXe1-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

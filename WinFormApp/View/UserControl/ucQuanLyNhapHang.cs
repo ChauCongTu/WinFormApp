@@ -55,8 +55,8 @@ namespace WinFormApp.CustomControl
             function.turnOffButton(btnDelete, pbDelete);
             DAO_ChiNhanh dAO_ChiNhanh = new DAO_ChiNhanh();
             cbChiNhanh.DataSource = dAO_ChiNhanh.getAll();
-            cbChiNhanh.ValueMember = "maChiNhanh";
-            cbChiNhanh.DisplayMember = "tenChiNhanh";
+            cbChiNhanh.ValueMember = "maChiNhanh"; //giá trị
+            cbChiNhanh.DisplayMember = "tenChiNhanh"; //hiển thị
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace WinFormApp.CustomControl
                 NhanVien nv = new NhanVien("NV12345", "Châu Quế Nhơn", "JoshCQN", "123456", dateTime, 61527384, "An Nhơn - Bình Định", 3, "0848611127");
                 NhaCungCap nhaCungCap = new NhaCungCap("NCC001", "Honda Viễn Thuận Phát", "Bình Định", "081723884", "AAA@GMAIL.COM");
                 HoaDonNhap hoaDonNhap = new HoaDonNhap(txtSoHD.Text, dtpNgayHD.Value, nv, nhaCungCap);
-                ChiTietHoaDonNhap chiTietHoaDon = new ChiTietHoaDonNhap(hoaDonNhap);
+                ChiTietHoaDonNhap chiTietHoaDon = new ChiTietHoaDonNhap(hoaDonNhap, ChiNhanh);
                 chiTietHoaDon.ShowDialog();
             }
         }
@@ -105,6 +105,11 @@ namespace WinFormApp.CustomControl
         {
             DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

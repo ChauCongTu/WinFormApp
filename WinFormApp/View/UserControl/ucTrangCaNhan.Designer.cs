@@ -32,6 +32,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.txtChungMinhNhanDan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.btnUpdate = new WinFormApp.RJButton();
             this.btnSave = new WinFormApp.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbChucVu = new System.Windows.Forms.ComboBox();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.pbDelete = new System.Windows.Forms.PictureBox();
             this.pbUpdate = new System.Windows.Forms.PictureBox();
             this.pbSave = new System.Windows.Forms.PictureBox();
@@ -122,6 +122,32 @@
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
+            this.cbGioiTinh.Location = new System.Drawing.Point(268, 193);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(236, 34);
+            this.cbGioiTinh.TabIndex = 96;
+            // 
+            // cbChucVu
+            // 
+            this.cbChucVu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Items.AddRange(new object[] {
+            "Nhân Viên",
+            "Quản Lý",
+            "Admin"});
+            this.cbChucVu.Location = new System.Drawing.Point(268, 306);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(236, 34);
+            this.cbChucVu.TabIndex = 95;
             // 
             // txtChungMinhNhanDan
             // 
@@ -264,6 +290,7 @@
             this.btnChangePass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChangePass.TextColor = System.Drawing.Color.White;
             this.btnChangePass.UseVisualStyleBackColor = false;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // btnExit
             // 
@@ -343,24 +370,6 @@
             this.panel1.Size = new System.Drawing.Size(1122, 797);
             this.panel1.TabIndex = 2;
             // 
-            // cbChucVu
-            // 
-            this.cbChucVu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(268, 306);
-            this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(236, 34);
-            this.cbChucVu.TabIndex = 95;
-            // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Location = new System.Drawing.Point(268, 193);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(236, 34);
-            this.cbGioiTinh.TabIndex = 96;
-            // 
             // pbDelete
             // 
             this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -371,6 +380,7 @@
             this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDelete.TabIndex = 43;
             this.pbDelete.TabStop = false;
+            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
             // 
             // pbUpdate
             // 
