@@ -90,7 +90,7 @@ namespace WinFormApp
         {
             switchSelect(btnXuatHang);
             gpMain.Controls.Clear();
-            gpMain.Controls.Add(new ucQuanLyXuatHang());
+            gpMain.Controls.Add(new ucQuanLyXuatHang(nhanVien));
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace WinFormApp
         {
             switchSelect(btnNhapHang);
             gpMain.Controls.Clear();
-            gpMain.Controls.Add(new ucQuanLyNhapHang());
+            gpMain.Controls.Add(new ucQuanLyNhapHang(nhanVien));
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)

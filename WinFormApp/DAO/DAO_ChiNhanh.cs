@@ -58,6 +58,7 @@ namespace WinFormApp.DAO
                 ChiNhanh chiNhanh = new ChiNhanh(maChiNhanh, tenChiNhanh, diaChi, soDienThoai, nhanVien, sanPham);
                 list.Add(chiNhanh);
             }
+            _conn.Close();  
             return list;
         }
         public ChiNhanh GetLast()
@@ -78,13 +79,14 @@ namespace WinFormApp.DAO
                 List<NhanVien> nhanVien = _NhanVien.GetList(maChiNhanh);
                 chiNhanh = new ChiNhanh(maChiNhanh, tenChiNhanh, diaChi, soDienThoai, nhanVien, sanPham);
             }
+            _conn.Close();
             return chiNhanh;
         }
         public ChiNhanh GetByID(string _maChiNhanh)
         {
             ChiNhanh chiNhanh = new ChiNhanh();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM CHINHANH WHERE MACN = {_maChiNhanh}", _conn);
+            command = new SqlCommand($"SELECT * FROM CHINHANH WHERE MACN = '{_maChiNhanh}'", _conn);
             reader = command.ExecuteReader();
             DAO_NhanVien _NhanVien = new DAO_NhanVien();
             DAO_SanPham _SanPham = new DAO_SanPham();
@@ -98,6 +100,28 @@ namespace WinFormApp.DAO
                 List<NhanVien> nhanVien = _NhanVien.GetList(maChiNhanh);
                 chiNhanh = new ChiNhanh(maChiNhanh, tenChiNhanh, diaChi, soDienThoai, nhanVien, sanPham);
             }
+            _conn.Close();
+            return chiNhanh;
+        }
+        public ChiNhanh GetByUsrID(string _maNhanVien)
+        {
+            ChiNhanh chiNhanh = new ChiNhanh();
+            _conn.Open();
+            command = new SqlCommand($"SELECT CHINHANH.* FROM CHINHANH, NHANVIEN WHERE CHINHANH.MACN = NHANVIEN.MACN AND MANV = '{_maNhanVien}'", _conn);
+            reader = command.ExecuteReader();
+            DAO_NhanVien _NhanVien = new DAO_NhanVien();
+            DAO_SanPham _SanPham = new DAO_SanPham();
+            while (reader.Read())
+            {
+                string maChiNhanh = reader.GetString(0);
+                string tenChiNhanh = reader.GetString(1);
+                string diaChi = reader.GetString(2);
+                string soDienThoai = reader.GetString(3);
+                List<SanPham> sanPham = _SanPham.GetList(maChiNhanh);
+                List<NhanVien> nhanVien = _NhanVien.GetList(maChiNhanh);
+                chiNhanh = new ChiNhanh(maChiNhanh, tenChiNhanh, diaChi, soDienThoai, nhanVien, sanPham);
+            }
+            _conn.Close();
             return chiNhanh;
         }
         public void Add(ChiNhanh chiNhanh)

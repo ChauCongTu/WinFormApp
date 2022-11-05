@@ -64,6 +64,7 @@ namespace WinFormApp.DAO
         }
         public HoaDonNhap GetLast()
         {
+            _conn.Open();
             HoaDonNhap hoaDonNhap = new HoaDonNhap();
             command = new SqlCommand($"SELECT TOP(1)* FROM HOADONNHAP ORDER BY SOHDNHAP DESC", _conn);
             reader = command.ExecuteReader();
@@ -84,6 +85,7 @@ namespace WinFormApp.DAO
         }
         public HoaDonNhap GetByID(string _soHoaDon)
         {
+            _conn.Open();
             HoaDonNhap hoaDonNhap = new HoaDonNhap();
             command = new SqlCommand($"SELECT * FROM HOADONNHAP WHERE SOHDNHAP = '{_soHoaDon}'", _conn);
             reader = command.ExecuteReader();
