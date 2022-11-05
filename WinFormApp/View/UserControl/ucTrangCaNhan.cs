@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormApp.Model;
+using WinFormApp.View;
 
 namespace WinFormApp.CustomControl
 {
@@ -36,27 +37,39 @@ namespace WinFormApp.CustomControl
             txtSoDienThoai.Enabled = false;
             txtChungMinhNhanDan.Enabled = false;
             txtDiaChi.Enabled = false;
-            rbNam.Enabled = false;
-            rbNu.Enabled = false;
-            txtChucVu.Enabled = false;
+            cbChucVu.Enabled = false;
+            cbGioiTinh.Enabled = false;
+            dtpNgaySinh.Enabled = false;
             //Load employee data
             txtMaNhanVien.Text = nhanVien.maNhanVien;
             txtTenNhanVien.Text = nhanVien.tenNhanVien;
             txtSoDienThoai.Text = nhanVien.soDienThoai;
             if(nhanVien.capbac == 1)
             {
-                txtChucVu.Text = "Nhân Viên";
+                cbChucVu.Text = "Nhân Viên";
             }
             else if(nhanVien.capbac == 2)
             {
-                txtChucVu.Text = "Quản Lý";
+                cbChucVu.Text = "Quản Lý";
             }
             else
             {
-                txtChucVu.Text = "Admin";
+                cbChucVu.Text = "Admin";
             }
             txtChungMinhNhanDan.Text = nhanVien.chungMinhNhanDan.ToString();
             txtDiaChi.Text = nhanVien.diaChi;
+            dtpNgaySinh.Value = nhanVien.ngaySinh;
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMatKhau = new DoiMatKhau(nhanVien);
+            doiMatKhau.Show();
+        }
+
+        private void pbDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

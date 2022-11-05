@@ -38,8 +38,6 @@
             this.btnAdd = new WinFormApp.RJButton();
             this.btnEdit = new WinFormApp.RJButton();
             this.btnDelete = new WinFormApp.RJButton();
-            this.ckbPhuTung = new System.Windows.Forms.CheckBox();
-            this.ckbXe = new System.Windows.Forms.CheckBox();
             this.txtSl = new System.Windows.Forms.TextBox();
             this.txtSoHoaDon = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -72,6 +70,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbLoaiSP = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -87,6 +86,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cbLoaiSP);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.cbChiNhanh);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -96,8 +96,6 @@
             this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btnDelete);
-            this.panel3.Controls.Add(this.ckbPhuTung);
-            this.panel3.Controls.Add(this.ckbXe);
             this.panel3.Controls.Add(this.txtSl);
             this.panel3.Controls.Add(this.txtSoHoaDon);
             this.panel3.Controls.Add(this.label7);
@@ -119,7 +117,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(113, 197);
+            this.label12.Location = new System.Drawing.Point(76, 197);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 26);
             this.label12.TabIndex = 71;
@@ -129,7 +127,7 @@
             // 
             this.cbChiNhanh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChiNhanh.FormattingEnabled = true;
-            this.cbChiNhanh.Location = new System.Drawing.Point(277, 131);
+            this.cbChiNhanh.Location = new System.Drawing.Point(240, 131);
             this.cbChiNhanh.Name = "cbChiNhanh";
             this.cbChiNhanh.Size = new System.Drawing.Size(250, 34);
             this.cbChiNhanh.TabIndex = 70;
@@ -138,7 +136,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.pictureBox4.Image = global::WinFormApp.Properties.Resources.Sua1_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(502, 253);
+            this.pictureBox4.Location = new System.Drawing.Point(496, 253);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,7 +147,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(113, 139);
+            this.label11.Location = new System.Drawing.Point(76, 139);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 26);
             this.label11.TabIndex = 69;
@@ -240,40 +238,19 @@
             this.btnDelete.TextColor = System.Drawing.Color.White;
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // ckbPhuTung
-            // 
-            this.ckbPhuTung.AutoSize = true;
-            this.ckbPhuTung.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbPhuTung.Location = new System.Drawing.Point(865, 134);
-            this.ckbPhuTung.Name = "ckbPhuTung";
-            this.ckbPhuTung.Size = new System.Drawing.Size(118, 30);
-            this.ckbPhuTung.TabIndex = 60;
-            this.ckbPhuTung.Text = "Phụ tùng";
-            this.ckbPhuTung.UseVisualStyleBackColor = true;
-            // 
-            // ckbXe
-            // 
-            this.ckbXe.AutoSize = true;
-            this.ckbXe.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbXe.Location = new System.Drawing.Point(773, 133);
-            this.ckbXe.Name = "ckbXe";
-            this.ckbXe.Size = new System.Drawing.Size(60, 30);
-            this.ckbXe.TabIndex = 59;
-            this.ckbXe.Text = "Xe";
-            this.ckbXe.UseVisualStyleBackColor = true;
-            // 
             // txtSl
             // 
             this.txtSl.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSl.Location = new System.Drawing.Point(733, 189);
+            this.txtSl.Location = new System.Drawing.Point(771, 189);
             this.txtSl.Name = "txtSl";
             this.txtSl.Size = new System.Drawing.Size(250, 34);
             this.txtSl.TabIndex = 58;
+            this.txtSl.Text = "1";
             // 
             // txtSoHoaDon
             // 
             this.txtSoHoaDon.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoHoaDon.Location = new System.Drawing.Point(277, 14);
+            this.txtSoHoaDon.Location = new System.Drawing.Point(240, 14);
             this.txtSoHoaDon.Name = "txtSoHoaDon";
             this.txtSoHoaDon.Size = new System.Drawing.Size(250, 34);
             this.txtSoHoaDon.TabIndex = 57;
@@ -292,7 +269,7 @@
             // 
             this.cbSanPham.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSanPham.FormattingEnabled = true;
-            this.cbSanPham.Location = new System.Drawing.Point(276, 189);
+            this.cbSanPham.Location = new System.Drawing.Point(239, 189);
             this.cbSanPham.Name = "cbSanPham";
             this.cbSanPham.Size = new System.Drawing.Size(250, 34);
             this.cbSanPham.TabIndex = 55;
@@ -311,7 +288,7 @@
             // 
             this.cbNhanVien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhanVien.FormattingEnabled = true;
-            this.cbNhanVien.Location = new System.Drawing.Point(734, 71);
+            this.cbNhanVien.Location = new System.Drawing.Point(772, 71);
             this.cbNhanVien.Name = "cbNhanVien";
             this.cbNhanVien.Size = new System.Drawing.Size(250, 34);
             this.cbNhanVien.TabIndex = 53;
@@ -320,7 +297,7 @@
             // 
             this.cbNhaCungCap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhaCungCap.FormattingEnabled = true;
-            this.cbNhaCungCap.Location = new System.Drawing.Point(277, 71);
+            this.cbNhaCungCap.Location = new System.Drawing.Point(240, 71);
             this.cbNhaCungCap.Name = "cbNhaCungCap";
             this.cbNhaCungCap.Size = new System.Drawing.Size(250, 34);
             this.cbNhaCungCap.TabIndex = 52;
@@ -329,7 +306,7 @@
             // 
             this.dtpNgayHD.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayHD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayHD.Location = new System.Drawing.Point(734, 14);
+            this.dtpNgayHD.Location = new System.Drawing.Point(772, 14);
             this.dtpNgayHD.Name = "dtpNgayHD";
             this.dtpNgayHD.Size = new System.Drawing.Size(250, 34);
             this.dtpNgayHD.TabIndex = 51;
@@ -358,7 +335,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(113, 79);
+            this.label3.Location = new System.Drawing.Point(76, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 26);
             this.label3.TabIndex = 48;
@@ -368,7 +345,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(113, 20);
+            this.label2.Location = new System.Drawing.Point(76, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 26);
             this.label2.TabIndex = 47;
@@ -608,6 +585,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // cbLoaiSP
+            // 
+            this.cbLoaiSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiSP.FormattingEnabled = true;
+            this.cbLoaiSP.Items.AddRange(new object[] {
+            "Xe",
+            "Phụ tùng"});
+            this.cbLoaiSP.Location = new System.Drawing.Point(772, 131);
+            this.cbLoaiSP.Name = "cbLoaiSP";
+            this.cbLoaiSP.Size = new System.Drawing.Size(250, 34);
+            this.cbLoaiSP.TabIndex = 72;
+            this.cbLoaiSP.Text = "Xe";
+            // 
             // ChiTietHoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -659,8 +649,6 @@
         private RJButton btnAdd;
         private RJButton btnEdit;
         private RJButton btnDelete;
-        private System.Windows.Forms.CheckBox ckbPhuTung;
-        private System.Windows.Forms.CheckBox ckbXe;
         private System.Windows.Forms.TextBox txtSl;
         private System.Windows.Forms.TextBox txtSoHoaDon;
         private System.Windows.Forms.Label label7;
@@ -693,5 +681,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbLoaiSP;
     }
 }

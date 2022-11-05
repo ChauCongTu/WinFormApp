@@ -57,6 +57,10 @@
             this.colSdtKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCmndKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
@@ -65,10 +69,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pbDelete);
             this.panel1.Controls.Add(this.pbUpdate);
             this.panel1.Controls.Add(this.btnDelete);
@@ -92,14 +99,14 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(18, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1121, 351);
+            this.panel1.Size = new System.Drawing.Size(1121, 310);
             this.panel1.TabIndex = 0;
             // 
             // pbDelete
             // 
             this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
-            this.pbDelete.Location = new System.Drawing.Point(715, 276);
+            this.pbDelete.Location = new System.Drawing.Point(717, 245);
             this.pbDelete.Name = "pbDelete";
             this.pbDelete.Size = new System.Drawing.Size(31, 31);
             this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +117,7 @@
             // 
             this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
-            this.pbUpdate.Location = new System.Drawing.Point(506, 279);
+            this.pbUpdate.Location = new System.Drawing.Point(508, 248);
             this.pbUpdate.Name = "pbUpdate";
             this.pbUpdate.Size = new System.Drawing.Size(28, 28);
             this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,7 +135,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(697, 275);
+            this.btnDelete.Location = new System.Drawing.Point(699, 244);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnDelete.Size = new System.Drawing.Size(157, 40);
@@ -142,7 +149,7 @@
             // 
             this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
-            this.pbSave.Location = new System.Drawing.Point(287, 279);
+            this.pbSave.Location = new System.Drawing.Point(289, 248);
             this.pbSave.Name = "pbSave";
             this.pbSave.Size = new System.Drawing.Size(28, 28);
             this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +160,7 @@
             // 
             this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
-            this.pbAdd.Location = new System.Drawing.Point(75, 279);
+            this.pbAdd.Location = new System.Drawing.Point(77, 248);
             this.pbAdd.Name = "pbAdd";
             this.pbAdd.Size = new System.Drawing.Size(28, 28);
             this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,7 +171,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
-            this.pictureBox5.Location = new System.Drawing.Point(941, 279);
+            this.pictureBox5.Location = new System.Drawing.Point(943, 248);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(26, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,7 +189,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(914, 275);
+            this.btnExit.Location = new System.Drawing.Point(916, 244);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(157, 40);
@@ -203,7 +210,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(483, 275);
+            this.btnUpdate.Location = new System.Drawing.Point(485, 244);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnUpdate.Size = new System.Drawing.Size(157, 40);
@@ -224,7 +231,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(265, 275);
+            this.btnSave.Location = new System.Drawing.Point(267, 244);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(157, 40);
@@ -245,7 +252,7 @@
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(51, 275);
+            this.btnNew.Location = new System.Drawing.Point(53, 244);
             this.btnNew.Name = "btnNew";
             this.btnNew.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.btnNew.Size = new System.Drawing.Size(157, 40);
@@ -258,7 +265,7 @@
             // txtHoTenKH
             // 
             this.txtHoTenKH.Location = new System.Drawing.Point(237, 133);
-            this.txtHoTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTenKH.Multiline = true;
             this.txtHoTenKH.Name = "txtHoTenKH";
             this.txtHoTenKH.Size = new System.Drawing.Size(250, 30);
@@ -268,7 +275,7 @@
             // txtSdtKH
             // 
             this.txtSdtKH.Location = new System.Drawing.Point(237, 183);
-            this.txtSdtKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSdtKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtSdtKH.Multiline = true;
             this.txtSdtKH.Name = "txtSdtKH";
             this.txtSdtKH.Size = new System.Drawing.Size(250, 30);
@@ -278,7 +285,7 @@
             // txtDiaChiKH
             // 
             this.txtDiaChiKH.Location = new System.Drawing.Point(795, 138);
-            this.txtDiaChiKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChiKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChiKH.Multiline = true;
             this.txtDiaChiKH.Name = "txtDiaChiKH";
             this.txtDiaChiKH.Size = new System.Drawing.Size(250, 75);
@@ -288,7 +295,7 @@
             // txtCmndKH
             // 
             this.txtCmndKH.Location = new System.Drawing.Point(795, 89);
-            this.txtCmndKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCmndKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtCmndKH.Multiline = true;
             this.txtCmndKH.Name = "txtCmndKH";
             this.txtCmndKH.Size = new System.Drawing.Size(250, 30);
@@ -297,7 +304,7 @@
             // txtMaKH
             // 
             this.txtMaKH.Location = new System.Drawing.Point(237, 84);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaKH.Multiline = true;
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(250, 30);
@@ -365,11 +372,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1121, 50);
+            this.panel2.Size = new System.Drawing.Size(1119, 50);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -377,11 +385,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 12);
+            this.label1.Location = new System.Drawing.Point(72, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 27);
+            this.label1.Size = new System.Drawing.Size(204, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Khách hàng";
+            this.label1.Text = "Quản lý khách hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvKhachHang
@@ -395,12 +403,12 @@
             this.colSdtKH,
             this.colDiaChiKH,
             this.colCmndKH});
-            this.dgvKhachHang.Location = new System.Drawing.Point(18, 356);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvKhachHang.Location = new System.Drawing.Point(18, 388);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 82;
             this.dgvKhachHang.RowTemplate.Height = 33;
-            this.dgvKhachHang.Size = new System.Drawing.Size(1121, 447);
+            this.dgvKhachHang.Size = new System.Drawing.Size(1121, 403);
             this.dgvKhachHang.TabIndex = 1;
             this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick);
             // 
@@ -439,13 +447,65 @@
             this.colCmndKH.Name = "colCmndKH";
             this.colCmndKH.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_search;
+            this.pictureBox1.Location = new System.Drawing.Point(1110, 331);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(635, 339);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(221, 26);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Tìm kiếm khách hàng:";
+            // 
+            // txtTraCuuHoaDon
+            // 
+            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
+            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTraCuuHoaDon.BorderSize = 2;
+            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(862, 331);
+            this.txtTraCuuHoaDon.Multiline = false;
+            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
+            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTraCuuHoaDon.PasswordChar = false;
+            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
+            this.txtTraCuuHoaDon.TabIndex = 56;
+            this.txtTraCuuHoaDon.Texts = "";
+            this.txtTraCuuHoaDon.UnderlinedStyle = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WinFormApp.Properties.Resources.KhachHang1_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(12, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // ucQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtTraCuuHoaDon);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucQuanLyKhachHang";
             this.Size = new System.Drawing.Size(1153, 803);
             this.Load += new System.EventHandler(this.ucQuanLyKhachHang_Load);
@@ -459,7 +519,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -494,5 +557,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSdtKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChiKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCmndKH;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private CustomControls.RJControls.RJTextBox txtTraCuuHoaDon;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
