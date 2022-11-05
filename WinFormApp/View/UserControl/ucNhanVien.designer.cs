@@ -56,6 +56,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbGioitinh = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbsave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcancel)).BeginInit();
@@ -70,6 +72,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbGioitinh);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pbsave);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.pbcancel);
@@ -387,6 +391,29 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 29);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Giới tính";
+            // 
+            // cbGioitinh
+            // 
+            this.cbGioitinh.FormattingEnabled = true;
+            this.cbGioitinh.Items.AddRange(new object[] {
+            "",
+            "Nam",
+            "Nữ"});
+            this.cbGioitinh.Location = new System.Drawing.Point(277, 202);
+            this.cbGioitinh.Name = "cbGioitinh";
+            this.cbGioitinh.Size = new System.Drawing.Size(250, 24);
+            this.cbGioitinh.TabIndex = 29;
+            this.cbGioitinh.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // ucNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -440,5 +467,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pbsave;
         private System.Windows.Forms.PictureBox pbadd;
+        private System.Windows.Forms.ComboBox cbGioitinh;
+        private System.Windows.Forms.Label label3;
     }
 }

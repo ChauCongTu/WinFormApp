@@ -60,26 +60,36 @@ namespace WinFormApp.CustomControl
             btn.Enabled = true;
             btn.BackColor = Color.FromArgb(23, 162, 139);
         }
-        private void button1_Click(object sender, EventArgs e)  // Chức năng thêm nhân viên
+        void check()
         {
-            txtManhanvien.Enabled = true;
-            txtTen.Enabled = true;
-            dtbNgaysinh.Enabled = true;
-            rdNam.Enabled = true;
-            rdNu.Enabled = true;
-            txtDiachi.Enabled = true;
-            txtSodienthoai.Enabled = true;
-            cbChucvu.Enabled = true;
-            turnOnButton(btnSave, pbsave);
-            turnOffButton(btn_sua, pbedit);
-            turnOffButton(btn_xoa, pbdelete);
-            if (txtManhanvien.Text.Length == 0 || txtTen.Text.Length == 0|| txtDiachi.Text.Length == 0 || txtSodienthoai.Text.Length == 0|| rdNam.Text.Length == 0 || rdNu.Text.Length == 0 || cbChucvu.Text.Length == 0)
+            if (txtManhanvien.Text.Length == 0 || txtTen.Text.Length == 0 || txtDiachi.Text.Length == 0 || txtSodienthoai.Text.Length == 0 || cbGioitinh.Text.Length == 0 || cbChucvu.Text.Length == 0)
             {
                 RJMessageBox.Show("Vui lòng điền đầy đủ các thông tin nhân viên!",
                     "Có lỗi xảy ra",
                     MessageBoxButtons.RetryCancel,
                     MessageBoxIcon.Error);
             }
+        }
+        private void button1_Click(object sender, EventArgs e)  // Chức năng thêm nhân viên
+        {
+            txtManhanvien.Enabled = true;
+            txtTen.Enabled = true;
+            dtbNgaysinh.Enabled = true;
+            txtDiachi.Enabled = true;
+            txtSodienthoai.Enabled = true;
+            cbChucvu.Enabled = true;
+            cbGioitinh.Enabled = true;  
+            turnOnButton(btnSave, pbsave);
+            turnOffButton(btn_sua, pbedit);
+            turnOffButton(btn_xoa, pbdelete);
+            check();
+            /*if (txtManhanvien.Text.Length == 0 || txtTen.Text.Length == 0|| txtDiachi.Text.Length == 0 || txtSodienthoai.Text.Length == 0|| cbGioitinh.Text.Length == 0 || cbChucvu.Text.Length == 0)
+            {
+                RJMessageBox.Show("Vui lòng điền đầy đủ các thông tin nhân viên!",
+                    "Có lỗi xảy ra",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+            }*/
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -108,8 +118,7 @@ namespace WinFormApp.CustomControl
             txtManhanvien.Enabled = true;
             txtTen.Enabled = true;
             dtbNgaysinh.Enabled = true;
-            rdNam.Enabled = true;
-            rdNu.Enabled = true;
+            cbGioitinh.Enabled = true;  
             txtDiachi.Enabled = true;
             txtSodienthoai.Enabled = true;
             cbChucvu.Enabled = true;
@@ -119,6 +128,18 @@ namespace WinFormApp.CustomControl
         }
 
         private void btnSave_Click(object sender, EventArgs e)
+        {
+            check();
+            /*if (txtManhanvien.Text.Length == 0 || txtTen.Text.Length == 0 || txtDiachi.Text.Length == 0 || txtSodienthoai.Text.Length == 0 || cbGioitinh.Text.Length == 0 || cbChucvu.Text.Length == 0)
+            {
+                RJMessageBox.Show("Vui lòng điền đầy đủ các thông tin nhân viên!",
+                    "Có lỗi xảy ra",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+            }*/
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
