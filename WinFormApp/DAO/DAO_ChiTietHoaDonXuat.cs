@@ -21,7 +21,7 @@ namespace WinFormApp.DAO
         {
             List<CTHDXUAT> list = new List<CTHDXUAT>();
             _conn.Open();
-            command = new SqlCommand($"SELECT SOLUONG, MASP FROM CTHDXUAT, SANPHAM WHERE CTHDXUAT.MASP = SANPHAM.MASP AND SOHDXUAT = {_soHoaDon}", _conn);
+            command = new SqlCommand($"SELECT SOLUONG, SANPHAM.MASP FROM CTHDXUAT, SANPHAM WHERE CTHDXUAT.MASP = SANPHAM.MASP AND SOHDXUAT = '{_soHoaDon}'", _conn);
             reader = command.ExecuteReader();
             DAO_SanPham _sanPham = new DAO_SanPham();
             while (reader.Read())

@@ -52,7 +52,7 @@ namespace WinFormApp.DAO
         {
             List<SanPhamXe> list = new List<SanPhamXe>();
             _conn.Open();
-            command = new SqlCommand($"EXEC sp_getListVehicle {_maChiNhanh}", _conn);
+            command = new SqlCommand($"SELECT SANPHAM.MASP, TENSP, DONGIA, DVT, MAXE, SOKHUNG, KHOILUONG, DUNGTICHBX, DUNGTICHXL, LOAIDC, PITTONG, TYSONEN, CONGSUATMAX, DUNGTICHNHOT, TRUYENDONG, HTKHOIDONG  FROM XE, SANPHAM WHERE XE.MASP = SANPHAM.MASP AND MACN = '{_maChiNhanh}' AND DABAN != 1", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -82,7 +82,7 @@ namespace WinFormApp.DAO
         {
             List<SanPhamXe> list = new List<SanPhamXe>();
             _conn.Open();
-            command = new SqlCommand($"SELECT SANPHAM.MASP, TENSP, DONGIA, DVT, MAXE, SOKHUNG, KHOILUONG, DUNGTICHBX, DUNGTICHXL, LOAIDC, PITTONG, TYSONEN, CONGSUATMAX, DUNGTICHNHOT, TRUYENDONG, HTKHOIDONG  FROM XE, SANPHAM WHERE XE.MASP = SANPHAM.MASP AND MACN = @macn AND DABAN != 1 AND TENSP LIKE '%{_tenXe}%'", _conn);
+            command = new SqlCommand($"SELECT SANPHAM.MASP, TENSP, DONGIA, DVT, MAXE, SOKHUNG, KHOILUONG, DUNGTICHBX, DUNGTICHXL, LOAIDC, PITTONG, TYSONEN, CONGSUATMAX, DUNGTICHNHOT, TRUYENDONG, HTKHOIDONG  FROM XE, SANPHAM WHERE XE.MASP = SANPHAM.MASP AND DABAN != 1 AND TENSP LIKE '%{_tenXe}%'", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {

@@ -78,10 +78,10 @@
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\ucKhoXe.cs">
+    <Compile Include="View\UserControl\ucKhoXe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\ucKhoXe.Designer.cs">
+    <Compile Include="View\UserControl\ucKhoXe.Designer.cs">
       <DependentUpon>ucKhoXe.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControl\ucQuanLyNCC.cs">
@@ -207,7 +207,7 @@
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControl\ucKhoXe.resx">
+    <EmbeddedResource Include="View\UserControl\ucKhoXe.resx">
       <DependentUpon>ucKhoXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucQuanLyNCC.resx">

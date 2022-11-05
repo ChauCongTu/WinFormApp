@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvHoaDonXuat = new System.Windows.Forms.DataGridView();
             this.txtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,23 +89,23 @@
             this.label7.TabIndex = 50;
             this.label7.Text = "~";
             // 
-            // dateTimePicker2
+            // dtpTo
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(207, 369);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(155, 34);
-            this.dateTimePicker2.TabIndex = 54;
+            this.dtpTo.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo.Location = new System.Drawing.Point(207, 369);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(155, 34);
+            this.dtpTo.TabIndex = 54;
             // 
-            // dateTimePicker1
+            // dtpFrom
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 369);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(155, 34);
-            this.dateTimePicker1.TabIndex = 52;
+            this.dtpFrom.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom.Location = new System.Drawing.Point(16, 369);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(155, 34);
+            this.dtpFrom.TabIndex = 52;
             // 
             // label6
             // 
@@ -224,6 +224,7 @@
             this.cbChiNhanh.Size = new System.Drawing.Size(250, 34);
             this.cbChiNhanh.TabIndex = 46;
             this.cbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cbChiNhanh_SelectedIndexChanged);
+            this.cbChiNhanh.SelectedValueChanged += new System.EventHandler(this.cbChiNhanh_SelectedValueChanged);
             // 
             // label8
             // 
@@ -263,6 +264,7 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.TextColor = System.Drawing.Color.White;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbNhanVien
             // 
@@ -293,6 +295,7 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextColor = System.Drawing.Color.White;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // cbNhaCungCap
             // 
@@ -302,6 +305,7 @@
             this.cbNhaCungCap.Name = "cbNhaCungCap";
             this.cbNhaCungCap.Size = new System.Drawing.Size(250, 34);
             this.cbNhaCungCap.TabIndex = 16;
+            this.cbNhaCungCap.Text = "-- Chọn nhà cung cấp --";
             // 
             // btnUpdate
             // 
@@ -323,6 +327,7 @@
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.TextColor = System.Drawing.Color.White;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnChiTietHD
             // 
@@ -477,6 +482,7 @@
             this.rjButton1.Text = "Lọc";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // txtTraCuuHoaDon
             // 
@@ -506,6 +512,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbDelete
             // 
@@ -579,8 +586,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpTo);
+            this.Controls.Add(this.dtpFrom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTraCuuHoaDon);
             this.Controls.Add(this.dgvHoaDonXuat);
@@ -609,8 +616,8 @@
 
         private System.Windows.Forms.Label label7;
         private RJButton rjButton1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpTo;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.RJTextBox txtTraCuuHoaDon;
         private System.Windows.Forms.DataGridView dgvHoaDonXuat;

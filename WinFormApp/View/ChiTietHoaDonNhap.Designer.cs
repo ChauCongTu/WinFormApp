@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbLoaiSP = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbChiNhanh = new System.Windows.Forms.ComboBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnAdd = new WinFormApp.RJButton();
-            this.btnEdit = new WinFormApp.RJButton();
-            this.btnDelete = new WinFormApp.RJButton();
             this.txtSl = new System.Windows.Forms.TextBox();
             this.txtSoHoaDon = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,6 +59,7 @@
             this.txtSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.rjButton1 = new WinFormApp.RJButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -70,10 +68,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbLoaiSP = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
@@ -89,13 +84,9 @@
             this.panel3.Controls.Add(this.cbLoaiSP);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.cbChiNhanh);
-            this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Controls.Add(this.btnEdit);
-            this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.txtSl);
             this.panel3.Controls.Add(this.txtSoHoaDon);
             this.panel3.Controls.Add(this.label7);
@@ -112,6 +103,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1085, 320);
             this.panel3.TabIndex = 58;
+            // 
+            // cbLoaiSP
+            // 
+            this.cbLoaiSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiSP.FormattingEnabled = true;
+            this.cbLoaiSP.Items.AddRange(new object[] {
+            "Xe",
+            "Phụ tùng"});
+            this.cbLoaiSP.Location = new System.Drawing.Point(772, 131);
+            this.cbLoaiSP.Name = "cbLoaiSP";
+            this.cbLoaiSP.Size = new System.Drawing.Size(250, 34);
+            this.cbLoaiSP.TabIndex = 72;
+            this.cbLoaiSP.Text = "Xe";
+            this.cbLoaiSP.SelectedValueChanged += new System.EventHandler(this.cbLoaiSP_SelectedValueChanged);
             // 
             // label12
             // 
@@ -132,17 +137,6 @@
             this.cbChiNhanh.Size = new System.Drawing.Size(250, 34);
             this.cbChiNhanh.TabIndex = 70;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pictureBox4.Image = global::WinFormApp.Properties.Resources.Sua1_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(496, 253);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 66;
-            this.pictureBox4.TabStop = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -153,22 +147,11 @@
             this.label11.TabIndex = 69;
             this.label11.Text = "Chi nhánh:";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pictureBox3.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(688, 252);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 65;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.pictureBox6.Image = global::WinFormApp.Properties.Resources.NhapHang1_removebg_preview;
-            this.pictureBox6.Location = new System.Drawing.Point(315, 253);
+            this.pictureBox6.Location = new System.Drawing.Point(454, 253);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(35, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,62 +164,21 @@
             this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAdd.BorderRadius = 0;
-            this.btnAdd.BorderSize = 0;
+            this.btnAdd.BorderSize = 1;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(289, 252);
+            this.btnAdd.Location = new System.Drawing.Point(440, 253);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnAdd.Size = new System.Drawing.Size(157, 40);
+            this.btnAdd.Size = new System.Drawing.Size(244, 40);
             this.btnAdd.TabIndex = 63;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "Thêm sản phẩm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit.BorderRadius = 0;
-            this.btnEdit.BorderSize = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(478, 252);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnEdit.Size = new System.Drawing.Size(157, 40);
-            this.btnEdit.TabIndex = 62;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 0;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(667, 252);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(157, 40);
-            this.btnDelete.TabIndex = 61;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSl
             // 
@@ -273,6 +215,7 @@
             this.cbSanPham.Name = "cbSanPham";
             this.cbSanPham.Size = new System.Drawing.Size(250, 34);
             this.cbSanPham.TabIndex = 55;
+            this.cbSanPham.SelectedValueChanged += new System.EventHandler(this.cbSanPham_SelectedValueChanged);
             // 
             // label6
             // 
@@ -415,13 +358,15 @@
             this.txtTenSP,
             this.txtSoLuong,
             this.txtDonGia,
-            this.txtThanhTien});
+            this.txtThanhTien,
+            this._xoa});
             this.dgvChiTietHoaDon.Location = new System.Drawing.Point(21, 463);
             this.dgvChiTietHoaDon.Name = "dgvChiTietHoaDon";
             this.dgvChiTietHoaDon.RowHeadersWidth = 51;
             this.dgvChiTietHoaDon.RowTemplate.Height = 24;
             this.dgvChiTietHoaDon.Size = new System.Drawing.Size(1090, 291);
             this.dgvChiTietHoaDon.TabIndex = 52;
+            this.dgvChiTietHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietHoaDon_CellClick);
             // 
             // txtSTT
             // 
@@ -464,6 +409,13 @@
             this.txtThanhTien.MinimumWidth = 6;
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.ReadOnly = true;
+            // 
+            // _xoa
+            // 
+            this._xoa.HeaderText = "";
+            this._xoa.MinimumWidth = 6;
+            this._xoa.Name = "_xoa";
+            this._xoa.ReadOnly = true;
             // 
             // rjButton1
             // 
@@ -585,19 +537,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // cbLoaiSP
-            // 
-            this.cbLoaiSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLoaiSP.FormattingEnabled = true;
-            this.cbLoaiSP.Items.AddRange(new object[] {
-            "Xe",
-            "Phụ tùng"});
-            this.cbLoaiSP.Location = new System.Drawing.Point(772, 131);
-            this.cbLoaiSP.Name = "cbLoaiSP";
-            this.cbLoaiSP.Size = new System.Drawing.Size(250, 34);
-            this.cbLoaiSP.TabIndex = 72;
-            this.cbLoaiSP.Text = "Xe";
-            // 
             // ChiTietHoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -622,8 +561,6 @@
             this.Load += new System.EventHandler(this.ChiTietHoaDonNhap_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).EndInit();
@@ -642,13 +579,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbChiNhanh;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private RJButton btnAdd;
-        private RJButton btnEdit;
-        private RJButton btnDelete;
         private System.Windows.Forms.TextBox txtSl;
         private System.Windows.Forms.TextBox txtSoHoaDon;
         private System.Windows.Forms.Label label7;
@@ -667,12 +600,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvChiTietHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtMaSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtTenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtSoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtDonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtThanhTien;
         private RJButton rjButton1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -682,5 +609,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbLoaiSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtMaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtTenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtThanhTien;
+        private System.Windows.Forms.DataGridViewButtonColumn _xoa;
     }
 }
