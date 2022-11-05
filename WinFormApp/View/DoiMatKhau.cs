@@ -52,12 +52,12 @@ namespace WinFormApp.View
         {
             if (_pass2 == 0)
             {
-                txtOldPwd.PasswordChar = '*';
+                txtNewPwd.PasswordChar = '*';
                 _pass2 = 1;
             }
             else if (_pass2 == 1)
             {
-                txtOldPwd.PasswordChar = (char)0;
+                txtNewPwd.PasswordChar = (char)0;
                 _pass2 = 0;
             }
         }
@@ -66,12 +66,12 @@ namespace WinFormApp.View
         {
             if (_pass3 == 0)
             {
-                txtOldPwd.PasswordChar = '*';
+                txtNewPwdCfm.PasswordChar = '*';
                 _pass3 = 1;
             }
             else if (_pass3 == 1)
             {
-                txtOldPwd.PasswordChar = (char)0;
+                txtNewPwdCfm.PasswordChar = (char)0;
                 _pass3 = 0;
             }
         }
@@ -83,6 +83,7 @@ namespace WinFormApp.View
 
         private void btnChangePass_Click(object sender, EventArgs e)
         {
+            lbErr.Text = "";
             if(txtOldPwd.Text.Length == 0 || txtNewPwd.Text.Length == 0 || txtNewPwdCfm.Text.Length == 0)
             {
                 lbErr.Text = "*Không được để trống thông tin!";

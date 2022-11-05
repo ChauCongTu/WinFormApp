@@ -87,6 +87,28 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
+        public NhanVien GetLast()
+        {
+            NhanVien nhanVien = new NhanVien();
+            _conn.Open();
+            command = new SqlCommand($"SELECT TOP(1)* FROM NHANVIEN ORDER BY MANV DESC", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maNhanVien = reader.GetString(0);
+                string tenNhanVien = reader.GetString(1);
+                string tenDangNhap = reader.GetString(2);
+                string matKhau = reader.GetString(3);
+                DateTime ngaySinh = reader.GetDateTime(4);
+                int chungMinhNhanDan = reader.GetInt32(5);
+                string diaChi = reader.GetString(6);
+                int capbac = reader.GetInt32(7);
+                string soDienThoai = reader.GetString(8);
+                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+            }
+            _conn.Close();
+            return nhanVien;
+        }
         public NhanVien GetByID(string _maNhanVien)
         {
             NhanVien nhanVien = new NhanVien();

@@ -59,6 +59,26 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
+        public SanPhamPhuTung GetLast()
+        {
+            SanPhamPhuTung sanPhamPhuTung = new SanPhamPhuTung();
+            _conn.Open();
+            command = new SqlCommand($"SELECT TOP(1) PHUTUNG.MASP, MAPT, TENSP, SOLUONG, DONGIA, DVT, MOTA FROM PHUTUNG, SANPHAM WHERE PHUTUNG.MASP = SANPHAM.MASP ORDER BY MAPT DESC", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maSanPham = reader.GetString(0);
+                string maPhuTung = reader.GetString(1);
+                string tenSanPham = reader.GetString(2);
+                int soLuong = reader.GetInt32(3);
+                decimal donGia = reader.GetDecimal(2);
+                string donViTinh = reader.GetString(5);
+                string mota = reader.GetString(6);
+                sanPhamPhuTung = new SanPhamPhuTung(maSanPham, tenSanPham, donGia, donViTinh, maPhuTung, mota, soLuong);
+            }
+            _conn.Close();
+            return sanPhamPhuTung;
+        }
         public SanPhamPhuTung GetByID(string _maSanPham)
         {
             SanPhamPhuTung sanPhamPhuTung = new SanPhamPhuTung();

@@ -65,7 +65,7 @@ namespace WinFormApp.DAO
         public HoaDonNhap GetLast()
         {
             HoaDonNhap hoaDonNhap = new HoaDonNhap();
-            command = new SqlCommand($"SELECT TOP(1).* FROM HOADONNHAP ORDER BY DESC", _conn);
+            command = new SqlCommand($"SELECT TOP(1)* FROM HOADONNHAP ORDER BY SOHDNHAP DESC", _conn);
             reader = command.ExecuteReader();
             DAO_NhaCungCap dAO_NhaCungCap = new DAO_NhaCungCap();
             DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
