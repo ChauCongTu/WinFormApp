@@ -137,6 +137,35 @@ namespace WinFormApp.DAO
             _conn.Close();
             return sanPham;
         }
+        public SanPhamXe GetLast()
+        {
+            SanPhamXe sanPham = new SanPhamXe();
+            _conn.Open();
+            command = new SqlCommand($"SELECT SANPHAM.MASP, TENSP, DONGIA, DVT, MAXE, SOKHUNG, KHOILUONG, DUNGTICHBX, DUNGTICHXL, LOAIDC, PITTONG, TYSONEN, CONGSUATMAX, DUNGTICHNHOT, TRUYENDONG, HTKHOIDONG  FROM XE, SANPHAM WHERE XE.MASP = SANPHAM.MASP ORDER BY MAXE DESC", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string masp = reader.GetString(0);
+                string tensp = reader.GetString(1);
+                decimal donGia = reader.GetDecimal(2);
+                string dvt = reader.GetString(3);
+                string maXe = reader.GetString(4);
+                string soKhungXe = reader.GetString(5);
+                float khoiLuong = reader.GetFloat(6);
+                float dungTichBinhXang = reader.GetFloat(7);
+                float dungTichXiLanh = reader.GetFloat(8);
+                string loaiDongCo = reader.GetString(9);
+                string hanhTrinhPittong = reader.GetString(10);
+                string tySoNen = reader.GetString(11);
+                string congSuatToiDa = reader.GetString(12);
+                string dungTichNhot = reader.GetString(13);
+                string loaiTruyenDong = reader.GetString(14);
+                string heThongKhoiDong = reader.GetString(15);
+                sanPham = new SanPhamXe(masp, tensp, donGia, dvt, maXe, soKhungXe, khoiLuong, dungTichBinhXang, dungTichXiLanh, loaiDongCo, hanhTrinhPittong, tySoNen, congSuatToiDa, dungTichNhot, loaiTruyenDong, heThongKhoiDong);
+            }
+            _conn.Close();
+            return sanPham;
+        }
         /*
          DECLARE @MASP nvarchar(20)
         DECLARE @TENSP nvarchar(50)

@@ -36,6 +36,24 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
+        public NhaCungCap GetLast()
+        {
+            NhaCungCap nhaCungCap = new NhaCungCap();
+            _conn.Open();
+            command = new SqlCommand($"SELECT TOP(1)* FROM NHACUNGCAP ORDER BY MANCC DESC", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maNhaCungCap = reader.GetString(0);
+                string tenNhaCungCap = reader.GetString(1);
+                string diaChi = reader.GetString(2);
+                string soDienThoai = "0" + Convert.ToString(reader.GetInt32(3));
+                string email = reader.GetString(4);
+                nhaCungCap = new NhaCungCap(maNhaCungCap, tenNhaCungCap, diaChi, soDienThoai, email);
+            }
+            _conn.Close();
+            return nhaCungCap;
+        }
         public NhaCungCap GetByID(string _maNhaCungCap)
         {
             NhaCungCap nhaCungCap = new NhaCungCap();

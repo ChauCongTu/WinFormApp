@@ -65,6 +65,7 @@ namespace WinFormApp.CustomControl
             dtpNgayHD.Enabled = true;
             cbNhaCungCap.Enabled = true;
             cbChiNhanh.Enabled = true;
+            cbNhanVien.Enabled = true;
             function.turnOnButton(btnChiTietHD);
             function.turnOffButton(btnNew, pbAdd);
             function.turnOnButton(btnSave, pbSave);

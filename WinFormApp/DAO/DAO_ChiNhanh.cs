@@ -60,6 +60,26 @@ namespace WinFormApp.DAO
             }
             return list;
         }
+        public ChiNhanh GetLast()
+        {
+            ChiNhanh chiNhanh = new ChiNhanh();
+            _conn.Open();
+            command = new SqlCommand($"SELECT TOP(1)* FROM CHINHANH ORDER BY MACN DESC", _conn);
+            reader = command.ExecuteReader();
+            DAO_NhanVien _NhanVien = new DAO_NhanVien();
+            DAO_SanPham _SanPham = new DAO_SanPham();
+            while (reader.Read())
+            {
+                string maChiNhanh = reader.GetString(0);
+                string tenChiNhanh = reader.GetString(1);
+                string diaChi = reader.GetString(2);
+                string soDienThoai = reader.GetString(3);
+                List<SanPham> sanPham = _SanPham.GetList(maChiNhanh);
+                List<NhanVien> nhanVien = _NhanVien.GetList(maChiNhanh);
+                chiNhanh = new ChiNhanh(maChiNhanh, tenChiNhanh, diaChi, soDienThoai, nhanVien, sanPham);
+            }
+            return chiNhanh;
+        }
         public ChiNhanh GetByID(string _maChiNhanh)
         {
             ChiNhanh chiNhanh = new ChiNhanh();

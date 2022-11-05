@@ -53,6 +53,24 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
+        public SanPham GetLast(string _maSanPham)
+        {
+            SanPham sanPham = new SanPham();
+            _conn.Open();
+            command = new SqlCommand($"SELECT TOP(1)* FROM SANPHAM ORDER BY MASP DESC", _conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string maSanPham = reader.GetString(0);
+                string tenSanPham = reader.GetString(1);
+                decimal donGia = reader.GetDecimal(2);
+                string donViTinh = reader.GetString(3);
+                sanPham = new SanPham(maSanPham, tenSanPham, donGia, donViTinh);
+
+            }
+            _conn.Close();
+            return sanPham;
+        }
         public SanPham GetByID (string _maSanPham)
         {
             SanPham sanPham = new SanPham();
