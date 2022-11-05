@@ -78,6 +78,12 @@
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\ucKhoXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ucKhoXe.Designer.cs">
+      <DependentUpon>ucKhoXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DAO_ChiNhanh.cs" />
     <Compile Include="DAO\DAO_KhachHang.cs" />
     <Compile Include="DAO\DAO_NhaCungCap.cs" />
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\ucKhoXe.resx">
+      <DependentUpon>ucKhoXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChiTietHoaDonNhap.resx">
       <DependentUpon>ChiTietHoaDonNhap.cs</DependentUpon>
