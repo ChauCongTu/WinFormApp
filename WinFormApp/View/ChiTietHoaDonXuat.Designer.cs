@@ -54,6 +54,13 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvChiTietHoaDon = new System.Windows.Forms.DataGridView();
+            this.txtSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.rjButton1 = new WinFormApp.RJButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -62,13 +69,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -391,6 +391,57 @@
             this.dgvChiTietHoaDon.TabIndex = 29;
             this.dgvChiTietHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietHoaDon_CellClick);
             // 
+            // txtSTT
+            // 
+            this.txtSTT.HeaderText = "Số TT";
+            this.txtSTT.MinimumWidth = 6;
+            this.txtSTT.Name = "txtSTT";
+            this.txtSTT.ReadOnly = true;
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.HeaderText = "Mã SP";
+            this.txtMaSP.MinimumWidth = 6;
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.ReadOnly = true;
+            // 
+            // txtTenSP
+            // 
+            this.txtTenSP.HeaderText = "Tên SP";
+            this.txtTenSP.MinimumWidth = 6;
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.ReadOnly = true;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.HeaderText = "Số lượng";
+            this.txtSoLuong.MinimumWidth = 6;
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.ReadOnly = true;
+            // 
+            // txtDonGia
+            // 
+            this.txtDonGia.HeaderText = "Đơn giá";
+            this.txtDonGia.MinimumWidth = 6;
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.ReadOnly = true;
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.HeaderText = "Thành tiền";
+            this.txtThanhTien.MinimumWidth = 6;
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.ReadOnly = true;
+            // 
+            // _xoa
+            // 
+            this._xoa.HeaderText = "";
+            this._xoa.MinimumWidth = 6;
+            this._xoa.Name = "_xoa";
+            this._xoa.ReadOnly = true;
+            this._xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -411,6 +462,7 @@
             this.rjButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // pictureBox5
             // 
@@ -510,57 +562,6 @@
             this.label1.Size = new System.Drawing.Size(206, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chi tiết hóa đơn xuất";
-            // 
-            // txtSTT
-            // 
-            this.txtSTT.HeaderText = "Số TT";
-            this.txtSTT.MinimumWidth = 6;
-            this.txtSTT.Name = "txtSTT";
-            this.txtSTT.ReadOnly = true;
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.HeaderText = "Mã SP";
-            this.txtMaSP.MinimumWidth = 6;
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.ReadOnly = true;
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.HeaderText = "Tên SP";
-            this.txtTenSP.MinimumWidth = 6;
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.ReadOnly = true;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.HeaderText = "Số lượng";
-            this.txtSoLuong.MinimumWidth = 6;
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.ReadOnly = true;
-            // 
-            // txtDonGia
-            // 
-            this.txtDonGia.HeaderText = "Đơn giá";
-            this.txtDonGia.MinimumWidth = 6;
-            this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.ReadOnly = true;
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.HeaderText = "Thành tiền";
-            this.txtThanhTien.MinimumWidth = 6;
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.ReadOnly = true;
-            // 
-            // _xoa
-            // 
-            this._xoa.HeaderText = "";
-            this._xoa.MinimumWidth = 6;
-            this._xoa.Name = "_xoa";
-            this._xoa.ReadOnly = true;
-            this._xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this._xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ChiTietHoaDonXuat
             // 

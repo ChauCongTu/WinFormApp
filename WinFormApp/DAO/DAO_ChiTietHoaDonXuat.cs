@@ -37,7 +37,7 @@ namespace WinFormApp.DAO
         public void Add(CTHDXUAT CTHD, string _soHoaDon)
         {
             _conn.Open();
-            command = new SqlCommand($"INSERT INTO CTHDXUAT (SOHDXUAT, SOLUONG, MASP) VALUES('{_soHoaDon}', {CTHD.sl}, '{CTHD.SP.maSanPham}'", _conn);
+            command = new SqlCommand($"INSERT INTO CTHDXUAT (SOHDXUAT, SOLUONG, MASP) VALUES ('{_soHoaDon}', {CTHD.sl}, '{CTHD.SP.maSanPham}')", _conn);
             command.ExecuteNonQuery();
             _conn.Close();
         }

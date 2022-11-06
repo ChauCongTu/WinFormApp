@@ -36,6 +36,24 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -77,6 +95,40 @@
     </Compile>
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsHoaDonNhap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHoaDonNhap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLXEMAYDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLXEMAYDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLXEMAYDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLXEMAYDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLXEMAYDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLXEMAYDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="View\Report\dsHoaDon.cs" />
+    <Compile Include="View\Report\rpHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\rpHoaDonNhap.Designer.cs">
+      <DependentUpon>rpHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\rpHoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\rpHoaDonXuat.Designer.cs">
+      <DependentUpon>rpHoaDonXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControl\ucKhoXe.cs">
       <SubType>UserControl</SubType>
@@ -201,11 +253,21 @@
     <Compile Include="View\QuanLyCuaHang.Designer.cs">
       <DependentUpon>QuanLyCuaHang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="bin\Debug\HoaDonNhap.rdlc" />
+    <EmbeddedResource Include="bin\Debug\HoaDonXuat.rdlc" />
     <EmbeddedResource Include="CustomControl\FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\HoaDonNhap.rdlc" />
+    <EmbeddedResource Include="View\Report\HoaDonXuat.rdlc" />
+    <EmbeddedResource Include="View\Report\rpHoaDonNhap.resx">
+      <DependentUpon>rpHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\rpHoaDonXuat.resx">
+      <DependentUpon>rpHoaDonXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucKhoXe.resx">
       <DependentUpon>ucKhoXe.cs</DependentUpon>
@@ -267,6 +329,20 @@
       <DependentUpon>QuanLyCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="dsHoaDonNhap.xsc">
+      <DependentUpon>dsHoaDonNhap.xsd</DependentUpon>
+    </None>
+    <None Include="dsHoaDonNhap.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHoaDonNhap.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsHoaDonNhap.xss">
+      <DependentUpon>dsHoaDonNhap.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\WinFormApp.Model.dsHoaDon.datasource" />
+    <None Include="Properties\DataSources\WinFormApp.Model.HoaDonNhap.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -281,6 +357,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLXEMAYDataSet.xsc">
+      <DependentUpon>QLXEMAYDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLXEMAYDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLXEMAYDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLXEMAYDataSet.xss">
+      <DependentUpon>QLXEMAYDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLXEMAYDataSet1.xsc">
+      <DependentUpon>QLXEMAYDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLXEMAYDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLXEMAYDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLXEMAYDataSet1.xss">
+      <DependentUpon>QLXEMAYDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLXEMAYDataSet2.xsc">
+      <DependentUpon>QLXEMAYDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLXEMAYDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLXEMAYDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLXEMAYDataSet2.xss">
+      <DependentUpon>QLXEMAYDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\back_login.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -299,7 +408,19 @@
     <None Include="Resources\avatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\Report\" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_add.png" />
@@ -379,5 +500,6 @@
   <ItemGroup>
     <None Include="icon\KhoXe1-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

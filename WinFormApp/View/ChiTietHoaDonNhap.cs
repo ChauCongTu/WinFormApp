@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WinFormApp.CustomControl;
 using WinFormApp.DAO;
 using WinFormApp.Model;
+using WinFormApp.View.Report;
 
 namespace WinFormApp.View
 {
@@ -145,6 +146,12 @@ namespace WinFormApp.View
                     }
                 }
             }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            rpHoaDonNhap rpHoaDonNhap = new rpHoaDonNhap(hd);
+            rpHoaDonNhap.ShowDialog();
         }
     }
 }

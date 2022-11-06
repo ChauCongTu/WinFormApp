@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WinFormApp.CustomControl;
 using WinFormApp.DAO;
 using WinFormApp.Model;
+using WinFormApp.View.Report;
 
 namespace WinFormApp.View
 {
@@ -150,6 +151,12 @@ namespace WinFormApp.View
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            rpHoaDonXuat rpHoaDonXuat = new rpHoaDonXuat(hd);
+            rpHoaDonXuat.ShowDialog();
         }
     }
 }
