@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new WinFormApp.RJButton();
             this.btnSave = new WinFormApp.RJButton();
             this.lbTenXe = new System.Windows.Forms.Label();
             this.txtMaXe = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbLoaiXe = new System.Windows.Forms.ComboBox();
             this.txtSoKhung = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -71,16 +73,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pbSave = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbLoaiXe = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,6 +93,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1126, 50);
             this.panel2.TabIndex = 47;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icone_fermer_et_x_rouge1;
+            this.pictureBox1.Location = new System.Drawing.Point(1090, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -191,6 +203,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1065, 214);
             this.panel1.TabIndex = 56;
+            // 
+            // cbLoaiXe
+            // 
+            this.cbLoaiXe.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiXe.FormattingEnabled = true;
+            this.cbLoaiXe.Items.AddRange(new object[] {
+            "Xe số",
+            "Xe côn tay",
+            "Xe tay ga"});
+            this.cbLoaiXe.Location = new System.Drawing.Point(776, 121);
+            this.cbLoaiXe.Name = "cbLoaiXe";
+            this.cbLoaiXe.Size = new System.Drawing.Size(250, 34);
+            this.cbLoaiXe.TabIndex = 73;
+            this.cbLoaiXe.Text = "-- Chọn loại xe --";
+            this.cbLoaiXe.SelectedValueChanged += new System.EventHandler(this.cbLoaiXe_SelectedValueChanged);
             // 
             // txtSoKhung
             // 
@@ -439,6 +466,7 @@
             this.txtDungTichBX.Name = "txtDungTichBX";
             this.txtDungTichBX.Size = new System.Drawing.Size(250, 30);
             this.txtDungTichBX.TabIndex = 73;
+            this.txtDungTichBX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDungTichBX_KeyPress);
             // 
             // label12
             // 
@@ -457,6 +485,7 @@
             this.txtDungTichXL.Name = "txtDungTichXL";
             this.txtDungTichXL.Size = new System.Drawing.Size(250, 30);
             this.txtDungTichXL.TabIndex = 71;
+            this.txtDungTichXL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDungTichXL_KeyPress);
             // 
             // label11
             // 
@@ -493,6 +522,7 @@
             this.txtKhoiLuong.Name = "txtKhoiLuong";
             this.txtKhoiLuong.Size = new System.Drawing.Size(250, 30);
             this.txtKhoiLuong.TabIndex = 67;
+            this.txtKhoiLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhoiLuong_KeyPress);
             // 
             // panel4
             // 
@@ -547,33 +577,6 @@
             this.pictureBox5.TabIndex = 53;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icone_fermer_et_x_rouge1;
-            this.pictureBox1.Location = new System.Drawing.Point(1090, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // cbLoaiXe
-            // 
-            this.cbLoaiXe.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLoaiXe.FormattingEnabled = true;
-            this.cbLoaiXe.Items.AddRange(new object[] {
-            "Xe số",
-            "Xe côn tay",
-            "Xe tay ga"});
-            this.cbLoaiXe.Location = new System.Drawing.Point(776, 121);
-            this.cbLoaiXe.Name = "cbLoaiXe";
-            this.cbLoaiXe.Size = new System.Drawing.Size(250, 34);
-            this.cbLoaiXe.TabIndex = 73;
-            this.cbLoaiXe.Text = "-- Chọn loại xe --";
-            this.cbLoaiXe.SelectedValueChanged += new System.EventHandler(this.cbLoaiXe_SelectedValueChanged);
-            // 
             // ChiTietXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -594,6 +597,7 @@
             this.Load += new System.EventHandler(this.ChiTietXe_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -604,7 +608,6 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

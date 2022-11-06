@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -142,11 +143,11 @@ namespace WinFormApp.View
                     sanPhamXe.tenSanPham = txtTenXe.Text;
                     sanPhamXe.donGia = Convert.ToDecimal(txtDonGia.Text);
                     sanPhamXe.soKhungXe = txtSoKhung.Text;
-                    sanPhamXe.khoiLuong = Convert.ToInt64(txtKhoiLuong.Text);
+                    sanPhamXe.khoiLuong = float.Parse(txtKhoiLuong.Text, CultureInfo.InvariantCulture.NumberFormat);
                     sanPhamXe.congSuatToiDa = txtCongSuatMax.Text;
-                    sanPhamXe.dungTichBinhXang = Convert.ToInt64(txtDungTichBX.Text);
+                    sanPhamXe.dungTichBinhXang = float.Parse(txtDungTichBX.Text, CultureInfo.InvariantCulture.NumberFormat);
                     sanPhamXe.dungTichNhot = txtDungTichNhot.Text;
-                    sanPhamXe.dungTichXiLanh = Convert.ToInt64(txtDungTichXL.Text);
+                    sanPhamXe.dungTichXiLanh = float.Parse(txtDungTichXL.Text, CultureInfo.InvariantCulture.NumberFormat);
                     sanPhamXe.hanhTrinhPittong = txtHanhTrinhPittong.Text;
                     sanPhamXe.heThongKhoiDong = txtHTKhoiDong.Text;
                     sanPhamXe.loaiDongCo = txtLoaiDC.Text;
@@ -184,11 +185,11 @@ namespace WinFormApp.View
                     sanPhamXe.tenSanPham = txtTenXe.Text;
                     sanPhamXe.donGia = Convert.ToDecimal(txtDonGia.Text);
                     sanPhamXe.soKhungXe = txtSoKhung.Text;
-                    sanPhamXe.khoiLuong = Convert.ToInt64(txtKhoiLuong.Text);
+                    sanPhamXe.khoiLuong = float.Parse(txtKhoiLuong.Text, CultureInfo.InvariantCulture.NumberFormat);
                     sanPhamXe.congSuatToiDa = txtCongSuatMax.Text;
-                    sanPhamXe.dungTichBinhXang = Convert.ToInt64(txtDungTichBX.Text);
+                    sanPhamXe.dungTichBinhXang = float.Parse(txtDungTichBX.Text, CultureInfo.InvariantCulture.NumberFormat);
                     sanPhamXe.dungTichNhot = txtDungTichNhot.Text;
-                    sanPhamXe.dungTichXiLanh = Convert.ToInt64(txtDungTichXL.Text);
+                    sanPhamXe.dungTichXiLanh = float.Parse(txtDungTichXL.Text, CultureInfo.InvariantCulture.NumberFormat);
                     sanPhamXe.hanhTrinhPittong = txtHanhTrinhPittong.Text;
                     sanPhamXe.heThongKhoiDong = txtHTKhoiDong.Text;
                     sanPhamXe.loaiDongCo = txtLoaiDC.Text;
@@ -217,6 +218,42 @@ namespace WinFormApp.View
         private void cbLoaiXe_SelectedValueChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtKhoiLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) && Char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 127)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDungTichXL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) && Char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 127)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDungTichBX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) && Char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 127)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
