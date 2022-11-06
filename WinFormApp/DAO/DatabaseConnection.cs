@@ -9,10 +9,14 @@ namespace WinFormApp.DAO
 {
     public class DatabaseConnection
     {
-        public string _strConn = "Data Source=LAPTOP-7LHL7JGI;Initial Catalog=QLXEMAY;Integrated Security=True"; //Chuỗi kết nối
+        public string _strConn = "Data Source=DESKTOP-RHJMEO8;Initial Catalog=QLXEMAY;Integrated Security=True"; //Chuỗi kết nối
         public DatabaseConnection()
         {
             
+        }
+        protected SqlConnection GetConnection()
+        {
+            return new SqlConnection(_strConn);
         }
     }
 }
