@@ -78,6 +78,7 @@
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Dashboard.cs" />
     <Compile Include="View\UserControl\ucKhoXe.cs">
       <SubType>UserControl</SubType>
     </Compile>
