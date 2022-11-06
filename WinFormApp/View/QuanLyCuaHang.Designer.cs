@@ -55,12 +55,13 @@
             // gpMain
             // 
             this.gpMain.Angle = 0F;
-            this.gpMain.BackColor = System.Drawing.Color.White;
+            this.gpMain.BackColor = System.Drawing.Color.Transparent;
             this.gpMain.BottomColor = System.Drawing.Color.Empty;
             this.gpMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gpMain.Location = new System.Drawing.Point(283, 0);
+            this.gpMain.Location = new System.Drawing.Point(222, 0);
+            this.gpMain.Margin = new System.Windows.Forms.Padding(2);
             this.gpMain.Name = "gpMain";
-            this.gpMain.Size = new System.Drawing.Size(1153, 803);
+            this.gpMain.Size = new System.Drawing.Size(855, 652);
             this.gpMain.TabIndex = 1;
             this.gpMain.TopColor = System.Drawing.Color.Empty;
             // 
@@ -83,8 +84,9 @@
             this.gradientPanel1.Controls.Add(this.pictureBox1);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(291, 803);
+            this.gradientPanel1.Size = new System.Drawing.Size(218, 652);
             this.gradientPanel1.TabIndex = 0;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             // 
@@ -99,9 +101,10 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(11, 336);
+            this.rjButton1.Location = new System.Drawing.Point(8, 273);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(263, 40);
+            this.rjButton1.Size = new System.Drawing.Size(197, 32);
             this.rjButton1.TabIndex = 31;
             this.rjButton1.Text = "Nhà cung cấp";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -118,9 +121,10 @@
             this.gradientPanel3.Controls.Add(this.lbCapBac);
             this.gradientPanel3.Controls.Add(this.lbUserName);
             this.gradientPanel3.Controls.Add(this.rjCircularPictureBox1);
-            this.gradientPanel3.Location = new System.Drawing.Point(12, 674);
+            this.gradientPanel3.Location = new System.Drawing.Point(9, 548);
+            this.gradientPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(262, 117);
+            this.gradientPanel3.Size = new System.Drawing.Size(197, 95);
             this.gradientPanel3.TabIndex = 30;
             this.gradientPanel3.TopColor = System.Drawing.Color.Empty;
             // 
@@ -135,9 +139,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(3, 83);
+            this.btnLogout.Location = new System.Drawing.Point(2, 67);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(254, 29);
+            this.btnLogout.Size = new System.Drawing.Size(190, 24);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Đăng Xuất";
             this.btnLogout.TextColor = System.Drawing.Color.White;
@@ -149,9 +154,10 @@
             this.lbCapBac.AutoSize = true;
             this.lbCapBac.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCapBac.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbCapBac.Location = new System.Drawing.Point(86, 50);
+            this.lbCapBac.Location = new System.Drawing.Point(64, 41);
+            this.lbCapBac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCapBac.Name = "lbCapBac";
-            this.lbCapBac.Size = new System.Drawing.Size(65, 19);
+            this.lbCapBac.Size = new System.Drawing.Size(54, 16);
             this.lbCapBac.TabIndex = 2;
             this.lbCapBac.Text = "Cấp Bậc";
             // 
@@ -160,9 +166,10 @@
             this.lbUserName.AutoSize = true;
             this.lbUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbUserName.Location = new System.Drawing.Point(86, 16);
+            this.lbUserName.Location = new System.Drawing.Point(64, 13);
+            this.lbUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(98, 22);
+            this.lbUserName.Size = new System.Drawing.Size(79, 19);
             this.lbUserName.TabIndex = 1;
             this.lbUserName.Text = "User Name";
             // 
@@ -175,9 +182,10 @@
             this.rjCircularPictureBox1.BorderSize = 2;
             this.rjCircularPictureBox1.GradientAngle = 50F;
             this.rjCircularPictureBox1.Image = global::WinFormApp.Properties.Resources.avatar;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(12, 4);
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(9, 3);
+            this.rjCircularPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(68, 68);
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(51, 51);
             this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox1.TabIndex = 0;
             this.rjCircularPictureBox1.TabStop = false;
@@ -194,9 +202,10 @@
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Location = new System.Drawing.Point(9, 563);
+            this.btnThongKe.Location = new System.Drawing.Point(7, 457);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(263, 40);
+            this.btnThongKe.Size = new System.Drawing.Size(197, 32);
             this.btnThongKe.TabIndex = 25;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.TextColor = System.Drawing.Color.White;
@@ -214,9 +223,10 @@
             this.btnXuatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuatHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuatHang.ForeColor = System.Drawing.Color.White;
-            this.btnXuatHang.Location = new System.Drawing.Point(9, 517);
+            this.btnXuatHang.Location = new System.Drawing.Point(7, 420);
+            this.btnXuatHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnXuatHang.Name = "btnXuatHang";
-            this.btnXuatHang.Size = new System.Drawing.Size(263, 40);
+            this.btnXuatHang.Size = new System.Drawing.Size(197, 32);
             this.btnXuatHang.TabIndex = 26;
             this.btnXuatHang.Text = "Xuất Hàng";
             this.btnXuatHang.TextColor = System.Drawing.Color.White;
@@ -234,9 +244,10 @@
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.Location = new System.Drawing.Point(12, 244);
+            this.btnNhanVien.Location = new System.Drawing.Point(9, 198);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(263, 40);
+            this.btnNhanVien.Size = new System.Drawing.Size(197, 32);
             this.btnNhanVien.TabIndex = 29;
             this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.TextColor = System.Drawing.Color.White;
@@ -254,9 +265,10 @@
             this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhachHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnKhachHang.Location = new System.Drawing.Point(14, 290);
+            this.btnKhachHang.Location = new System.Drawing.Point(10, 236);
+            this.btnKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(263, 40);
+            this.btnKhachHang.Size = new System.Drawing.Size(197, 32);
             this.btnKhachHang.TabIndex = 28;
             this.btnKhachHang.Text = "Khách Hàng";
             this.btnKhachHang.TextColor = System.Drawing.Color.White;
@@ -274,9 +286,10 @@
             this.btnNhapHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhapHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhapHang.ForeColor = System.Drawing.Color.White;
-            this.btnNhapHang.Location = new System.Drawing.Point(11, 471);
+            this.btnNhapHang.Location = new System.Drawing.Point(8, 383);
+            this.btnNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Size = new System.Drawing.Size(263, 40);
+            this.btnNhapHang.Size = new System.Drawing.Size(197, 32);
             this.btnNhapHang.TabIndex = 24;
             this.btnNhapHang.Text = "Nhập Hàng";
             this.btnNhapHang.TextColor = System.Drawing.Color.White;
@@ -294,9 +307,10 @@
             this.btnKhoXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhoXe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhoXe.ForeColor = System.Drawing.Color.White;
-            this.btnKhoXe.Location = new System.Drawing.Point(9, 379);
+            this.btnKhoXe.Location = new System.Drawing.Point(7, 308);
+            this.btnKhoXe.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoXe.Name = "btnKhoXe";
-            this.btnKhoXe.Size = new System.Drawing.Size(263, 40);
+            this.btnKhoXe.Size = new System.Drawing.Size(197, 32);
             this.btnKhoXe.TabIndex = 27;
             this.btnKhoXe.Text = "Kho Xe";
             this.btnKhoXe.TextColor = System.Drawing.Color.White;
@@ -314,9 +328,10 @@
             this.btnKhoPhuTung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhoPhuTung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhoPhuTung.ForeColor = System.Drawing.Color.White;
-            this.btnKhoPhuTung.Location = new System.Drawing.Point(11, 425);
+            this.btnKhoPhuTung.Location = new System.Drawing.Point(8, 345);
+            this.btnKhoPhuTung.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoPhuTung.Name = "btnKhoPhuTung";
-            this.btnKhoPhuTung.Size = new System.Drawing.Size(263, 40);
+            this.btnKhoPhuTung.Size = new System.Drawing.Size(197, 32);
             this.btnKhoPhuTung.TabIndex = 23;
             this.btnKhoPhuTung.Text = "Kho Phụ Tùng";
             this.btnKhoPhuTung.TextColor = System.Drawing.Color.White;
@@ -334,9 +349,10 @@
             this.btnChiNhanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiNhanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChiNhanh.ForeColor = System.Drawing.Color.White;
-            this.btnChiNhanh.Location = new System.Drawing.Point(12, 198);
+            this.btnChiNhanh.Location = new System.Drawing.Point(9, 161);
+            this.btnChiNhanh.Margin = new System.Windows.Forms.Padding(2);
             this.btnChiNhanh.Name = "btnChiNhanh";
-            this.btnChiNhanh.Size = new System.Drawing.Size(263, 40);
+            this.btnChiNhanh.Size = new System.Drawing.Size(197, 32);
             this.btnChiNhanh.TabIndex = 22;
             this.btnChiNhanh.Text = "Chi Nhánh";
             this.btnChiNhanh.TextColor = System.Drawing.Color.White;
@@ -354,9 +370,10 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnHome.Location = new System.Drawing.Point(12, 152);
+            this.btnHome.Location = new System.Drawing.Point(9, 124);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(263, 40);
+            this.btnHome.Size = new System.Drawing.Size(197, 32);
             this.btnHome.TabIndex = 21;
             this.btnHome.Text = "Trang Chủ";
             this.btnHome.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -367,21 +384,23 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_honda;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(197, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
             // QuanLyCuaHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 803);
+            this.ClientSize = new System.Drawing.Size(1077, 652);
             this.Controls.Add(this.gpMain);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyCuaHang";
             this.Text = "Quản lý cửa hàng Honda Phát Tiến";
             this.Load += new System.EventHandler(this.QuanLyCuaHang_Load);

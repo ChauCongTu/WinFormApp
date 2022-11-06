@@ -57,7 +57,7 @@ namespace WinFormApp.Model
                     // get total orders
                     command.CommandText = @"SELECT count(SOHDXUAT) from HOADONXUAT Where NGHD between @fromDate and @toDate";
                     command.Parameters.Add("@fromDate", System.Data.SqlDbType.Date).Value = this.startDate;
-                    command.Parameters.Add("@endDate", System.Data.SqlDbType.Date).Value = this.endDate;
+                    command.Parameters.Add("@toDate", System.Data.SqlDbType.Date).Value = this.endDate;
                     this.NumOrders = (int)command.ExecuteScalar();
                 }
             }
@@ -79,7 +79,7 @@ namespace WinFormApp.Model
                                             GROUP BY NGHD";
 
                     command.Parameters.Add("@fromDate", System.Data.SqlDbType.Date).Value = this.startDate;
-                    command.Parameters.Add("@endDate", System.Data.SqlDbType.Date).Value = this.endDate;
+                    command.Parameters.Add("@toDate", System.Data.SqlDbType.Date).Value = this.endDate;
                     var reader = command.ExecuteReader();
                     var resultTable = new List<KeyValuePair<DateTime, decimal>>();
                     while (reader.Read())
@@ -147,6 +147,64 @@ namespace WinFormApp.Model
                                                                          ).ToList();
                     }
                 }
+            }
+        }
+
+        private void GetProductAnalysys()
+        {
+            this.TopProductsList = new List<KeyValuePair<string, int>>();
+            this.UnderStockList = new List<KeyValuePair<string, int>>();
+            using(var connection = GetConnection())
+            {
+                connection.Open();
+                using(var command = new SqlCommand())
+                {
+                    SqlDataReader reader;
+                    command.Connection = connection;
+                    // get top 5 products
+                    command.CommandText = @"SELECT top 5 SANPHAM.TENSP, sum(CTHDXUAT.SOLUONG) as Quantity
+                                          from HOADONXUAT, CTHDXUAT, SANPHAM Where NGHD between @fromDate and @toDate AND HOADONXUAT.SOHDXUAT = CTHDXUAT.SOHDXUAT AND SANPHAM.MASP = CTHDXUAT.MASP
+                                          GROUP BY SANPHAM.TENSP ORDER BY Quantity DESC";
+                    command.Parameters.Add("@fromDate", System.Data.SqlDbType.Date).Value = this.startDate;
+                    command.Parameters.Add("@toDate", System.Data.SqlDbType.Date).Value = this.endDate;
+                    reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        this.TopProductsList.Add(new KeyValuePair<string, int>(reader[0].ToString(), (int)reader[1]));
+                    }
+                    reader.Close();
+
+                    // get understock
+                    command.CommandText = @"select top 10 TENSP, count(TENSP) as count from SANPHAM group by TENSP Order by count ASC";
+                    reader = command.ExecuteReader();
+                    while(reader.Read())
+                    {
+                        this.UnderStockList.Add(new KeyValuePair<string, int>(reader[0].ToString(), (int)reader[1]));
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+        public bool LoadData(DateTime _startDate, DateTime _endDate)
+        {
+            _endDate = new DateTime(_endDate.Year, _endDate.Month, _endDate.Day, _endDate.Hour, endDate.Minute, 59);
+            if (_startDate != this.startDate || _endDate != this.endDate)
+            {
+                this.startDate = _startDate;
+                this.endDate = _endDate;
+                this.numberDays = (endDate - startDate).Days;
+
+                this.GetNumerItems();
+                this.GetProductAnalysys();
+                this.GetOrderAnalysis();
+                Console.WriteLine("Get Data: {0} - {1}", _startDate.ToString(), _endDate.ToString());
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Get Data Fail: {0} - {1}", _startDate.ToString(), _endDate.ToString());
+                return false;
             }
         }
     }
