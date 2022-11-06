@@ -138,8 +138,6 @@ namespace WinFormApp
         {
             switchSelect(btnThongKe);
             gpMain.Controls.Clear();
-            gpMain.Size = new Size(1220, 652);
-            QuanLyCuaHang.ActiveForm.Size = new Size(gradientPanel1.Size.Width + gpMain.Size.Width, QuanLyCuaHang.ActiveForm.Size.Height);
             gpMain.Controls.Add(new ucQuanLyThongKe());
         }
 
