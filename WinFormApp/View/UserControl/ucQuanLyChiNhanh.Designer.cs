@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQuanLyChiNhanh));
             this.label3 = new System.Windows.Forms.Label();
-            this.rjtbFindCN = new CustomControls.RJControls.RJTextBox();
             this.dgvChiNhanh = new System.Windows.Forms.DataGridView();
             this.txtNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +58,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -76,29 +75,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(616, 294);
+            this.label3.Location = new System.Drawing.Point(645, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(206, 26);
             this.label3.TabIndex = 59;
             this.label3.Text = "Tìm kiếm chi nhánh:";
-            // 
-            // rjtbFindCN
-            // 
-            this.rjtbFindCN.BackColor = System.Drawing.SystemColors.Window;
-            this.rjtbFindCN.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjtbFindCN.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjtbFindCN.BorderSize = 2;
-            this.rjtbFindCN.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbFindCN.ForeColor = System.Drawing.Color.Black;
-            this.rjtbFindCN.Location = new System.Drawing.Point(846, 286);
-            this.rjtbFindCN.Multiline = false;
-            this.rjtbFindCN.Name = "rjtbFindCN";
-            this.rjtbFindCN.Padding = new System.Windows.Forms.Padding(7);
-            this.rjtbFindCN.PasswordChar = false;
-            this.rjtbFindCN.Size = new System.Drawing.Size(250, 34);
-            this.rjtbFindCN.TabIndex = 62;
-            this.rjtbFindCN.Texts = "";
-            this.rjtbFindCN.UnderlinedStyle = false;
             // 
             // dgvChiNhanh
             // 
@@ -456,22 +437,40 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1098, 286);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_search;
+            this.pictureBox1.Location = new System.Drawing.Point(1108, 288);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtTraCuuHoaDon
+            // 
+            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
+            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTraCuuHoaDon.BorderSize = 2;
+            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(860, 286);
+            this.txtTraCuuHoaDon.Multiline = false;
+            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
+            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTraCuuHoaDon.PasswordChar = false;
+            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
+            this.txtTraCuuHoaDon.TabIndex = 62;
+            this.txtTraCuuHoaDon.Texts = "";
+            this.txtTraCuuHoaDon.UnderlinedStyle = true;
             // 
             // ucQuanLyChiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.rjtbFindCN);
+            this.Controls.Add(this.txtTraCuuHoaDon);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvChiNhanh);
             this.Controls.Add(this.panel1);
             this.Name = "ucQuanLyChiNhanh";
@@ -497,8 +496,6 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private CustomControls.RJControls.RJTextBox rjtbFindCN;
         private System.Windows.Forms.DataGridView dgvChiNhanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtMaCn;
@@ -527,5 +524,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private CustomControls.RJControls.RJTextBox txtTraCuuHoaDon;
     }
 }

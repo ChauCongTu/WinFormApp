@@ -16,8 +16,7 @@ namespace WinFormApp.CustomControl
         {
             InitializeComponent();
         }
-
-        private void ucQuanLyKhachHang_Load(object sender, EventArgs e)
+        void table_load()
         {
 
         }

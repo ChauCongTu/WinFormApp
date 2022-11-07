@@ -508,7 +508,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucQuanLyKhachHang";
             this.Size = new System.Drawing.Size(1153, 803);
-            this.Load += new System.EventHandler(this.ucQuanLyKhachHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();

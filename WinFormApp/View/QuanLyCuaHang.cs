@@ -97,6 +97,7 @@ namespace WinFormApp
         {
             switchSelect(btnHome);
             gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucTrangChu());
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -150,6 +151,8 @@ namespace WinFormApp
 
         private void QuanLyCuaHang_Load(object sender, EventArgs e)
         {
+            gpMain.Controls.Clear();
+            gpMain.Controls.Add(new ucTrangChu());
             lbUserName.Text = nhanVien.tenNhanVien;
             if(nhanVien.capbac == 1)
             {

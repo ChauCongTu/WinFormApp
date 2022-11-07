@@ -125,6 +125,7 @@
             this.txtPassword.TabIndex = 21;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // rjButton1
             // 

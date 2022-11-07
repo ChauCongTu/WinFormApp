@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormApp.CustomControl;
+using WinFormApp.DAO;
 using WinFormApp.Model;
 
 namespace WinFormApp.View
@@ -18,6 +19,7 @@ namespace WinFormApp.View
         int _pass2 = 0;
         int _pass3 = 0;
         NhanVien nhanVien = new NhanVien();
+        Functions Functions = new Functions();
         public DoiMatKhau()
         {
             InitializeComponent();
@@ -88,7 +90,7 @@ namespace WinFormApp.View
             {
                 lbErr.Text = "*Không được để trống thông tin!";
             }
-            else if(txtOldPwd.Text != nhanVien.matKhau)
+            else if(Functions.GetMD5(txtOldPwd.Text) != nhanVien.matKhau)
             {
                 lbErr.Text = "*Mật khẩu cũ không chính xác!";
             }
@@ -102,7 +104,7 @@ namespace WinFormApp.View
                 {
                     lbErr.Text = "*Mật khẩu mới và mật khẩu xác nhận không trùng khớp!";
                 }
-                else if(txtNewPwd.Text == nhanVien.matKhau)
+                else if(Functions.GetMD5(txtNewPwd.Text) == nhanVien.matKhau)
                 {
                     lbErr.Text = "*Mật khẩu mới không được trùng với mật khẩu cũ!";
                 }
@@ -110,6 +112,12 @@ namespace WinFormApp.View
                 {
                     lbErr.Text = "";
                     RJMessageBox.Show("Đổi mật khẩu thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    nhanVien.matKhau = Functions.GetMD5(txtNewPwd.Text);
+                    DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
+                    DAO_ChiNhanh dAO_ChiNhanh = new DAO_ChiNhanh();
+                    dAO_NhanVien.Update(nhanVien, dAO_ChiNhanh.GetByUsrID(nhanVien.maNhanVien).maChiNhanh);
+                    this.Hide();
+                    this.Close();
                 }
             }
         }

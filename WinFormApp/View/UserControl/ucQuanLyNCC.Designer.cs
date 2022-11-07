@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQuanLyNCC));
             this.label3 = new System.Windows.Forms.Label();
-            this.rjtbFindNcc = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbInputEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +61,7 @@
             this.txtDiaChiNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSDTNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
@@ -84,24 +83,6 @@
             this.label3.Size = new System.Drawing.Size(237, 26);
             this.label3.TabIndex = 64;
             this.label3.Text = "Tìm kiếm nhà cung cấp:";
-            // 
-            // rjtbFindNcc
-            // 
-            this.rjtbFindNcc.BackColor = System.Drawing.SystemColors.Window;
-            this.rjtbFindNcc.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjtbFindNcc.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjtbFindNcc.BorderSize = 2;
-            this.rjtbFindNcc.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjtbFindNcc.ForeColor = System.Drawing.Color.White;
-            this.rjtbFindNcc.Location = new System.Drawing.Point(846, 335);
-            this.rjtbFindNcc.Multiline = false;
-            this.rjtbFindNcc.Name = "rjtbFindNcc";
-            this.rjtbFindNcc.Padding = new System.Windows.Forms.Padding(7);
-            this.rjtbFindNcc.PasswordChar = false;
-            this.rjtbFindNcc.Size = new System.Drawing.Size(250, 34);
-            this.rjtbFindNcc.TabIndex = 67;
-            this.rjtbFindNcc.Texts = "";
-            this.rjtbFindNcc.UnderlinedStyle = false;
             // 
             // panel1
             // 
@@ -486,22 +467,40 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1098, 335);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_search;
+            this.pictureBox1.Location = new System.Drawing.Point(1109, 337);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtTraCuuHoaDon
+            // 
+            this.txtTraCuuHoaDon.BackColor = System.Drawing.Color.White;
+            this.txtTraCuuHoaDon.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.txtTraCuuHoaDon.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTraCuuHoaDon.BorderSize = 2;
+            this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(861, 335);
+            this.txtTraCuuHoaDon.Multiline = false;
+            this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
+            this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTraCuuHoaDon.PasswordChar = false;
+            this.txtTraCuuHoaDon.Size = new System.Drawing.Size(276, 34);
+            this.txtTraCuuHoaDon.TabIndex = 67;
+            this.txtTraCuuHoaDon.Texts = "";
+            this.txtTraCuuHoaDon.UnderlinedStyle = true;
             // 
             // ucQuanLyNCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.rjtbFindNcc);
+            this.Controls.Add(this.txtTraCuuHoaDon);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvNCC);
             this.Name = "ucQuanLyNCC";
@@ -527,8 +526,6 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private CustomControls.RJControls.RJTextBox rjtbFindNcc;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbInputEmail;
         private System.Windows.Forms.Label label6;
@@ -560,5 +557,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtDiaChiNcc;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtSDTNcc;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private CustomControls.RJControls.RJTextBox txtTraCuuHoaDon;
     }
 }

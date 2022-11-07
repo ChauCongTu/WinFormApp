@@ -96,6 +96,12 @@
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControl\ucTrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucTrangChu.Designer.cs">
+      <DependentUpon>ucTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="dsHoaDonNhap.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,6 +268,9 @@
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucTrangChu.resx">
+      <DependentUpon>ucTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Report\HoaDonNhap.rdlc" />
     <EmbeddedResource Include="View\Report\HoaDonXuat.rdlc" />
     <EmbeddedResource Include="View\Report\rpHoaDonNhap.resx">
@@ -409,6 +418,7 @@
     <None Include="Resources\avatar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\back_ground.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
