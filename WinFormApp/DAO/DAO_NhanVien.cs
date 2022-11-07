@@ -68,7 +68,7 @@ namespace WinFormApp.DAO
         {
             List<NhanVien> list = new List<NhanVien>();
             _conn.Open();
-            command = new SqlCommand($"SELECT * FROM NHANVIEN WHERE TENNV LIKE '%{_tenNhanVien}%'", _conn);
+            command = new SqlCommand($"SELECT * FROM NHANVIEN WHERE HOTEN LIKE '%{_tenNhanVien}%'", _conn);
             reader = command.ExecuteReader();
             while (reader.Read())
             {

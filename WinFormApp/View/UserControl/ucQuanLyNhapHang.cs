@@ -17,13 +17,13 @@ namespace WinFormApp.CustomControl
     {
         Functions function = new Functions();
         ChiNhanh ChiNhanh = new ChiNhanh();
-        NhanVien nhanVien = new NhanVien();
-        HoaDonNhap hd = new HoaDonNhap();
+        NhanVien nhanVien = new NhanVien(); //thông tin đang đăng nhập
+        HoaDonNhap hd = new HoaDonNhap(); //thông tin rỗng
         int saveType;
         public ucQuanLyNhapHang(NhanVien nhanVien)
         {
             InitializeComponent();
-            this.nhanVien = nhanVien;
+            this.nhanVien = nhanVien; //truyền vào
         }
         public ucQuanLyNhapHang(HoaDonNhap hd, NhanVien nhanVien)
         {

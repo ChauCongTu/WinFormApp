@@ -57,9 +57,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -68,8 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -269,6 +269,7 @@
             this.btnDeleteCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteCN.TextColor = System.Drawing.Color.White;
             this.btnDeleteCN.UseVisualStyleBackColor = false;
+            this.btnDeleteCN.Click += new System.EventHandler(this.btnDeleteCN_Click);
             // 
             // pbSave
             // 
@@ -323,6 +324,7 @@
             this.btnExitCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExitCN.TextColor = System.Drawing.Color.White;
             this.btnExitCN.UseVisualStyleBackColor = false;
+            this.btnExitCN.Click += new System.EventHandler(this.btnExitCN_Click);
             // 
             // btnUpdateCN
             // 
@@ -344,6 +346,7 @@
             this.btnUpdateCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateCN.TextColor = System.Drawing.Color.White;
             this.btnUpdateCN.UseVisualStyleBackColor = false;
+            this.btnUpdateCN.Click += new System.EventHandler(this.btnUpdateCN_Click);
             // 
             // btnSaveCN
             // 
@@ -430,6 +433,16 @@
             this.panel2.Size = new System.Drawing.Size(1120, 50);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WinFormApp.Properties.Resources.ChiNhanh1_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -451,16 +464,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WinFormApp.Properties.Resources.ChiNhanh1_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
             // 
             // ucQuanLyChiNhanh
             // 
@@ -484,8 +487,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

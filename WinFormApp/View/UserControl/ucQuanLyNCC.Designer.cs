@@ -40,7 +40,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbInputMaNcc = new System.Windows.Forms.TextBox();
+            this.pbDelete = new System.Windows.Forms.PictureBox();
+            this.pbUpdate = new System.Windows.Forms.PictureBox();
             this.btnDeleteCN = new WinFormApp.RJButton();
+            this.pbSave = new System.Windows.Forms.PictureBox();
+            this.pbAdd = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnExitCN = new WinFormApp.RJButton();
             this.btnUpdateCN = new WinFormApp.RJButton();
             this.btnSaveCN = new WinFormApp.RJButton();
@@ -48,8 +53,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvChiNhanh = new System.Windows.Forms.DataGridView();
+            this.dgvNCC = new System.Windows.Forms.DataGridView();
             this.txtNoNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTenNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,22 +63,16 @@
             this.txtDiaChiNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSDTNcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
-            this.pbUpdate = new System.Windows.Forms.PictureBox();
-            this.pbSave = new System.Windows.Forms.PictureBox();
-            this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -203,6 +203,28 @@
             this.tbInputMaNcc.Size = new System.Drawing.Size(250, 30);
             this.tbInputMaNcc.TabIndex = 44;
             // 
+            // pbDelete
+            // 
+            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
+            this.pbDelete.Location = new System.Drawing.Point(720, 250);
+            this.pbDelete.Name = "pbDelete";
+            this.pbDelete.Size = new System.Drawing.Size(31, 31);
+            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDelete.TabIndex = 43;
+            this.pbDelete.TabStop = false;
+            // 
+            // pbUpdate
+            // 
+            this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
+            this.pbUpdate.Location = new System.Drawing.Point(511, 253);
+            this.pbUpdate.Name = "pbUpdate";
+            this.pbUpdate.Size = new System.Drawing.Size(28, 28);
+            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUpdate.TabIndex = 20;
+            this.pbUpdate.TabStop = false;
+            // 
             // btnDeleteCN
             // 
             this.btnDeleteCN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -223,6 +245,40 @@
             this.btnDeleteCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteCN.TextColor = System.Drawing.Color.White;
             this.btnDeleteCN.UseVisualStyleBackColor = false;
+            this.btnDeleteCN.Click += new System.EventHandler(this.btnDeleteCN_Click);
+            // 
+            // pbSave
+            // 
+            this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
+            this.pbSave.Location = new System.Drawing.Point(292, 253);
+            this.pbSave.Name = "pbSave";
+            this.pbSave.Size = new System.Drawing.Size(28, 28);
+            this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSave.TabIndex = 19;
+            this.pbSave.TabStop = false;
+            // 
+            // pbAdd
+            // 
+            this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
+            this.pbAdd.Location = new System.Drawing.Point(80, 253);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(28, 28);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdd.TabIndex = 18;
+            this.pbAdd.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
+            this.pictureBox5.Location = new System.Drawing.Point(945, 253);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 41;
+            this.pictureBox5.TabStop = false;
             // 
             // btnExitCN
             // 
@@ -244,6 +300,7 @@
             this.btnExitCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExitCN.TextColor = System.Drawing.Color.White;
             this.btnExitCN.UseVisualStyleBackColor = false;
+            this.btnExitCN.Click += new System.EventHandler(this.btnExitCN_Click);
             // 
             // btnUpdateCN
             // 
@@ -265,6 +322,7 @@
             this.btnUpdateCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateCN.TextColor = System.Drawing.Color.White;
             this.btnUpdateCN.UseVisualStyleBackColor = false;
+            this.btnUpdateCN.Click += new System.EventHandler(this.btnUpdateCN_Click);
             // 
             // btnSaveCN
             // 
@@ -286,6 +344,7 @@
             this.btnSaveCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveCN.TextColor = System.Drawing.Color.White;
             this.btnSaveCN.UseVisualStyleBackColor = false;
+            this.btnSaveCN.Click += new System.EventHandler(this.btnSaveCN_Click);
             // 
             // btnNewCN
             // 
@@ -307,6 +366,7 @@
             this.btnNewCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewCN.TextColor = System.Drawing.Color.White;
             this.btnNewCN.UseVisualStyleBackColor = false;
+            this.btnNewCN.Click += new System.EventHandler(this.btnNewCN_Click);
             // 
             // label5
             // 
@@ -339,6 +399,16 @@
             this.panel2.Size = new System.Drawing.Size(1120, 50);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WinFormApp.Properties.Resources.icon_ncc;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -350,24 +420,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lý Nhà Cung Cấp";
             // 
-            // dgvChiNhanh
+            // dgvNCC
             // 
-            this.dgvChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvChiNhanh.BackgroundColor = System.Drawing.Color.White;
-            this.dgvChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiNhanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNCC.BackgroundColor = System.Drawing.Color.White;
+            this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtNoNcc,
             this.txtMaNcc,
             this.txtTenNcc,
             this.txtEmail,
             this.txtDiaChiNcc,
             this.txtSDTNcc});
-            this.dgvChiNhanh.Location = new System.Drawing.Point(16, 388);
-            this.dgvChiNhanh.Name = "dgvChiNhanh";
-            this.dgvChiNhanh.RowHeadersWidth = 51;
-            this.dgvChiNhanh.RowTemplate.Height = 24;
-            this.dgvChiNhanh.Size = new System.Drawing.Size(1121, 411);
-            this.dgvChiNhanh.TabIndex = 66;
+            this.dgvNCC.Location = new System.Drawing.Point(16, 388);
+            this.dgvNCC.Name = "dgvNCC";
+            this.dgvNCC.RowHeadersWidth = 51;
+            this.dgvNCC.RowTemplate.Height = 24;
+            this.dgvNCC.Size = new System.Drawing.Size(1121, 411);
+            this.dgvNCC.TabIndex = 66;
+            this.dgvNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNCC_CellClick);
             // 
             // txtNoNcc
             // 
@@ -424,71 +495,6 @@
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
             // 
-            // pbDelete
-            // 
-            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
-            this.pbDelete.Location = new System.Drawing.Point(720, 250);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(31, 31);
-            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete.TabIndex = 43;
-            this.pbDelete.TabStop = false;
-            // 
-            // pbUpdate
-            // 
-            this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
-            this.pbUpdate.Location = new System.Drawing.Point(511, 253);
-            this.pbUpdate.Name = "pbUpdate";
-            this.pbUpdate.Size = new System.Drawing.Size(28, 28);
-            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUpdate.TabIndex = 20;
-            this.pbUpdate.TabStop = false;
-            // 
-            // pbSave
-            // 
-            this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
-            this.pbSave.Location = new System.Drawing.Point(292, 253);
-            this.pbSave.Name = "pbSave";
-            this.pbSave.Size = new System.Drawing.Size(28, 28);
-            this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSave.TabIndex = 19;
-            this.pbSave.TabStop = false;
-            // 
-            // pbAdd
-            // 
-            this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
-            this.pbAdd.Location = new System.Drawing.Point(80, 253);
-            this.pbAdd.Name = "pbAdd";
-            this.pbAdd.Size = new System.Drawing.Size(28, 28);
-            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAdd.TabIndex = 18;
-            this.pbAdd.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
-            this.pictureBox5.Location = new System.Drawing.Point(945, 253);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 41;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WinFormApp.Properties.Resources.icon_ncc;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
-            // 
             // ucQuanLyNCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -497,21 +503,22 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rjtbFindNcc);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvChiNhanh);
+            this.Controls.Add(this.dgvNCC);
             this.Name = "ucQuanLyNCC";
             this.Size = new System.Drawing.Size(1153, 803);
+            this.Load += new System.EventHandler(this.ucQuanLyNCC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiNhanh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,7 +552,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvChiNhanh;
+        private System.Windows.Forms.DataGridView dgvNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNoNcc;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtMaNcc;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtTenNcc;
