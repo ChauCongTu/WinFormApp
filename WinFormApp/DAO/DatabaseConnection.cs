@@ -12,7 +12,11 @@ namespace WinFormApp.DAO
         public string _strConn = "Data Source=./;Initial Catalog=QLXEMAY;Integrated Security=True"; //Chuỗi kết nối
         public DatabaseConnection()
         {
-            
+
+        }
+        protected SqlConnection GetConnection()
+        {
+            return new SqlConnection(_strConn);
         }
     }
 }
