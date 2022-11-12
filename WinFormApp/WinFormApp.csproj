@@ -83,6 +83,20 @@
     <Compile Include="CustomControl\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\DAO_HinhAnhXe.cs" />
+    <Compile Include="Model\HinhAnhXe.cs" />
+    <Compile Include="View\ChiTietXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChiTietXe.Designer.cs">
+      <DependentUpon>ChiTietXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControl\ucHinhAnhXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControl\ucHinhAnhXe.Designer.cs">
+      <DependentUpon>ucHinhAnhXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -95,6 +109,12 @@
     </Compile>
     <Compile Include="CustomControl\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FullSizeAvatar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FullSizeAvatar.Designer.cs">
+      <DependentUpon>FullSizeAvatar.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControl\ucTrangChu.cs">
       <SubType>UserControl</SubType>
@@ -167,11 +187,11 @@
     <Compile Include="View\UserControl\ucQuanLyChiNhanh.Designer.cs">
       <DependentUpon>ucQuanLyChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ChiTietXe.cs">
-      <SubType>Form</SubType>
+    <Compile Include="View\UserControl\ucChiTietXe.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ChiTietXe.Designer.cs">
-      <DependentUpon>ChiTietXe.cs</DependentUpon>
+    <Compile Include="View\UserControl\ucChiTietXe.Designer.cs">
+      <DependentUpon>ucChiTietXe.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControl\ucQuanLyThongKe.cs">
       <SubType>UserControl</SubType>
@@ -265,8 +285,17 @@
     <EmbeddedResource Include="CustomControl\FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ChiTietXe.resx">
+      <DependentUpon>ChiTietXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControl\ucHinhAnhXe.resx">
+      <DependentUpon>ucHinhAnhXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FullSizeAvatar.resx">
+      <DependentUpon>FullSizeAvatar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucTrangChu.resx">
       <DependentUpon>ucTrangChu.cs</DependentUpon>
@@ -294,8 +323,8 @@
     <EmbeddedResource Include="View\UserControl\ucQuanLyChiNhanh.resx">
       <DependentUpon>ucQuanLyChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ChiTietXe.resx">
-      <DependentUpon>ChiTietXe.cs</DependentUpon>
+    <EmbeddedResource Include="View\UserControl\ucChiTietXe.resx">
+      <DependentUpon>ucChiTietXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl\ucQuanLyThongKe.resx">
       <DependentUpon>ucQuanLyThongKe.cs</DependentUpon>
@@ -419,6 +448,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back_ground.png" />
+    <None Include="Resources\icon_camera.png" />
+    <None Include="Resources\haaland.jpeg" />
+    <None Include="Resources\icon_close_img.png" />
+    <None Include="Resources\navigate_right.png" />
+    <None Include="Resources\icon_right.png" />
+    <None Include="Resources\navigate_left.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

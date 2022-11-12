@@ -29,9 +29,21 @@
         private void InitializeComponent()
         {
             this.dgvPhuTung = new System.Windows.Forms.DataGridView();
+            this._sott = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._tenpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbChiNhanh = new System.Windows.Forms.ComboBox();
+            this.pbsave = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.pbcancel = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pbedit = new System.Windows.Forms.PictureBox();
+            this.pbdelete = new System.Windows.Forms.PictureBox();
+            this.pbadd = new System.Windows.Forms.PictureBox();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
@@ -44,31 +56,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pbsave = new System.Windows.Forms.PictureBox();
-            this.pbcancel = new System.Windows.Forms.PictureBox();
-            this.pbedit = new System.Windows.Forms.PictureBox();
-            this.pbdelete = new System.Windows.Forms.PictureBox();
-            this.pbadd = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
-            this._sott = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._mapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._tenpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuTung)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbsave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbedit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbdelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbadd)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -91,11 +91,46 @@
             this.dgvPhuTung.Size = new System.Drawing.Size(1127, 396);
             this.dgvPhuTung.TabIndex = 3;
             // 
+            // _sott
+            // 
+            this._sott.HeaderText = "Số TT";
+            this._sott.MinimumWidth = 6;
+            this._sott.Name = "_sott";
+            this._sott.ReadOnly = true;
+            // 
+            // _mapt
+            // 
+            this._mapt.HeaderText = "Mã phụ tùng";
+            this._mapt.MinimumWidth = 6;
+            this._mapt.Name = "_mapt";
+            this._mapt.ReadOnly = true;
+            // 
+            // _tenpt
+            // 
+            this._tenpt.HeaderText = "Tên phụ tùng";
+            this._tenpt.MinimumWidth = 6;
+            this._tenpt.Name = "_tenpt";
+            this._tenpt.ReadOnly = true;
+            // 
+            // _sl
+            // 
+            this._sl.HeaderText = "Số lượng";
+            this._sl.MinimumWidth = 6;
+            this._sl.Name = "_sl";
+            this._sl.ReadOnly = true;
+            // 
+            // _mota
+            // 
+            this._mota.HeaderText = "Mô tả";
+            this._mota.MinimumWidth = 6;
+            this._mota.Name = "_mota";
+            this._mota.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbChiNhanh);
             this.panel1.Controls.Add(this.pbsave);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.pbcancel);
@@ -120,6 +155,40 @@
             this.panel1.Size = new System.Drawing.Size(1127, 327);
             this.panel1.TabIndex = 2;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(328, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 26);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Chi nhánh:";
+            // 
+            // cbChiNhanh
+            // 
+            this.cbChiNhanh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChiNhanh.FormattingEnabled = true;
+            this.cbChiNhanh.Items.AddRange(new object[] {
+            "Quản Lý",
+            "Nhân Viên"});
+            this.cbChiNhanh.Location = new System.Drawing.Point(446, 57);
+            this.cbChiNhanh.Name = "cbChiNhanh";
+            this.cbChiNhanh.Size = new System.Drawing.Size(328, 34);
+            this.cbChiNhanh.TabIndex = 38;
+            this.cbChiNhanh.SelectedValueChanged += new System.EventHandler(this.cbChiNhanh_SelectedValueChanged);
+            // 
+            // pbsave
+            // 
+            this.pbsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbsave.Image = global::WinFormApp.Properties.Resources.icon_save;
+            this.pbsave.Location = new System.Drawing.Point(279, 279);
+            this.pbsave.Name = "pbsave";
+            this.pbsave.Size = new System.Drawing.Size(26, 26);
+            this.pbsave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbsave.TabIndex = 37;
+            this.pbsave.TabStop = false;
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -132,6 +201,17 @@
             this.btnSave.Text = "   Lưu lại ";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // pbcancel
+            // 
+            this.pbcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.pbcancel.Image = global::WinFormApp.Properties.Resources.icon_close;
+            this.pbcancel.Location = new System.Drawing.Point(937, 279);
+            this.pbcancel.Name = "pbcancel";
+            this.pbcancel.Size = new System.Drawing.Size(28, 28);
+            this.pbcancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbcancel.TabIndex = 35;
+            this.pbcancel.TabStop = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
@@ -143,6 +223,42 @@
             this.button2.TabIndex = 34;
             this.button2.Text = "   Thoát";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // pbedit
+            // 
+            this.pbedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbedit.Cursor = System.Windows.Forms.Cursors.No;
+            this.pbedit.Enabled = false;
+            this.pbedit.Image = global::WinFormApp.Properties.Resources.icon_edit;
+            this.pbedit.Location = new System.Drawing.Point(482, 281);
+            this.pbedit.Name = "pbedit";
+            this.pbedit.Size = new System.Drawing.Size(28, 28);
+            this.pbedit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbedit.TabIndex = 33;
+            this.pbedit.TabStop = false;
+            // 
+            // pbdelete
+            // 
+            this.pbdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbdelete.Image = global::WinFormApp.Properties.Resources.icon_delete;
+            this.pbdelete.Location = new System.Drawing.Point(714, 279);
+            this.pbdelete.Name = "pbdelete";
+            this.pbdelete.Size = new System.Drawing.Size(28, 28);
+            this.pbdelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbdelete.TabIndex = 32;
+            this.pbdelete.TabStop = false;
+            // 
+            // pbadd
+            // 
+            this.pbadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbadd.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbadd.Image = global::WinFormApp.Properties.Resources.icon_add1;
+            this.pbadd.Location = new System.Drawing.Point(72, 279);
+            this.pbadd.Name = "pbadd";
+            this.pbadd.Size = new System.Drawing.Size(28, 28);
+            this.pbadd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbadd.TabIndex = 31;
+            this.pbadd.TabStop = false;
             // 
             // btn_xoa
             // 
@@ -264,6 +380,16 @@
             this.panel2.Size = new System.Drawing.Size(1125, 43);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.PhuTung1_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -274,96 +400,6 @@
             this.label1.Size = new System.Drawing.Size(141, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Kho phụ tùng";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(328, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 26);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Chi nhánh:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Quản Lý",
-            "Nhân Viên"});
-            this.comboBox1.Location = new System.Drawing.Point(446, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(328, 34);
-            this.comboBox1.TabIndex = 38;
-            // 
-            // pbsave
-            // 
-            this.pbsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbsave.Image = global::WinFormApp.Properties.Resources.icon_save;
-            this.pbsave.Location = new System.Drawing.Point(279, 279);
-            this.pbsave.Name = "pbsave";
-            this.pbsave.Size = new System.Drawing.Size(26, 26);
-            this.pbsave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbsave.TabIndex = 37;
-            this.pbsave.TabStop = false;
-            // 
-            // pbcancel
-            // 
-            this.pbcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.pbcancel.Image = global::WinFormApp.Properties.Resources.icon_close;
-            this.pbcancel.Location = new System.Drawing.Point(937, 279);
-            this.pbcancel.Name = "pbcancel";
-            this.pbcancel.Size = new System.Drawing.Size(28, 28);
-            this.pbcancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbcancel.TabIndex = 35;
-            this.pbcancel.TabStop = false;
-            // 
-            // pbedit
-            // 
-            this.pbedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbedit.Cursor = System.Windows.Forms.Cursors.No;
-            this.pbedit.Enabled = false;
-            this.pbedit.Image = global::WinFormApp.Properties.Resources.icon_edit;
-            this.pbedit.Location = new System.Drawing.Point(482, 281);
-            this.pbedit.Name = "pbedit";
-            this.pbedit.Size = new System.Drawing.Size(28, 28);
-            this.pbedit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbedit.TabIndex = 33;
-            this.pbedit.TabStop = false;
-            // 
-            // pbdelete
-            // 
-            this.pbdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbdelete.Image = global::WinFormApp.Properties.Resources.icon_delete;
-            this.pbdelete.Location = new System.Drawing.Point(714, 279);
-            this.pbdelete.Name = "pbdelete";
-            this.pbdelete.Size = new System.Drawing.Size(28, 28);
-            this.pbdelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbdelete.TabIndex = 32;
-            this.pbdelete.TabStop = false;
-            // 
-            // pbadd
-            // 
-            this.pbadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbadd.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pbadd.Image = global::WinFormApp.Properties.Resources.icon_add1;
-            this.pbadd.Location = new System.Drawing.Point(72, 279);
-            this.pbadd.Name = "pbadd";
-            this.pbadd.Size = new System.Drawing.Size(28, 28);
-            this.pbadd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbadd.TabIndex = 31;
-            this.pbadd.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WinFormApp.Properties.Resources.PhuTung1_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -404,41 +440,6 @@
             this.txtTraCuuHoaDon.Texts = "";
             this.txtTraCuuHoaDon.UnderlinedStyle = true;
             // 
-            // _sott
-            // 
-            this._sott.HeaderText = "Số TT";
-            this._sott.MinimumWidth = 6;
-            this._sott.Name = "_sott";
-            this._sott.ReadOnly = true;
-            // 
-            // _mapt
-            // 
-            this._mapt.HeaderText = "Mã phụ tùng";
-            this._mapt.MinimumWidth = 6;
-            this._mapt.Name = "_mapt";
-            this._mapt.ReadOnly = true;
-            // 
-            // _tenpt
-            // 
-            this._tenpt.HeaderText = "Tên phụ tùng";
-            this._tenpt.MinimumWidth = 6;
-            this._tenpt.Name = "_tenpt";
-            this._tenpt.ReadOnly = true;
-            // 
-            // _sl
-            // 
-            this._sl.HeaderText = "Số lượng";
-            this._sl.MinimumWidth = 6;
-            this._sl.Name = "_sl";
-            this._sl.ReadOnly = true;
-            // 
-            // _mota
-            // 
-            this._mota.HeaderText = "Mô tả";
-            this._mota.MinimumWidth = 6;
-            this._mota.Name = "_mota";
-            this._mota.ReadOnly = true;
-            // 
             // ucKhoPhuTung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,16 +451,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucKhoPhuTung";
             this.Size = new System.Drawing.Size(1153, 803);
+            this.Load += new System.EventHandler(this.ucKhoPhuTung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuTung)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbsave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbedit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbdelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbadd)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -493,7 +495,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbChiNhanh;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.RJTextBox txtTraCuuHoaDon;

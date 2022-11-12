@@ -17,11 +17,13 @@ namespace WinFormApp.Model
         public string diaChi { set; get; }
         public int capbac { set; get; }
         public string soDienThoai { set; get; }
+        public int gioiTinh { set; get; }
+        public string anhDaiDien { set; get; }
         public NhanVien()
         {
 
         }
-        public NhanVien(string maNhanVien, string tenNhanVien, string tenDangNhap, string matKhau, DateTime ngaySinh, int chungMinhNhanDan, string diaChi, int capbac, string soDienThoai)
+        public NhanVien(string maNhanVien, string tenNhanVien, string tenDangNhap, string matKhau, DateTime ngaySinh, int chungMinhNhanDan, string diaChi, int capbac, string soDienThoai, int gioiTinh, string anhDaiDien)
         {
             this.maNhanVien = maNhanVien;
             this.tenNhanVien = tenNhanVien;
@@ -32,6 +34,8 @@ namespace WinFormApp.Model
             this.diaChi = diaChi;
             this.capbac = capbac;
             this.soDienThoai = soDienThoai;
+            this.gioiTinh = gioiTinh;
+            this.anhDaiDien = anhDaiDien;
         }
     }
 }

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvKhoXe = new System.Windows.Forms.DataGridView();
+            this._stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbLoaiXe = new System.Windows.Forms.ComboBox();
             this.txtSoKhung = new System.Windows.Forms.TextBox();
@@ -57,12 +63,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
-            this._stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoXe)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -94,6 +94,48 @@
             this.dgvKhoXe.Size = new System.Drawing.Size(1121, 383);
             this.dgvKhoXe.TabIndex = 5;
             this.dgvKhoXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoXe_CellClick);
+            // 
+            // _stt
+            // 
+            this._stt.HeaderText = "Số TT";
+            this._stt.MinimumWidth = 6;
+            this._stt.Name = "_stt";
+            this._stt.ReadOnly = true;
+            // 
+            // ColMaXe
+            // 
+            this.ColMaXe.HeaderText = "Mã sản phẩm";
+            this.ColMaXe.MinimumWidth = 6;
+            this.ColMaXe.Name = "ColMaXe";
+            this.ColMaXe.ReadOnly = true;
+            // 
+            // ColTenXe
+            // 
+            this.ColTenXe.HeaderText = "Tên Xe";
+            this.ColTenXe.MinimumWidth = 6;
+            this.ColTenXe.Name = "ColTenXe";
+            this.ColTenXe.ReadOnly = true;
+            // 
+            // ColSL
+            // 
+            this.ColSL.HeaderText = "Loại Xe";
+            this.ColSL.MinimumWidth = 6;
+            this.ColSL.Name = "ColSL";
+            this.ColSL.ReadOnly = true;
+            // 
+            // ColDG
+            // 
+            this.ColDG.HeaderText = "Đơn Giá";
+            this.ColDG.MinimumWidth = 6;
+            this.ColDG.Name = "ColDG";
+            this.ColDG.ReadOnly = true;
+            // 
+            // ColMoTa
+            // 
+            this.ColMoTa.HeaderText = "Số khung";
+            this.ColMoTa.MinimumWidth = 6;
+            this.ColMoTa.Name = "ColMoTa";
+            this.ColMoTa.ReadOnly = true;
             // 
             // panel2
             // 
@@ -478,48 +520,6 @@
             this.txtTraCuuHoaDon.TabIndex = 72;
             this.txtTraCuuHoaDon.Texts = "";
             this.txtTraCuuHoaDon.UnderlinedStyle = true;
-            // 
-            // _stt
-            // 
-            this._stt.HeaderText = "Số TT";
-            this._stt.MinimumWidth = 6;
-            this._stt.Name = "_stt";
-            this._stt.ReadOnly = true;
-            // 
-            // ColMaXe
-            // 
-            this.ColMaXe.HeaderText = "Mã sản phẩm";
-            this.ColMaXe.MinimumWidth = 6;
-            this.ColMaXe.Name = "ColMaXe";
-            this.ColMaXe.ReadOnly = true;
-            // 
-            // ColTenXe
-            // 
-            this.ColTenXe.HeaderText = "Tên Xe";
-            this.ColTenXe.MinimumWidth = 6;
-            this.ColTenXe.Name = "ColTenXe";
-            this.ColTenXe.ReadOnly = true;
-            // 
-            // ColSL
-            // 
-            this.ColSL.HeaderText = "Loại Xe";
-            this.ColSL.MinimumWidth = 6;
-            this.ColSL.Name = "ColSL";
-            this.ColSL.ReadOnly = true;
-            // 
-            // ColDG
-            // 
-            this.ColDG.HeaderText = "Đơn Giá";
-            this.ColDG.MinimumWidth = 6;
-            this.ColDG.Name = "ColDG";
-            this.ColDG.ReadOnly = true;
-            // 
-            // ColMoTa
-            // 
-            this.ColMoTa.HeaderText = "Số khung";
-            this.ColMoTa.MinimumWidth = 6;
-            this.ColMoTa.Name = "ColMoTa";
-            this.ColMoTa.ReadOnly = true;
             // 
             // ucKhoXe
             // 

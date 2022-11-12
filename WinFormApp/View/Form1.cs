@@ -16,6 +16,7 @@ namespace WinFormApp
 {
     public partial class Form1 : Form
     {
+
         int _showPass = 0;
         Functions _function = new Functions();
         public Form1()
@@ -45,6 +46,8 @@ namespace WinFormApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
+            this.KeyDown += Form1_KeyDown;
             txtErr1.Text = "";
             txtErr2.Text = "";
             txtPassword.PasswordChar = true;
@@ -126,5 +129,14 @@ namespace WinFormApp
                 }
             }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                rjButton1_Click(sender, e);
+            }
+        }
+        
     }
 }

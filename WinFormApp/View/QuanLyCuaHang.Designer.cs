@@ -35,7 +35,7 @@
             this.btnLogout = new WinFormApp.RJButton();
             this.lbCapBac = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox1 = new WinFormApp.RJCircularPictureBox();
+            this.pbAnhDaiDien = new WinFormApp.RJCircularPictureBox();
             this.btnThongKe = new WinFormApp.RJButton();
             this.btnXuatHang = new WinFormApp.RJButton();
             this.btnNhanVien = new WinFormApp.RJButton();
@@ -48,7 +48,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
             this.gradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnhDaiDien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +117,7 @@
             this.gradientPanel3.Controls.Add(this.btnLogout);
             this.gradientPanel3.Controls.Add(this.lbCapBac);
             this.gradientPanel3.Controls.Add(this.lbUserName);
-            this.gradientPanel3.Controls.Add(this.rjCircularPictureBox1);
+            this.gradientPanel3.Controls.Add(this.pbAnhDaiDien);
             this.gradientPanel3.Location = new System.Drawing.Point(12, 674);
             this.gradientPanel3.Name = "gradientPanel3";
             this.gradientPanel3.Size = new System.Drawing.Size(262, 117);
@@ -166,22 +166,22 @@
             this.lbUserName.TabIndex = 1;
             this.lbUserName.Text = "User Name";
             // 
-            // rjCircularPictureBox1
+            // pbAnhDaiDien
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::WinFormApp.Properties.Resources.avatar;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(12, 4);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(68, 68);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 0;
-            this.rjCircularPictureBox1.TabStop = false;
-            this.rjCircularPictureBox1.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
+            this.pbAnhDaiDien.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbAnhDaiDien.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pbAnhDaiDien.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbAnhDaiDien.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbAnhDaiDien.BorderSize = 2;
+            this.pbAnhDaiDien.GradientAngle = 50F;
+            this.pbAnhDaiDien.Image = global::WinFormApp.Properties.Resources.avatar;
+            this.pbAnhDaiDien.Location = new System.Drawing.Point(12, 4);
+            this.pbAnhDaiDien.Name = "pbAnhDaiDien";
+            this.pbAnhDaiDien.Size = new System.Drawing.Size(68, 68);
+            this.pbAnhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAnhDaiDien.TabIndex = 0;
+            this.pbAnhDaiDien.TabStop = false;
+            this.pbAnhDaiDien.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
             // 
             // btnThongKe
             // 
@@ -388,7 +388,7 @@
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel3.ResumeLayout(false);
             this.gradientPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnhDaiDien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -409,7 +409,7 @@
         private RJButton btnKhoXe;
         private RJButton btnKhoPhuTung;
         private CustomControl.GradientPanel gradientPanel3;
-        private RJCircularPictureBox rjCircularPictureBox1;
+        private RJCircularPictureBox pbAnhDaiDien;
         private RJButton btnLogout;
         private System.Windows.Forms.Label lbCapBac;
         private System.Windows.Forms.Label lbUserName;

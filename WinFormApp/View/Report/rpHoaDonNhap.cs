@@ -44,7 +44,6 @@ namespace WinFormApp.View.Report
             }
             var reportDataSource = new ReportDataSource("DataSet1", dsHoaDonNhap);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
-            //tên hiển thị
             this.reportViewer1.LocalReport.DisplayName = "Hóa đơn nhập hàng";
             this.reportViewer1.RefreshReport();
         }

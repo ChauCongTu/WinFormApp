@@ -48,7 +48,7 @@ namespace WinFormApp.Model
                     this.NumCustomers = (int)command.ExecuteScalar();
 
                     // dummy total Suppliers
-                    this.NumSuppliers = 24719274;
+                    this.NumSuppliers = 37;
 
                     // get total products
                     command.CommandText = "SELECT count(MASP) from SANPHAM";

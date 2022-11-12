@@ -17,13 +17,13 @@ namespace WinFormApp.CustomControl
     {
         Functions function = new Functions();
         ChiNhanh ChiNhanh = new ChiNhanh();
-        NhanVien nhanVien = new NhanVien(); //thông tin đang đăng nhập
-        HoaDonNhap hd = new HoaDonNhap(); //thông tin rỗng
+        NhanVien nhanVien = new NhanVien();
+        HoaDonNhap hd = new HoaDonNhap();
         int saveType;
         public ucQuanLyNhapHang(NhanVien nhanVien)
         {
             InitializeComponent();
-            this.nhanVien = nhanVien; //truyền vào
+            this.nhanVien = nhanVien;
         }
         public ucQuanLyNhapHang(HoaDonNhap hd, NhanVien nhanVien)
         {
@@ -40,7 +40,7 @@ namespace WinFormApp.CustomControl
             List<HoaDonNhap> hoaDonNhap = dAO_HoaDonNhap.GetAll();
             foreach(HoaDonNhap hoaDon in hoaDonNhap)
             {
-                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
                 i++;
             }
         }
@@ -212,7 +212,7 @@ namespace WinFormApp.CustomControl
             List<HoaDonNhap> hoaDonNhap = dAO_HoaDonNhap.GetByDate(dtpFrom.Value.Date, dtpTo.Value.Date);
             foreach (HoaDonNhap hoaDon in hoaDonNhap)
             {
-                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
                 i++;
             }
         }
@@ -275,7 +275,7 @@ namespace WinFormApp.CustomControl
             hoaDonNhaps.Add(hoaDonNhap);
             foreach (HoaDonNhap hoaDon in hoaDonNhaps)
             {
-                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
                 i++;
             }
         }

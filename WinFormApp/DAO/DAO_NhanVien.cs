@@ -35,7 +35,9 @@ namespace WinFormApp.DAO
                 string diaChi = reader.GetString(6);
                 int capbac = reader.GetInt32(7);
                 string soDienThoai = reader.GetString(8);
-                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                int gioiTinh = reader.GetInt32(10);
+                string anhDaiDien = reader.GetString(11);
+                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai, gioiTinh, anhDaiDien);
                 list.Add(nhan);
             }
             _conn.Close();
@@ -58,7 +60,9 @@ namespace WinFormApp.DAO
                 string diaChi = reader.GetString(6);
                 int capbac = reader.GetInt32(7);
                 string soDienThoai = reader.GetString(8);
-                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                int gioiTinh = reader.GetInt32(10);
+                string anhDaiDien = reader.GetString(11);
+                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai, gioiTinh, anhDaiDien);
                 list.Add(nhan);
             }
             _conn.Close();
@@ -81,7 +85,9 @@ namespace WinFormApp.DAO
                 string diaChi = reader.GetString(6);
                 int capbac = reader.GetInt32(7);
                 string soDienThoai = reader.GetString(8);
-                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                int gioiTinh = reader.GetInt32(10);
+                string anhDaiDien = reader.GetString(11);
+                NhanVien nhan = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai, gioiTinh, anhDaiDien);
                 list.Add(nhan);
             }
             _conn.Close();
@@ -104,7 +110,9 @@ namespace WinFormApp.DAO
                 string diaChi = reader.GetString(6);
                 int capbac = reader.GetInt32(7);
                 string soDienThoai = reader.GetString(8);
-                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                int gioiTinh = reader.GetInt32(10);
+                string anhDaiDien = reader.GetString(11);
+                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai, gioiTinh, anhDaiDien);
             }
             _conn.Close();
             return nhanVien;
@@ -126,7 +134,9 @@ namespace WinFormApp.DAO
                 string diaChi = reader.GetString(6);
                 int capbac = reader.GetInt32(7);
                 string soDienThoai = reader.GetString(8);
-                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                int gioiTinh = reader.GetInt32(10);
+                string anhDaiDien = reader.GetString(11);
+                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai, gioiTinh, anhDaiDien);
             }
             _conn.Close();
             return nhanVien;
@@ -148,7 +158,9 @@ namespace WinFormApp.DAO
                 string diaChi = reader.GetString(6);
                 int capbac = reader.GetInt32(7);
                 string soDienThoai = reader.GetString(8);
-                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai);
+                int gioiTinh = reader.GetInt32(10);
+                string anhDaiDien = reader.GetString(11);
+                nhanVien = new NhanVien(maNhanVien, tenNhanVien, tenDangNhap, matKhau, ngaySinh, chungMinhNhanDan, diaChi, capbac, soDienThoai, gioiTinh, anhDaiDien);
             }
             _conn.Close();
             return nhanVien;
@@ -156,17 +168,20 @@ namespace WinFormApp.DAO
         public void Add(NhanVien _nhanVien, string _maChiNhanh)
         {
             _conn.Open();
+            string pwd = "123456";
             command = new SqlCommand($@"INSERT INTO NHANVIEN 
                                         VALUES(MANV = '{_nhanVien.maNhanVien}', 
                                                HOTEN = N'{_nhanVien.tenNhanVien}',
                                                TENDANGNHAP = N'{_nhanVien.tenDangNhap}',
-                                               MATKHAU = '{GetMD5(_nhanVien.matKhau)}',
+                                               MATKHAU = '{GetMD5(pwd)}',
                                                NGSINH = '{_nhanVien.ngaySinh}',
                                                SOCMND = '{_nhanVien.chungMinhNhanDan}',
                                                DIACHI = N'{_nhanVien.diaChi}',
                                                QUYEN = {_nhanVien.capbac},
                                                SDT = '{_nhanVien.soDienThoai}',
-                                               MACN = '{_maChiNhanh}'
+                                               MACN = '{_maChiNhanh}',
+                                               GIOITINH = {_nhanVien.gioiTinh},
+                                               AVATAR = '0'
                                                )", _conn);
             command.ExecuteNonQuery();
             _conn.Close();
@@ -183,8 +198,16 @@ namespace WinFormApp.DAO
                                             DIACHI = N'{_nhanVien.diaChi}',
                                             QUYEN = {_nhanVien.capbac},
                                             SDT = '{_nhanVien.soDienThoai}',
+                                            GIOITINH = {_nhanVien.gioiTinh},
                                             MACN = '{_maChiNhanh}'
                                         WHERE MANV = '{_nhanVien.maNhanVien}'", _conn);
+            command.ExecuteNonQuery();
+            _conn.Close();
+        }
+        public void SetUpAvatar(string _maNhanVien, string _Image)
+        {
+            _conn.Open();
+            command = new SqlCommand($"UPDATE NHANVIEN SET AVATAR = '{_Image}' WHERE MANV = '{_maNhanVien}'", _conn);
             command.ExecuteNonQuery();
             _conn.Close();
         }

@@ -1030,7 +1030,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Đại diện nhà cung cấp</Value>
+                    <Value>   Khách hàng</Value>
                     <Style>
                       <FontFamily>TIMes New Roman</FontFamily>
                       <FontSize>14pt</FontSize>
@@ -1041,13 +1041,6 @@
               </Paragraph>
               <Paragraph>
                 <TextRuns>
-                  <TextRun>
-                    <Value xml:space="preserve">      </Value>
-                    <Style>
-                      <FontFamily>TIMes New Roman</FontFamily>
-                      <FontSize>14pt</FontSize>
-                    </Style>
-                  </TextRun>
                   <TextRun>
                     <Value>(Ký. ghi rõ họ tên)</Value>
                     <Style>
@@ -1063,7 +1056,7 @@
             <Top>4.94556in</Top>
             <Left>0.72723in</Left>
             <Height>0.575in</Height>
-            <Width>1.86667in</Width>
+            <Width>1.36667in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -1094,7 +1087,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value xml:space="preserve">      </Value>
+                    <Value xml:space="preserve">     </Value>
                     <Style>
                       <FontFamily>TIMes New Roman</FontFamily>
                       <FontSize>14pt</FontSize>
@@ -1233,8 +1226,43 @@
             <Top>4.48306in</Top>
             <Left>5.46113in</Left>
             <Height>0.25in</Height>
-            <Width>3.09777in</Width>
+            <Width>2.44944in</Width>
             <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox27">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>VNĐ</Value>
+                    <Style>
+                      <FontFamily>TIMes New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>4.48306in</Top>
+            <Left>7.93835in</Left>
+            <Height>0.25833in</Height>
+            <Width>0.62223in</Width>
+            <ZIndex>20</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1249,7 +1277,7 @@
         <Height>7.63333in</Height>
         <Style />
       </Body>
-      <Width>8.90833in</Width>
+      <Width>9.20502in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

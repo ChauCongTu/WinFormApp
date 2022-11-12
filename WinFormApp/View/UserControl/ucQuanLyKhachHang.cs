@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormApp.DAO;
+using WinFormApp.Model;
 
 namespace WinFormApp.CustomControl
 {
@@ -18,9 +20,21 @@ namespace WinFormApp.CustomControl
         }
         void table_load()
         {
+            dgvKhachHang.Rows.Clear();
+            int i = 1;
+            DAO_KhachHang dAO_KhachHang = new DAO_KhachHang();
 
+            List<KhachHang> khachHang = dAO_KhachHang.GetAll();
+            foreach (KhachHang kh in khachHang)
+            {
+                dgvKhachHang.Rows.Add(i, kh.maKhachHang, kh.tenKhachHang, kh.soDienThoai, kh.diaChi, kh.chungMinhNhanDan);
+                i++;
+            }
         }
-
+        private void ucQuanLyKhachHang_Load(object sender, EventArgs e)
+        {
+            table_load();
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 

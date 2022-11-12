@@ -40,7 +40,7 @@ namespace WinFormApp.CustomControl
             List<HoaDonXuat> hoaDonXuat = dAO_HoaDon.GetAll();
             foreach (HoaDonXuat hoaDon in hoaDonXuat)
             {
-                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
                 i++;
             }
         }
@@ -205,7 +205,7 @@ namespace WinFormApp.CustomControl
             List<HoaDonXuat> hoaDonXuat = dAO_HoaDon.GetByDate(dateTimePicker1.Value, dateTimePicker2.Value);
             foreach (HoaDonXuat hoaDon in hoaDonXuat)
             {
-                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+                dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
                 i++;
             }
         }
@@ -264,7 +264,7 @@ namespace WinFormApp.CustomControl
             dgvHoaDonXuat.Rows.Clear();
             int i = 1;
             HoaDonXuat hoaDon = dAO_HoaDon.GetByID(_keyWord);
-            dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString(), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
+            dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
         }
 
     }

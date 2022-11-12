@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormApp.CustomControl;
 using WinFormApp.Model;
+using WinFormApp.View;
 
 namespace WinFormApp
 {
     public partial class QuanLyCuaHang : Form
     {
         NhanVien nhanVien = new NhanVien();
+        Functions functions = new Functions();
         public QuanLyCuaHang()
         {
             InitializeComponent();
@@ -151,6 +153,14 @@ namespace WinFormApp
 
         private void QuanLyCuaHang_Load(object sender, EventArgs e)
         {
+            if (nhanVien.anhDaiDien == "0")
+            {
+                pbAnhDaiDien.Image = Properties.Resources.avatar;
+            }
+            else
+            {
+                pbAnhDaiDien.Image = functions.ConvertByteToImg(nhanVien.anhDaiDien);
+            }
             gpMain.Controls.Clear();
             gpMain.Controls.Add(new ucTrangChu());
             lbUserName.Text = nhanVien.tenNhanVien;
@@ -173,6 +183,10 @@ namespace WinFormApp
             ucTrangCaNhan profile = new ucTrangCaNhan(nhanVien);
             gpMain.Controls.Clear();
             gpMain.Controls.Add(profile);
+        }
+        private void LoadAvatar()
+        {
+            
         }
     }
 }
