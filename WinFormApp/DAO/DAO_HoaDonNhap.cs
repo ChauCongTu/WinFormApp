@@ -62,11 +62,12 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
-        public HoaDonNhap GetLast()
+        public HoaDonNhap GetLastIDToday()
         {
             _conn.Open();
+            DateTime dateTime = DateTime.Now;
             HoaDonNhap hoaDonNhap = new HoaDonNhap();
-            command = new SqlCommand($"SELECT TOP(1)* FROM HOADONNHAP ORDER BY SOHDNHAP DESC", _conn);
+            command = new SqlCommand($"SELECT TOP(1)* FROM HOADONNHAP WHERE NGHD = '{dateTime}' ORDER BY SOHDNHAP DESC", _conn);
             reader = command.ExecuteReader();
             DAO_NhaCungCap dAO_NhaCungCap = new DAO_NhaCungCap();
             DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();

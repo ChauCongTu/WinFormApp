@@ -454,6 +454,9 @@
     <None Include="Resources\navigate_right.png" />
     <None Include="Resources\icon_right.png" />
     <None Include="Resources\navigate_left.png" />
+    <None Include="Resources\icon_reload.png" />
+    <None Include="Resources\icon_remove_img.png" />
+    <None Include="Resources\icon_add_img.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

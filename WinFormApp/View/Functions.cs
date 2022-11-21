@@ -39,6 +39,7 @@ namespace WinFormApp.View
             btn.Enabled = true;
             btn.BackColor = Color.FromArgb(23, 162, 139);
         }
+
         public string CreateID(string _lastID)
         {
             string firstSubID = _lastID.Substring(0, _lastID.Length - 5);
@@ -72,10 +73,28 @@ namespace WinFormApp.View
         public Image ConvertByteToImg(string byteString)
         {
             byte[] imgBytes = Convert.FromBase64String(byteString);
-            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
-            ms.Write(imgBytes, 0, imgBytes.Length);
-            Image image = Image.FromStream(ms, true);
-            return image;
+            using (var ms = new MemoryStream(imgBytes))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+        
+        public string GenerateID(int loaiHoaDon)
+        {
+            DateTime time = DateTime.Now;
+            string MaHD_1 = time.ToString("dd") + time.ToString("MM") + time.ToString("yy");
+            string MaHD_2 = "";
+            if (loaiHoaDon == 1)
+            {
+                MaHD_2 = "X";
+            }
+            else
+            {
+                MaHD_2 = "N";
+            }
+            string MaHD_3 = time.ToString("HH") + time.ToString("mm") + time.ToString("ss");
+            string MaHoaDon = MaHD_1 + MaHD_2 + MaHD_3;
+            return MaHoaDon;
         }
     }
 }

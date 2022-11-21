@@ -76,13 +76,7 @@ namespace WinFormApp.DAO
             command.ExecuteNonQuery();
             _conn.Close();
         }
-        public void Update(HinhAnhXe hinhAnhXe)
-        {
-            _conn.Open();
-            command = new SqlCommand($"UPDATE XE_HINHANH SET Image_binary = '{hinhAnhXe.hinhAnh}' WHERE Product_ID = '{hinhAnhXe.maSanPham}' AND Image_ID = {hinhAnhXe.maHinhAnh}", _conn);
-            command.ExecuteNonQuery();
-            _conn.Close();
-        }
+        
         public void Delete(string _maSanPham, int _maHinhAnh)
         {
             _conn.Open();

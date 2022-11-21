@@ -63,11 +63,11 @@ namespace WinFormApp.DAO
             _conn.Close();
             return list;
         }
-        public HoaDonXuat GetLast()
+        public HoaDonXuat GetLastIDToday()
         {
             _conn.Open();
             HoaDonXuat hoaDonXuat = new HoaDonXuat();
-            command = new SqlCommand($"SELECT TOP(1)* FROM HOADONXUAT ORDER BY SOHDXUAT DESC", _conn);
+            command = new SqlCommand($"SELECT TOP(1)* FROM HOADONXUAT WHERE NGHD = '{DateTime.Now}'ORDER BY SOHDXUAT DESC", _conn);
             reader = command.ExecuteReader();
             DAO_KhachHang dAO_KhachHang = new DAO_KhachHang();
             DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();

@@ -42,6 +42,9 @@ namespace WinFormApp.CustomControl
             cbChucVu.Enabled = false;
             cbGioiTinh.Enabled = false;
             dtpNgaySinh.Enabled = false;
+            functions.turnOffButton(btnSave, pbSave);
+            functions.turnOnButton(btnUpdate, pbUpdate);
+            functions.turnOnButton(btnChangePass, pbChangePass);
             //Load employee data
             if(nhanVien.anhDaiDien == "0")
             {
@@ -101,20 +104,35 @@ namespace WinFormApp.CustomControl
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            string BinaryImg;
+            string bakAvatar = nhanVien.anhDaiDien;
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
             openFile.FilterIndex = 1;
             openFile.RestoreDirectory = true;
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                BinaryImg = Convert.ToBase64String(functions.ConvertImgToByte(openFile.FileName));
+                nhanVien.anhDaiDien = Convert.ToBase64String(functions.ConvertImgToByte(openFile.FileName));
                 DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
                 var result = RJMessageBox.Show("Bạn có chắc muốn thay đổi ảnh đại diện?",
                 "Xác nhận thay đổi",
                 MessageBoxButtons.YesNo);
-                RJMessageBox.Show("Thay đổi ảnh đại diên thành công\n\nLưu ý: vui lòng đăng nhập lại để hoàn thành thay đổi!", "Thành công");
-                dAO_NhanVien.SetUpAvatar(nhanVien.maNhanVien, BinaryImg);
+                int exception = 0;
+                try
+                {
+                    dAO_NhanVien.SetUpAvatar(nhanVien.maNhanVien, nhanVien.anhDaiDien);
+                    ucTrangCaNhan_Load(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    exception++;
+                    dAO_NhanVien.SetUpAvatar(nhanVien.maNhanVien, bakAvatar);
+                    RJMessageBox.Show("Không thể thay đổi ảnh đại diện, vui lòng thử lại!", "Có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if(exception == 0)
+                        RJMessageBox.Show("Thay đổi ảnh đại diện thành công", "Thành công");
+                }
             }
         }
 
@@ -122,6 +140,60 @@ namespace WinFormApp.CustomControl
         {
             FullSizeAvatar fullSizeAvatar = new FullSizeAvatar(nhanVien);
             fullSizeAvatar.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ucTrangCaNhan_Load(sender, e);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //Enable all text box
+            txtTenNhanVien.Enabled = true;
+            txtSoDienThoai.Enabled = true;
+            txtChungMinhNhanDan.Enabled = true;
+            txtDiaChi.Enabled = true;
+            cbGioiTinh.Enabled = true;
+            dtpNgaySinh.Enabled = true;
+            functions.turnOnButton(btnSave, pbSave);
+            functions.turnOffButton(btnUpdate, pbUpdate);
+            functions.turnOffButton(btnChangePass, pbChangePass);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtTenNhanVien.TextLength == 0 || txtSoDienThoai.TextLength == 0 || txtChungMinhNhanDan.TextLength == 0 || txtDiaChi.TextLength == 0)
+            {
+                RJMessageBox.Show("Thông tin người dùng không được để trống!", "Có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int gender;
+                if (cbGioiTinh.Text == "Nam")
+                {
+                    gender = 1;
+                }
+                else if (cbGioiTinh.Text == "Nữ")
+                {
+                    gender = 2;
+                }
+                else
+                {
+                    gender = 3;
+                }
+                nhanVien.tenNhanVien = txtTenNhanVien.Text;
+                nhanVien.ngaySinh = dtpNgaySinh.Value;
+                nhanVien.soDienThoai = txtSoDienThoai.Text;
+                nhanVien.diaChi = txtDiaChi.Text;
+                nhanVien.chungMinhNhanDan = Convert.ToInt32(txtChungMinhNhanDan.Text);
+                nhanVien.gioiTinh = gender;
+                DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
+                DAO_ChiNhanh dAO_ChiNhanh = new DAO_ChiNhanh();
+                dAO_NhanVien.Update(nhanVien, dAO_ChiNhanh.GetByUsrID(nhanVien.maNhanVien).maChiNhanh.ToString());
+                RJMessageBox.Show("Thay đổi thông tin thành công!", "Thành công");
+                ucTrangCaNhan_Load(sender, e);
+            }
         }
     }
 }

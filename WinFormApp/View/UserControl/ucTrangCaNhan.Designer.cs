@@ -53,7 +53,7 @@
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
+            this.pbChangePass = new System.Windows.Forms.PictureBox();
             this.pbUpdate = new System.Windows.Forms.PictureBox();
             this.btnChangePass = new WinFormApp.RJButton();
             this.pbSave = new System.Windows.Forms.PictureBox();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChangePass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -118,7 +118,7 @@
             this.panel1.Controls.Add(this.pbAnhDaiDien);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.pbDelete);
+            this.panel1.Controls.Add(this.pbChangePass);
             this.panel1.Controls.Add(this.pbUpdate);
             this.panel1.Controls.Add(this.btnChangePass);
             this.panel1.Controls.Add(this.pbSave);
@@ -363,17 +363,17 @@
             this.dtpNgaySinh.Size = new System.Drawing.Size(236, 34);
             this.dtpNgaySinh.TabIndex = 103;
             // 
-            // pbDelete
+            // pbChangePass
             // 
-            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbDelete.Image = global::WinFormApp.Properties.Resources.change_pass;
-            this.pbDelete.Location = new System.Drawing.Point(616, 737);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(38, 38);
-            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete.TabIndex = 43;
-            this.pbDelete.TabStop = false;
-            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
+            this.pbChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbChangePass.Image = global::WinFormApp.Properties.Resources.change_pass;
+            this.pbChangePass.Location = new System.Drawing.Point(616, 737);
+            this.pbChangePass.Name = "pbChangePass";
+            this.pbChangePass.Size = new System.Drawing.Size(38, 38);
+            this.pbChangePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbChangePass.TabIndex = 43;
+            this.pbChangePass.TabStop = false;
+            this.pbChangePass.Click += new System.EventHandler(this.pbDelete_Click);
             // 
             // pbUpdate
             // 
@@ -449,6 +449,7 @@
             this.btnExit.Text = "Thoát";
             this.btnExit.TextColor = System.Drawing.Color.White;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnUpdate
             // 
@@ -469,6 +470,7 @@
             this.btnUpdate.Text = "Chỉnh Sửa";
             this.btnUpdate.TextColor = System.Drawing.Color.White;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -489,6 +491,7 @@
             this.btnSave.Text = "Lưu Lại";
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // ucTrangCaNhan
             // 
@@ -508,7 +511,7 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChangePass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -521,7 +524,7 @@
         private RJCircularPictureBox rjCircularPictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbDelete;
+        private System.Windows.Forms.PictureBox pbChangePass;
         private System.Windows.Forms.PictureBox pbUpdate;
         private RJButton btnChangePass;
         private System.Windows.Forms.PictureBox pictureBox5;

@@ -183,6 +183,16 @@ namespace WinFormApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_add_img {
+            get {
+                object obj = ResourceManager.GetObject("icon_add_img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_add1 {
             get {
                 object obj = ResourceManager.GetObject("icon_add1", resourceCulture);
@@ -296,6 +306,26 @@ namespace WinFormApp.Properties {
         internal static System.Drawing.Bitmap icon_nhanvien {
             get {
                 object obj = ResourceManager.GetObject("icon_nhanvien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_reload {
+            get {
+                object obj = ResourceManager.GetObject("icon_reload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_remove_img {
+            get {
+                object obj = ResourceManager.GetObject("icon_remove_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

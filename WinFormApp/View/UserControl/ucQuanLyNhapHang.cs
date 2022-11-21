@@ -54,6 +54,7 @@ namespace WinFormApp.CustomControl
             cbChiNhanh.Enabled = false;
             cbNhaCungCap.Enabled = false;
             cbNhanVien.Enabled = false;
+            function.turnOnButton(btnNew, pbAdd);
             function.turnOffButton(btnSave, pbSave);
             function.turnOffButton(btnChiTietHD);
             function.turnOffButton(btnUpdate, pbUpdate);
@@ -65,7 +66,6 @@ namespace WinFormApp.CustomControl
             saveType = 1;
             dtpNgayHD.Enabled = true;
             cbNhaCungCap.Enabled = true;
-            function.turnOnButton(btnChiTietHD);
             function.turnOffButton(btnNew, pbAdd);
             function.turnOnButton(btnSave, pbSave);
             function.turnOffButton(btnUpdate, pbUpdate);
@@ -74,7 +74,7 @@ namespace WinFormApp.CustomControl
             DAO_HoaDonNhap daoHoaDonNhap = new DAO_HoaDonNhap();
             DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
             DAO_NhaCungCap dAO_NhaCungCap = new DAO_NhaCungCap();
-            txtSoHD.Text = function.CreateID(daoHoaDonNhap.GetLast().SOHD);
+            txtSoHD.Text = function.GenerateID(2);
             DAO_ChiNhanh dAO_ChiNhanh = new DAO_ChiNhanh();
             cbChiNhanh.Text = dAO_ChiNhanh.GetByUsrID(nhanVien.maNhanVien).tenChiNhanh;
             cbChiNhanh.ValueMember = "maChiNhanh"; //giá trị
@@ -140,7 +140,7 @@ namespace WinFormApp.CustomControl
                 cbNhaCungCap.Text = hoaDonNhap.nhaCungCap.tenNhaCungCap;
                 cbNhaCungCap.ValueMember = "maNhaCungCap";
                 dtpNgayHD.Value = hoaDonNhap.ngayLapHoaDon;
-                if(nhanVien.capbac == 1)
+                if(nhanVien.capbac < 3)
                 {
                     if (nhanVien.maNhanVien != hoaDonNhap.nhanVien.maNhanVien)
                     {
@@ -247,21 +247,7 @@ namespace WinFormApp.CustomControl
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            table_load();
-            txtSoHD.Enabled = false;
-            dtpNgayHD.Enabled = false;
-            cbChiNhanh.Enabled = false;
-            cbNhaCungCap.Enabled = false;
-            cbNhanVien.Enabled = false;
-            function.turnOffButton(btnSave, pbSave);
-            function.turnOffButton(btnChiTietHD);
-            function.turnOffButton(btnUpdate, pbUpdate);
-            function.turnOffButton(btnDelete, pbDelete);
-            txtSoHD.Text = "";
-            dtpNgayHD.Value = DateTime.Now;
-            cbChiNhanh.Text = "";
-            cbNhaCungCap.Text = "-- Chọn nhà cung cấp --";
-            cbNhanVien.Text = nhanVien.tenNhanVien;
+            ucQuanLyNhapHang_Load(sender, e);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -278,6 +264,11 @@ namespace WinFormApp.CustomControl
                 dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.nhaCungCap.tenNhaCungCap, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
                 i++;
             }
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            table_load();
         }
     }
 }

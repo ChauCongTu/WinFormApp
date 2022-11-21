@@ -35,31 +35,45 @@ namespace WinFormApp.CustomControl
         }
         void Load_Image()
         {
-            DAO_HinhAnhXe dAO_HinhAnhXe = new DAO_HinhAnhXe();
-            List<HinhAnhXe> listHinhAnh = dAO_HinhAnhXe.GetList(sanPhamXe.maSanPham);
-            if (listHinhAnh.Count > 0 && listHinhAnh.Count < 2)
-            {
-                pictureBox2.Visible = false;
-                pictureBox3.Visible = false;
-                lbError.Visible = false;
-                pbHinhAnh.Image = functions.ConvertByteToImg(listHinhAnh[maHinhAnh].hinhAnh);
-            }
-            else if (listHinhAnh.Count >= 2)
-            {
-                pictureBox2.Visible = true;
-                pictureBox3.Visible = true;
-                lbError.Visible = false;
-                pbHinhAnh.Image = functions.ConvertByteToImg(listHinhAnh[maHinhAnh].hinhAnh);
-            }
-            else
+            if(thaoTac == 1)
             {
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = false;
                 pbHinhAnh.Image = null;
             }
+            else
+            {
+                DAO_HinhAnhXe dAO_HinhAnhXe = new DAO_HinhAnhXe();
+                List<HinhAnhXe> listHinhAnh = dAO_HinhAnhXe.GetList(sanPhamXe.maSanPham);
+                if (listHinhAnh.Count > 0 && listHinhAnh.Count < 2)
+                {
+                    pictureBox2.Visible = false;
+                    pictureBox3.Visible = false;
+                    lbError.Visible = false;
+                    pbHinhAnh.Image = functions.ConvertByteToImg(listHinhAnh[maHinhAnh].hinhAnh);
+                }
+                else if (listHinhAnh.Count >= 2)
+                {
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                    lbError.Visible = false;
+                    pbHinhAnh.Image = functions.ConvertByteToImg(listHinhAnh[maHinhAnh].hinhAnh);
+                }
+                else
+                {
+                    pictureBox2.Visible = false;
+                    pictureBox3.Visible = false;
+                    pbHinhAnh.Image = null;
+                }
+            }
         }
         private void ucHinhAnhXe_Load(object sender, EventArgs e)
         {
+            if(thaoTac == 3)
+            {
+                functions.turnOffButton(btnAdd, pictureBox4);
+                functions.turnOffButton(rjButton1, pictureBox5);
+            }
             Load_Image();
         }
 

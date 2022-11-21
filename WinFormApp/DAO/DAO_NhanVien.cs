@@ -168,12 +168,12 @@ namespace WinFormApp.DAO
         public void Add(NhanVien _nhanVien, string _maChiNhanh)
         {
             _conn.Open();
-            string pwd = "123456";
+            string pwd = GetMD5("123456");
             command = new SqlCommand($@"INSERT INTO NHANVIEN 
                                         VALUES(MANV = '{_nhanVien.maNhanVien}', 
                                                HOTEN = N'{_nhanVien.tenNhanVien}',
                                                TENDANGNHAP = N'{_nhanVien.tenDangNhap}',
-                                               MATKHAU = '{GetMD5(pwd)}',
+                                               MATKHAU = '{pwd}',
                                                NGSINH = '{_nhanVien.ngaySinh}',
                                                SOCMND = '{_nhanVien.chungMinhNhanDan}',
                                                DIACHI = N'{_nhanVien.diaChi}',
@@ -192,7 +192,7 @@ namespace WinFormApp.DAO
             command = new SqlCommand($@"UPDATE NHANVIEN 
                                         SET HOTEN = N'{_nhanVien.tenNhanVien}',
                                             TENDANGNHAP = N'{_nhanVien.tenDangNhap}',
-                                            MATKHAU = '{GetMD5(_nhanVien.matKhau)}',
+                                            MATKHAU = '{_nhanVien.matKhau}',
                                             NGSINH = '{_nhanVien.ngaySinh}',
                                             SOCMND = '{_nhanVien.chungMinhNhanDan}',
                                             DIACHI = N'{_nhanVien.diaChi}',

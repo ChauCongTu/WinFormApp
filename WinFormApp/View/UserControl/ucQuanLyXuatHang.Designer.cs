@@ -34,11 +34,17 @@
             this.txtSoHD = new System.Windows.Forms.TextBox();
             this.pbDelete = new System.Windows.Forms.PictureBox();
             this.pbUpdate = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new WinFormApp.RJButton();
             this.pbSave = new System.Windows.Forms.PictureBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cbNhanVien = new System.Windows.Forms.ComboBox();
+            this.btnExit = new WinFormApp.RJButton();
             this.cbKhachHang = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new WinFormApp.RJButton();
+            this.btnChiTietHD = new WinFormApp.RJButton();
+            this.btnSave = new WinFormApp.RJButton();
+            this.btnNew = new WinFormApp.RJButton();
             this.dtpNgayHD = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,12 +67,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new WinFormApp.RJButton();
             this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
-            this.btnDelete = new WinFormApp.RJButton();
-            this.btnExit = new WinFormApp.RJButton();
-            this.btnUpdate = new WinFormApp.RJButton();
-            this.btnChiTietHD = new WinFormApp.RJButton();
-            this.btnSave = new WinFormApp.RJButton();
-            this.btnNew = new WinFormApp.RJButton();
+            this.pbReLoad = new System.Windows.Forms.PictureBox();
+            this.rjButton2 = new WinFormApp.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
@@ -77,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReLoad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,6 +161,28 @@
             this.pbUpdate.TabIndex = 20;
             this.pbUpdate.TabStop = false;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderSize = 1;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(701, 270);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(157, 40);
+            this.btnDelete.TabIndex = 42;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // pbSave
             // 
             this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -200,6 +225,28 @@
             this.cbNhanVien.Size = new System.Drawing.Size(250, 34);
             this.cbNhanVien.TabIndex = 17;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnExit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnExit.BorderColor = System.Drawing.Color.DimGray;
+            this.btnExit.BorderRadius = 0;
+            this.btnExit.BorderSize = 1;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(919, 270);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(157, 40);
+            this.btnExit.TabIndex = 40;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.TextColor = System.Drawing.Color.White;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // cbKhachHang
             // 
             this.cbKhachHang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,6 +255,92 @@
             this.cbKhachHang.Name = "cbKhachHang";
             this.cbKhachHang.Size = new System.Drawing.Size(250, 34);
             this.cbKhachHang.TabIndex = 16;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnUpdate.BorderColor = System.Drawing.Color.DimGray;
+            this.btnUpdate.BorderRadius = 0;
+            this.btnUpdate.BorderSize = 1;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(488, 270);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnUpdate.Size = new System.Drawing.Size(157, 40);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Chỉnh Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnChiTietHD
+            // 
+            this.btnChiTietHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnChiTietHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnChiTietHD.BorderColor = System.Drawing.Color.DimGray;
+            this.btnChiTietHD.BorderRadius = 0;
+            this.btnChiTietHD.BorderSize = 1;
+            this.btnChiTietHD.FlatAppearance.BorderSize = 0;
+            this.btnChiTietHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChiTietHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTietHD.ForeColor = System.Drawing.Color.White;
+            this.btnChiTietHD.Location = new System.Drawing.Point(701, 181);
+            this.btnChiTietHD.Name = "btnChiTietHD";
+            this.btnChiTietHD.Size = new System.Drawing.Size(375, 34);
+            this.btnChiTietHD.TabIndex = 11;
+            this.btnChiTietHD.Text = "Xem/Sửa chi tiết hóa đơn";
+            this.btnChiTietHD.TextColor = System.Drawing.Color.White;
+            this.btnChiTietHD.UseVisualStyleBackColor = false;
+            this.btnChiTietHD.Click += new System.EventHandler(this.btnChiTietHD_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnSave.BorderColor = System.Drawing.Color.DimGray;
+            this.btnSave.BorderRadius = 0;
+            this.btnSave.BorderSize = 1;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(269, 270);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(157, 40);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Lưu Lại";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnNew.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.btnNew.BorderColor = System.Drawing.Color.DimGray;
+            this.btnNew.BorderRadius = 0;
+            this.btnNew.BorderSize = 1;
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(56, 270);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnNew.Size = new System.Drawing.Size(157, 40);
+            this.btnNew.TabIndex = 9;
+            this.btnNew.Text = "Thêm Mới";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.TextColor = System.Drawing.Color.White;
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // dtpNgayHD
             // 
@@ -302,11 +435,11 @@
             this.txtNgayHD,
             this.txtNhanVien,
             this.txtTongTien});
-            this.dgvHoaDonXuat.Location = new System.Drawing.Point(19, 415);
+            this.dgvHoaDonXuat.Location = new System.Drawing.Point(19, 396);
             this.dgvHoaDonXuat.Name = "dgvHoaDonXuat";
             this.dgvHoaDonXuat.RowHeadersWidth = 51;
             this.dgvHoaDonXuat.RowTemplate.Height = 24;
-            this.dgvHoaDonXuat.Size = new System.Drawing.Size(1121, 371);
+            this.dgvHoaDonXuat.Size = new System.Drawing.Size(1121, 358);
             this.dgvHoaDonXuat.TabIndex = 1;
             this.dgvHoaDonXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellClick);
             // 
@@ -355,7 +488,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(659, 367);
+            this.label6.Location = new System.Drawing.Point(659, 358);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 26);
             this.label6.TabIndex = 45;
@@ -365,7 +498,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(19, 361);
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 352);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(155, 34);
             this.dateTimePicker1.TabIndex = 45;
@@ -374,7 +507,7 @@
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(210, 361);
+            this.dateTimePicker2.Location = new System.Drawing.Point(210, 352);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(155, 34);
             this.dateTimePicker2.TabIndex = 46;
@@ -383,7 +516,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(180, 367);
+            this.label7.Location = new System.Drawing.Point(180, 358);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 26);
             this.label7.TabIndex = 45;
@@ -393,7 +526,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_search;
-            this.pictureBox1.Location = new System.Drawing.Point(1111, 361);
+            this.pictureBox1.Location = new System.Drawing.Point(1111, 350);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -412,7 +545,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(401, 361);
+            this.rjButton1.Location = new System.Drawing.Point(401, 352);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(82, 34);
             this.rjButton1.TabIndex = 45;
@@ -429,7 +562,7 @@
             this.txtTraCuuHoaDon.BorderSize = 2;
             this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(863, 359);
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(863, 350);
             this.txtTraCuuHoaDon.Multiline = false;
             this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
             this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
@@ -439,140 +572,44 @@
             this.txtTraCuuHoaDon.Texts = "";
             this.txtTraCuuHoaDon.UnderlinedStyle = true;
             // 
-            // btnDelete
+            // pbReLoad
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.DimGray;
-            this.btnDelete.BorderRadius = 0;
-            this.btnDelete.BorderSize = 1;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(701, 270);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(157, 40);
-            this.btnDelete.TabIndex = 42;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.pbReLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbReLoad.Image = global::WinFormApp.Properties.Resources.icon_reload;
+            this.pbReLoad.Location = new System.Drawing.Point(1029, 756);
+            this.pbReLoad.Name = "pbReLoad";
+            this.pbReLoad.Size = new System.Drawing.Size(28, 28);
+            this.pbReLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReLoad.TabIndex = 59;
+            this.pbReLoad.TabStop = false;
             // 
-            // btnExit
+            // rjButton2
             // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnExit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnExit.BorderColor = System.Drawing.Color.DimGray;
-            this.btnExit.BorderRadius = 0;
-            this.btnExit.BorderSize = 1;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(919, 270);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(157, 40);
-            this.btnExit.TabIndex = 40;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.TextColor = System.Drawing.Color.White;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnUpdate.BorderColor = System.Drawing.Color.DimGray;
-            this.btnUpdate.BorderRadius = 0;
-            this.btnUpdate.BorderSize = 1;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(488, 270);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnUpdate.Size = new System.Drawing.Size(157, 40);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Chỉnh Sửa";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.TextColor = System.Drawing.Color.White;
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnChiTietHD
-            // 
-            this.btnChiTietHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnChiTietHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnChiTietHD.BorderColor = System.Drawing.Color.DimGray;
-            this.btnChiTietHD.BorderRadius = 0;
-            this.btnChiTietHD.BorderSize = 1;
-            this.btnChiTietHD.FlatAppearance.BorderSize = 0;
-            this.btnChiTietHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChiTietHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiTietHD.ForeColor = System.Drawing.Color.White;
-            this.btnChiTietHD.Location = new System.Drawing.Point(701, 181);
-            this.btnChiTietHD.Name = "btnChiTietHD";
-            this.btnChiTietHD.Size = new System.Drawing.Size(375, 34);
-            this.btnChiTietHD.TabIndex = 11;
-            this.btnChiTietHD.Text = "Chi tiết hóa đơn";
-            this.btnChiTietHD.TextColor = System.Drawing.Color.White;
-            this.btnChiTietHD.UseVisualStyleBackColor = false;
-            this.btnChiTietHD.Click += new System.EventHandler(this.btnChiTietHD_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnSave.BorderColor = System.Drawing.Color.DimGray;
-            this.btnSave.BorderRadius = 0;
-            this.btnSave.BorderSize = 1;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(269, 270);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(157, 40);
-            this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "Lưu Lại";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnNew.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.btnNew.BorderColor = System.Drawing.Color.DimGray;
-            this.btnNew.BorderRadius = 0;
-            this.btnNew.BorderSize = 1;
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(56, 270);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnNew.Size = new System.Drawing.Size(157, 40);
-            this.btnNew.TabIndex = 9;
-            this.btnNew.Text = "Thêm Mới";
-            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.TextColor = System.Drawing.Color.White;
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.DimGray;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 1;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(1024, 754);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.rjButton2.Size = new System.Drawing.Size(116, 34);
+            this.rjButton2.TabIndex = 58;
+            this.rjButton2.Text = "Tải lại";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // ucQuanLyXuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pbReLoad);
+            this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rjButton1);
@@ -597,6 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReLoad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -643,5 +681,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbReLoad;
+        private RJButton rjButton2;
     }
 }

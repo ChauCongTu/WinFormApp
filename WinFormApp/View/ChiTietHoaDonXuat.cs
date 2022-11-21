@@ -16,6 +16,9 @@ namespace WinFormApp.View
 {
     public partial class ChiTietHoaDonXuat : Form
     {
+        bool isMouseDown;
+        int xLast;
+        int yLast;
         HoaDonXuat hd = new HoaDonXuat();
         ChiNhanh chiNhanh = new ChiNhanh();
         NhanVien nhanVien = new NhanVien();
@@ -45,6 +48,36 @@ namespace WinFormApp.View
             }
             txtTongTien.Text = tongTien.ToString();
         }
+        
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            isMouseDown = true;
+            xLast = e.X;
+            yLast = e.Y;
+
+            base.OnMouseDown(e);
+        }
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                int newY = this.Top + (e.Y - yLast);
+                int newX = this.Left + (e.X - xLast);
+
+                this.Location = new Point(newX, newY);
+            }
+
+            base.OnMouseMove(e);
+        }
+
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
+            isMouseDown = false;
+
+            base.OnMouseUp(e);
+        }
+
         private void ChiTietHoaDonXuat_Load(object sender, EventArgs e)
         {
             table_load();
@@ -63,7 +96,7 @@ namespace WinFormApp.View
             cbSanPham.DataSource = dAO_SanPhamXe.GetList(chiNhanh.maChiNhanh);
             cbSanPham.ValueMember = "maSanPham";
             cbSanPham.DisplayMember = "tenSanPham";
-            if (nhanVien.capbac == 1)
+            if (nhanVien.capbac < 3)
             {
                 if (nhanVien.maNhanVien != hd.nhanVien.maNhanVien)
                 {
@@ -77,11 +110,6 @@ namespace WinFormApp.View
         {
             this.Hide();
             this.Close();
-        }
-
-        private void cbSanPham_SelectedValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cbLoaiSP_SelectedValueChanged(object sender, EventArgs e)
@@ -119,7 +147,7 @@ namespace WinFormApp.View
         {
             if (e.ColumnIndex == dgvChiTietHoaDon.Columns["_xoa"].Index)
             {
-                if (nhanVien.capbac == 1)
+                if (nhanVien.capbac < 3)
                 {
                     if (nhanVien.maNhanVien != hd.nhanVien.maNhanVien)
                     {
@@ -148,15 +176,16 @@ namespace WinFormApp.View
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void rjButton1_Click(object sender, EventArgs e)
         {
             rpHoaDonXuat rpHoaDonXuat = new rpHoaDonXuat(hd);
             rpHoaDonXuat.ShowDialog();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
         }
     }
 }

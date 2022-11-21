@@ -54,6 +54,7 @@ namespace WinFormApp.CustomControl
             cbChiNhanh.Enabled = false;
             cbKhachHang.Enabled = false;
             cbNhanVien.Enabled = false;
+            function.turnOnButton(btnNew, pbAdd);
             function.turnOffButton(btnSave, pbSave);
             function.turnOffButton(btnChiTietHD);
             function.turnOffButton(btnUpdate, pbUpdate);
@@ -65,7 +66,6 @@ namespace WinFormApp.CustomControl
             saveType = 1;
             dtpNgayHD.Enabled = true;
             cbKhachHang.Enabled = true;
-            function.turnOnButton(btnChiTietHD);
             function.turnOffButton(btnNew, pbAdd);
             function.turnOnButton(btnSave, pbSave);
             function.turnOffButton(btnUpdate, pbUpdate);
@@ -74,7 +74,7 @@ namespace WinFormApp.CustomControl
             DAO_HoaDonXuat daoHoaDonXuat = new DAO_HoaDonXuat();
             DAO_NhanVien dAO_NhanVien = new DAO_NhanVien();
             DAO_KhachHang dAO_KhachHang = new DAO_KhachHang();
-            txtSoHD.Text = function.CreateID(daoHoaDonXuat.GetLast().SOHD);
+            txtSoHD.Text = function.GenerateID(1);
             DAO_ChiNhanh dAO_ChiNhanh = new DAO_ChiNhanh();
             cbChiNhanh.Text = dAO_ChiNhanh.GetByUsrID(nhanVien.maNhanVien).tenChiNhanh;
             cbChiNhanh.ValueMember = "maChiNhanh"; //giá trị
@@ -121,6 +121,7 @@ namespace WinFormApp.CustomControl
 
         private void dgvHoaDonXuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            function.turnOffButton(btnNew, pbAdd);
             function.turnOffButton(btnSave, pbSave);
             function.turnOnButton(btnUpdate, pbUpdate);
             function.turnOnButton(btnDelete, pbDelete);
@@ -140,7 +141,7 @@ namespace WinFormApp.CustomControl
                 cbKhachHang.Text = hoaDonXuat.khachHang.tenKhachHang;
                 cbKhachHang.ValueMember = "maKhachHang";
                 dtpNgayHD.Value = hoaDonXuat.ngayLapHoaDon;
-                if(nhanVien.capbac == 1)
+                if(nhanVien.capbac < 3)
                 {
                     if (nhanVien.maNhanVien != hoaDonXuat.nhanVien.maNhanVien)
                     {
@@ -240,21 +241,7 @@ namespace WinFormApp.CustomControl
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            table_load();
-            txtSoHD.Enabled = false;
-            dtpNgayHD.Enabled = false;
-            cbChiNhanh.Enabled = false;
-            cbKhachHang.Enabled = false;
-            cbNhanVien.Enabled = false;
-            function.turnOffButton(btnSave, pbSave);
-            function.turnOffButton(btnChiTietHD);
-            function.turnOffButton(btnUpdate, pbUpdate);
-            function.turnOffButton(btnDelete, pbDelete);
-            txtSoHD.Text = "";
-            dtpNgayHD.Value = DateTime.Now;
-            cbChiNhanh.Text = "";
-            cbKhachHang.Text = "-- Chọn khách hàng --";
-            cbNhanVien.Text = nhanVien.tenNhanVien;
+            ucQuanLyXuatHang_Load(sender, e);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -267,5 +254,9 @@ namespace WinFormApp.CustomControl
             dgvHoaDonXuat.Rows.Add(i, hoaDon.SOHD, hoaDon.khachHang.tenKhachHang, hoaDon.ngayLapHoaDon.ToString("dd/MM/yyyy"), hoaDon.nhanVien.tenNhanVien, hoaDon.tongHoaDon);
         }
 
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            table_load();
+        }
     }
 }

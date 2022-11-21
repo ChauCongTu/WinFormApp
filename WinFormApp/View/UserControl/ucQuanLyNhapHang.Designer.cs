@@ -43,7 +43,12 @@
             this.cbChiNhanh = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSoHD = new System.Windows.Forms.TextBox();
+            this.pbDelete = new System.Windows.Forms.PictureBox();
+            this.pbUpdate = new System.Windows.Forms.PictureBox();
             this.btnDelete = new WinFormApp.RJButton();
+            this.pbSave = new System.Windows.Forms.PictureBox();
+            this.pbAdd = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cbNhanVien = new System.Windows.Forms.ComboBox();
             this.btnExit = new WinFormApp.RJButton();
             this.cbNhaCungCap = new System.Windows.Forms.ComboBox();
@@ -57,33 +62,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton1 = new WinFormApp.RJButton();
             this.txtTraCuuHoaDon = new CustomControls.RJControls.RJTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
-            this.pbUpdate = new System.Windows.Forms.PictureBox();
-            this.pbSave = new System.Windows.Forms.PictureBox();
-            this.pbAdd = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rjButton2 = new WinFormApp.RJButton();
+            this.pbReLoad = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReLoad)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(177, 375);
+            this.label7.Location = new System.Drawing.Point(177, 361);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 26);
             this.label7.TabIndex = 50;
@@ -93,7 +96,7 @@
             // 
             this.dtpTo.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(207, 369);
+            this.dtpTo.Location = new System.Drawing.Point(207, 355);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(155, 34);
             this.dtpTo.TabIndex = 54;
@@ -102,7 +105,7 @@
             // 
             this.dtpFrom.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(16, 369);
+            this.dtpFrom.Location = new System.Drawing.Point(16, 355);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(155, 34);
             this.dtpFrom.TabIndex = 52;
@@ -111,7 +114,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(656, 375);
+            this.label6.Location = new System.Drawing.Point(656, 361);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 26);
             this.label6.TabIndex = 53;
@@ -129,11 +132,11 @@
             this.txtNgayHD,
             this.txtNhanVien,
             this.txtTongTien});
-            this.dgvHoaDonXuat.Location = new System.Drawing.Point(16, 423);
+            this.dgvHoaDonXuat.Location = new System.Drawing.Point(16, 404);
             this.dgvHoaDonXuat.Name = "dgvHoaDonXuat";
             this.dgvHoaDonXuat.RowHeadersWidth = 51;
             this.dgvHoaDonXuat.RowTemplate.Height = 24;
-            this.dgvHoaDonXuat.Size = new System.Drawing.Size(1121, 371);
+            this.dgvHoaDonXuat.Size = new System.Drawing.Size(1121, 358);
             this.dgvHoaDonXuat.TabIndex = 48;
             this.dgvHoaDonXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellClick);
             this.dgvHoaDonXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDonXuat_CellContentClick);
@@ -244,6 +247,28 @@
             this.txtSoHD.Size = new System.Drawing.Size(250, 30);
             this.txtSoHD.TabIndex = 44;
             // 
+            // pbDelete
+            // 
+            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
+            this.pbDelete.Location = new System.Drawing.Point(720, 268);
+            this.pbDelete.Name = "pbDelete";
+            this.pbDelete.Size = new System.Drawing.Size(31, 31);
+            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDelete.TabIndex = 43;
+            this.pbDelete.TabStop = false;
+            // 
+            // pbUpdate
+            // 
+            this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
+            this.pbUpdate.Location = new System.Drawing.Point(511, 271);
+            this.pbUpdate.Name = "pbUpdate";
+            this.pbUpdate.Size = new System.Drawing.Size(28, 28);
+            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUpdate.TabIndex = 20;
+            this.pbUpdate.TabStop = false;
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
@@ -265,6 +290,39 @@
             this.btnDelete.TextColor = System.Drawing.Color.White;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // pbSave
+            // 
+            this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
+            this.pbSave.Location = new System.Drawing.Point(292, 271);
+            this.pbSave.Name = "pbSave";
+            this.pbSave.Size = new System.Drawing.Size(28, 28);
+            this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSave.TabIndex = 19;
+            this.pbSave.TabStop = false;
+            // 
+            // pbAdd
+            // 
+            this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
+            this.pbAdd.Location = new System.Drawing.Point(80, 271);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(28, 28);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdd.TabIndex = 18;
+            this.pbAdd.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
+            this.pictureBox5.Location = new System.Drawing.Point(945, 271);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 41;
+            this.pictureBox5.TabStop = false;
             // 
             // cbNhanVien
             // 
@@ -305,7 +363,6 @@
             this.cbNhaCungCap.Name = "cbNhaCungCap";
             this.cbNhaCungCap.Size = new System.Drawing.Size(250, 34);
             this.cbNhaCungCap.TabIndex = 16;
-            this.cbNhaCungCap.Text = "-- Chọn nhà cung cấp --";
             // 
             // btnUpdate
             // 
@@ -344,7 +401,7 @@
             this.btnChiTietHD.Name = "btnChiTietHD";
             this.btnChiTietHD.Size = new System.Drawing.Size(375, 34);
             this.btnChiTietHD.TabIndex = 11;
-            this.btnChiTietHD.Text = "Chi tiết hóa đơn";
+            this.btnChiTietHD.Text = "Xem/Sửa chi tiết hóa đơn";
             this.btnChiTietHD.TextColor = System.Drawing.Color.White;
             this.btnChiTietHD.UseVisualStyleBackColor = false;
             this.btnChiTietHD.Click += new System.EventHandler(this.btnChiTietHD_Click);
@@ -453,6 +510,16 @@
             this.panel2.Size = new System.Drawing.Size(1120, 50);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WinFormApp.Properties.Resources.NhapHang1_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(15, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -475,7 +542,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(398, 369);
+            this.rjButton1.Location = new System.Drawing.Point(398, 355);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(82, 34);
             this.rjButton1.TabIndex = 51;
@@ -492,7 +559,7 @@
             this.txtTraCuuHoaDon.BorderSize = 2;
             this.txtTraCuuHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTraCuuHoaDon.ForeColor = System.Drawing.Color.Black;
-            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(860, 367);
+            this.txtTraCuuHoaDon.Location = new System.Drawing.Point(860, 353);
             this.txtTraCuuHoaDon.Multiline = false;
             this.txtTraCuuHoaDon.Name = "txtTraCuuHoaDon";
             this.txtTraCuuHoaDon.Padding = new System.Windows.Forms.Padding(7);
@@ -506,7 +573,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::WinFormApp.Properties.Resources.icon_search;
-            this.pictureBox1.Location = new System.Drawing.Point(1108, 367);
+            this.pictureBox1.Location = new System.Drawing.Point(1108, 353);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -514,75 +581,44 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pbDelete
+            // rjButton2
             // 
-            this.pbDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbDelete.Image = global::WinFormApp.Properties.Resources.taoanhdep_icon_trash_alt_removebg_preview;
-            this.pbDelete.Location = new System.Drawing.Point(720, 268);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(31, 31);
-            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete.TabIndex = 43;
-            this.pbDelete.TabStop = false;
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.DimGray;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 1;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(1021, 762);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.rjButton2.Size = new System.Drawing.Size(116, 34);
+            this.rjButton2.TabIndex = 56;
+            this.rjButton2.Text = "Tải lại";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
-            // pbUpdate
+            // pbReLoad
             // 
-            this.pbUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbUpdate.Image = global::WinFormApp.Properties.Resources.icon_edit;
-            this.pbUpdate.Location = new System.Drawing.Point(511, 271);
-            this.pbUpdate.Name = "pbUpdate";
-            this.pbUpdate.Size = new System.Drawing.Size(28, 28);
-            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUpdate.TabIndex = 20;
-            this.pbUpdate.TabStop = false;
-            // 
-            // pbSave
-            // 
-            this.pbSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbSave.Image = global::WinFormApp.Properties.Resources.icon_save;
-            this.pbSave.Location = new System.Drawing.Point(292, 271);
-            this.pbSave.Name = "pbSave";
-            this.pbSave.Size = new System.Drawing.Size(28, 28);
-            this.pbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSave.TabIndex = 19;
-            this.pbSave.TabStop = false;
-            // 
-            // pbAdd
-            // 
-            this.pbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
-            this.pbAdd.Image = global::WinFormApp.Properties.Resources.icon_add2;
-            this.pbAdd.Location = new System.Drawing.Point(80, 271);
-            this.pbAdd.Name = "pbAdd";
-            this.pbAdd.Size = new System.Drawing.Size(28, 28);
-            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAdd.TabIndex = 18;
-            this.pbAdd.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.pictureBox5.Image = global::WinFormApp.Properties.Resources.icon_close;
-            this.pictureBox5.Location = new System.Drawing.Point(945, 271);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 41;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WinFormApp.Properties.Resources.NhapHang1_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
+            this.pbReLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(139)))));
+            this.pbReLoad.Image = global::WinFormApp.Properties.Resources.icon_reload;
+            this.pbReLoad.Location = new System.Drawing.Point(1026, 764);
+            this.pbReLoad.Name = "pbReLoad";
+            this.pbReLoad.Size = new System.Drawing.Size(28, 28);
+            this.pbReLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReLoad.TabIndex = 57;
+            this.pbReLoad.TabStop = false;
             // 
             // ucQuanLyNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pbReLoad);
+            this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rjButton1);
@@ -598,15 +634,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonXuat)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReLoad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,5 +690,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtTongTien;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private RJButton rjButton2;
+        private System.Windows.Forms.PictureBox pbReLoad;
     }
 }
